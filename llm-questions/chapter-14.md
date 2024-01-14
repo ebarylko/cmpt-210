@@ -67,6 +67,9 @@ Since $L$ is the union of disjoint sets, $|L|$ is the sum of each set within.
 
 $|TLTD|$ = $|A|^3 * |D|^3$ = $26^3 * 10^3$ = 17576000
 
-$|FL|$ = 
+$|FL|$ = $|A|^5$ = $|26|^5$ = 11881376
+
+$|TC|$ = $|36|^2$ = 1296
  
+$|L|$ = $|TLTD| \cup |FL| \cup |TC|$ = 29458672
 
