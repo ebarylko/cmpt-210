@@ -36,3 +36,16 @@ Since each subsequent element is in the subset or not, there are $2^5 = 32$ subs
 #### part b
 Knowing we the subsets must contain $x_2$, $x_3$, and exclude $x_6$, we have to count the number of subsets
 containing $x_4$, $x_5$, and $x_1$. There are 2^3 = 8 possible subsets fulfilling these constraints.
+
+### Question 5
+
+#### part a
+Let $A$ be the set of all uppercase letters.
+
+Let $D$ be the set of all digits.
+
+Three letters and three digits in terms of $A$ and $D$: $A^3 X D^3$
+
+Five letters in terms of $A$ and $D$: $A^5$
+
+Two characters which can be a letter or a number: $(A \cup B)^2)
