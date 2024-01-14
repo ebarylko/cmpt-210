@@ -56,10 +56,17 @@ $TLTD$ = $A^3 X D^3$
 
 $FL$ = $A^5$
 
-$TC$ = $(A \cup B)^2)$
+$TC$ = $(A \cup D)^2)$
 
 Since there are three sets of license plates (three letters and three digits, five letters, two characters) and each set is disjoint with the other two sets, $L$ can be represented as the union of all these sets.
 
 $L$ = $TLTD \cup FL \cup TC$
 
+#### part b
+Since $L$ is the union of disjoint sets, $|L|$ is the sum of each set within.
+
+$|TLTD|$ = $|A|^3 * |D|^3$ = $26^3 * 10^3$ = 17576000
+
+$|FL|$ = 
+ 
 
