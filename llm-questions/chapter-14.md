@@ -26,3 +26,13 @@ To have a total function, we need every element in $A$ to map to an element in $
 any constraints that the function has to be injective, this means that we can have multiple elements in $A$ mapping to the same element in $B$.
 As a result, for every element in $A$, there are seven possible elements in $B$ which it can correspond to. Therefore, the number of total functions 
 $f: A \rightarrow B$ are $7^3 = 343$.
+
+### Question 4
+
+#### part a
+Since $x_1$ is in the set, what needs to be counted is the number of subsets containing the rest of the elements.
+Since each subsequent element is in the subset or not, there are $2^5 = 32$ subsets containing $x_1$.
+
+#### part b
+Knowing we the subsets must contain $x_2$, $x_3$, and exclude $x_6$, we have to count the number of subsets
+containing $x_4$, $x_5$, and $x_1$. There are 2^3 = 8 possible subsets fulfilling these constraints.
