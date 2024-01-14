@@ -22,4 +22,7 @@ Since each question can be answered independently of the other, the number of wa
 answer the next chapter's problems is 16 * 4 * 6 = 384 possible ways.
 
 ### Question 3
-
+To have a total function, we need every element in $A$ to map to an element in $B$. Since we are not given 
+any constraints that the function has to be injective, this means that we can have multiple elements in $A$ mapping to the same element in $B$.
+As a result, for every element in $A$, there are seven possible elements in $B$ which it can correspond to. Therefore, the number of total functions 
+$f: A \rightarrow B$ are $7^3 = 343$.
