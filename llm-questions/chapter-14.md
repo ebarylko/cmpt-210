@@ -44,8 +44,22 @@ Let $A$ be the set of all uppercase letters.
 
 Let $D$ be the set of all digits.
 
-Three letters and three digits in terms of $A$ and $D$: $A^3 X D^3$
+Let $L$ be the set of all license plates.
 
-Five letters in terms of $A$ and $D$: $A^5$
+Let $TLTD$ denote the set representing all the license plates with three letters followed by three digits in terms of $A$ and $D$.
 
-Two characters which can be a letter or a number: $(A \cup B)^2)
+Let $FL$ denote the set representing all the license plates with five letters in terms of $A$ and $D$.
+
+Let $TC$ denote the set representing all the license plates with two characters (a number or a letter) in terms of $A$ and $D$.
+
+$TLTD$ = $A^3 X D^3$
+
+$FL$ = $A^5$
+
+$TC$ = $(A \cup B)^2)$
+
+Since there are three sets of license plates (three letters and three digits, five letters, two characters) and each set is disjoint with the other two sets, $L$ can be represented as the union of all these sets.
+
+$L$ = $TLTD \cup FL \cup TC$
+
+
