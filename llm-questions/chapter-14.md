@@ -73,3 +73,34 @@ $|TC|$ = $|36|^2$ = 1296
  
 $|L|$ = $|TLTD| \cup |FL| \cup |TC|$ = 29458672
 
+
+### Question 6
+
+#### part a
+
+How many of the integers from 1 to 1,000,000,000 contain the digit 1?
+
+To construct a number which does not contain a 1, there are $9^9$ possible ways 
+of making such a number.
+
+999,999,999
+To make a number which may or may not contain a zero, there are $10^9$ many ways 
+of doing so. 
+
+The total number of integers which contain a one is the difference between the number 
+of all possible numbers and the number of integers which do not contain a one.
+The total number is $10^9 - 9^9 + 1$, where the one is added to account for 
+0 being removed in the difference.
+
+Should it not be + 2 since I am adding a one for the 
+
+#### part b
+There are 20 books arranged in a row on a shelf. Describe a bijection between
+ways of choosing 6 of these books so that no two adjacent books are selected and
+15-bit strings with exactly 6 ones.
+
+101010101010 00000000
+the ones represent books. The zeroes represent 
+0101010101010
+111111
+1 1 1 1 1
