@@ -44,3 +44,12 @@ There are $\binom{4}{3}$ ways of picking three cards from the four possible suit
 There are $\binom{4}{2}$ ways of choosing two cards out of four possible suits.
 
 In total, there are $2\binom{13}{2}\binom{4}{3}\binom{4}{2}$ ways of drawing a full house, where the two represents the change of the values used for the three of a kind and the pair.
+
+## Question four
+Let us divide a unit square into sixteen points. For the first four points, the corners could be picked.
+Considering the distance from each point to the other, the smallest possible distance is 1.
+
+With the fifth point, either an adjacent point or one diagonal to the corner points will be picked.
+The largest possible distance from a corner point to one of the neighbouring points is $\frac{\sqrt{2}}{3}$, which is less than 
+$\frac{1}{\sqrt{2}}$. Therefore, no matter what set of five points we pick, there will always exist two 
+which are less than $\frac{1}{\sqrt{2}}$ units apart.
