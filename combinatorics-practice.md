@@ -46,10 +46,7 @@ There are $\binom{4}{2}$ ways of choosing two cards out of four possible suits.
 In total, there are $2\binom{13}{2}\binom{4}{3}\binom{4}{2}$ ways of drawing a full house, where the two represents the change of the values used for the three of a kind and the pair.
 
 ## Question four
-Let us divide a unit square into sixteen points. For the first four points, the corners could be picked.
-Considering the distance from each point to the other, the smallest possible distance is 1.
-
-With the fifth point, either an adjacent point or one diagonal to the corner points will be picked.
-The largest possible distance from a corner point to one of the neighbouring points is $\frac{\sqrt{2}}{3}$, which is less than 
-$\frac{1}{\sqrt{2}}$. Therefore, no matter what set of five points we pick, there will always exist two 
-which are less than $\frac{1}{\sqrt{2}}$ units apart.
+Let us divide the square into four quadrants of equal size. Four points can be selected at the corners, and 
+the farthest point from all four points is the center. Calculating the distance from the center, it is
+$\frac{1}{\sqrt{2}}$. Since this distance is calculated with the farthest points not being in the interior of the square, 
+the distance between the fifth point and any of the four previous points is less than $\frac{1}{\sqrt{2}}$.
