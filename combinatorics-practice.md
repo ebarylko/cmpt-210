@@ -29,7 +29,7 @@ You could construct an angry mob of three students in $\binom{75}{3}$ many ways.
 We can choose a hand in $\binom{52}{5}$ many ways.
 
 ### A 4-of-a-kind consists of a poker hand such that 4 of the cards have the same number but different suits. How many ways can we choose a 4-of-a-kind?
-There are $\2binom{13}{2}\binom{4}{1}$
+There are $2\binom{13}{2}\binom{4}{1}$
 $\binom{13}{2}$ represents all the combinations of two values someone could have for a four of a kind.
 
 $\binom{4}{1}$ represents the possible suits one could pick from for the fifth card
