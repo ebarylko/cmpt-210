@@ -69,3 +69,20 @@ to a selection of n items from the set of $3n$ items. Similarily, every selectio
 the collection of $3n$ elements can be mapped to a selection  of n - r and r elements from the set of $2n$ items and $n$ items.
 Since we have a bijection between both ways of selecting the items, the number of ways of 
 selecting $n$ items out of a collection of $3n$ items is equivalent to picking n - r items from the set of $2n$ items and r items from the set of $n$ items.
+
+## Question seven
+### How many positive integers not exceeding 1000 are divisible by 7 or 11?
+
+Let $I_7$ be the set of positive integers smaller than 1000 divisible by 7.
+Let $I_{11}$ be the set of positive integers smaller than 1000 divisible by 11.
+
+$|I_7 \cup I_{11}| = |I_7| + |I_{11}| - |I_7 \cap I_{11}|$
+
+$|I_7| = 142$
+$|I_{11}| = 90$
+$|I_7 \cap I_{11}|$ = 12
+
+$|I_7 \cup I_{11}|$ = 142 + 90 -12 = 220
+
+## Question eight
+Using the binomial theorem, the sum can be expressed as $(1 - x)^{2n}$
