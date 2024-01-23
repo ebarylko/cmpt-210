@@ -50,3 +50,22 @@ Let us divide the square into four quadrants of equal size. Four points can be s
 the farthest point from all four points is the center. Calculating the distance from the center, it is
 $\frac{1}{\sqrt{2}}$. Since this distance is calculated with the farthest points not being in the interior of the square, 
 the distance between the fifth point and any of the four previous points is less than $\frac{1}{\sqrt{2}}$.
+
+## Question five
+### What is the maximum possible number of edges if i) self-loops (edges of the form v1 → v1) are not permitted, ii) if self-loops are permitted?
+
+#### self-loops not permitted
+I have $\binom{n}{2}$ many possible edges since they count all the possible edges by considering every pair of two points.
+
+#### self-loops permitted
+I have $\binom{n}{2}$ many possible edges from the combinations of the unique vertices and $n$ edges since 
+each vertex has an edge with itself. In total, I have $\binom{n}{2}$ + $n$ edges.
+
+## Question six
+Picking $n$ items out of a collection of $3n$ items is equivalent to partitioning the set into 
+two collections of $n$ items and $2n$ items and picking n - r items from the set of $2n$ items and
+r items from the set of $n$ items. For every selection of n - r and r elements from the set of $2n$ items and $n$ items, it maps
+to a selection of n items from the set of $3n$ items. Similarily, every selection of $n$ items from
+the collection of $3n$ elements can be mapped to a selection  of n - r and r elements from the set of $2n$ items and $n$ items.
+Since we have a bijection between both ways of selecting the items, the number of ways of 
+selecting $n$ items out of a collection of $3n$ items is equivalent to picking n - r items from the set of $2n$ items and r items from the set of $n$ items.
