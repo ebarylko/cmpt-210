@@ -90,6 +90,43 @@ I avoid overcounting by only adding black balls to the unique subsets.
 
 The number different ways we can we choose 5 balls is $|\mathcal{P}({red, green, blue, yellow, violet})|$ 
 
-= $2^{|{red, green, blue, yellow, violet}|}$ = 32.
+= $2^{|{red, green, blue, yellow, violet}|}$ 
+
+= 32.
 
 There are 32 different ways we can we choose 5 balls. 
+
+## Question four
+Let P be the set of all possible plates, L = {A, B, . . . , Z} 
+be the set of upper-case letters, and D = {0, 1, . . . , 9} be
+the set of digits.
+
+### Express P in terms of L, D using the set union ∪ and product × operations 
+
+Let $L_{3l3d}$ be the set of all licence plates where three letters are followed
+by three digits.
+
+$L_{3l3d} = L \times L \times L \times D \times D \times D$
+
+Let $L_{5l}$ be the set of all licence plates where there are five letters.
+
+$L_{5l} = L \times L \times L \times L \times L$
+
+Let $L_{2c}$ be the set of all licence plates with two characters.
+
+Let $C = L \cup D$.
+
+$L_{2c} = C \times C$
+
+$P = L_{3l3d} \cup L_{5l} \cup L_{2c}$ 
+
+$P = (L \times L \times L \times D \times D \times D) \cup (L \times L \times L \times L \times L) \cup (C \times C)$
+
+
+### Using the sum rule and the product rule, compute |P|
+
+Since $P$ is pairwise disjoint, $|P| = |L_{3l3d}| \cup |L_{5l}| \cup |L_{2c}|$.
+
+
+
+
