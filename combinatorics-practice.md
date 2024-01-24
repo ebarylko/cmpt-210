@@ -46,10 +46,43 @@ There are $\binom{4}{2}$ ways of choosing two cards out of four possible suits.
 In total, there are $2\binom{13}{2}\binom{4}{3}\binom{4}{2}$ ways of drawing a full house, where the two represents the change of the values used for the three of a kind and the pair.
 
 ## Question four
-Let us divide a unit square into sixteen points. For the first four points, the corners could be picked.
-Considering the distance from each point to the other, the smallest possible distance is 1.
+Let us divide the square into four quadrants of equal size. Four points can be selected at the corners, and 
+the farthest point from all four points is the center. Calculating the distance from the center, it is
+$\frac{1}{\sqrt{2}}$. Since this distance is calculated with the farthest points not being in the interior of the square, 
+the distance between the fifth point and any of the four previous points is less than $\frac{1}{\sqrt{2}}$.
 
-With the fifth point, either an adjacent point or one diagonal to the corner points will be picked.
-The largest possible distance from a corner point to one of the neighbouring points is $\frac{\sqrt{2}}{3}$, which is less than 
-$\frac{1}{\sqrt{2}}$. Therefore, no matter what set of five points we pick, there will always exist two 
-which are less than $\frac{1}{\sqrt{2}}$ units apart.
+## Question five
+### What is the maximum possible number of edges if i) self-loops (edges of the form v1 → v1) are not permitted, ii) if self-loops are permitted?
+
+#### self-loops not permitted
+I have $\binom{n}{2}$ many possible edges since they count all the possible edges by considering every pair of two points.
+
+#### self-loops permitted
+I have $\binom{n}{2}$ many possible edges from the combinations of the unique vertices and $n$ edges since 
+each vertex has an edge with itself. In total, I have $\binom{n}{2}$ + $n$ edges.
+
+## Question six
+Picking $n$ items out of a collection of $3n$ items is equivalent to partitioning the set into 
+two collections of $n$ items and $2n$ items and picking n - r items from the set of $2n$ items and
+r items from the set of $n$ items. For every selection of n - r and r elements from the set of $2n$ items and $n$ items, it maps
+to a selection of n items from the set of $3n$ items. Similarily, every selection of $n$ items from
+the collection of $3n$ elements can be mapped to a selection  of n - r and r elements from the set of $2n$ items and $n$ items.
+Since we have a bijection between both ways of selecting the items, the number of ways of 
+selecting $n$ items out of a collection of $3n$ items is equivalent to picking n - r items from the set of $2n$ items and r items from the set of $n$ items.
+
+## Question seven
+### How many positive integers not exceeding 1000 are divisible by 7 or 11?
+
+Let $I_7$ be the set of positive integers smaller than 1000 divisible by 7.
+Let $I_{11}$ be the set of positive integers smaller than 1000 divisible by 11.
+
+$|I_7 \cup I_{11}| = |I_7| + |I_{11}| - |I_7 \cap I_{11}|$
+
+$|I_7| = 142$
+$|I_{11}| = 90$
+$|I_7 \cap I_{11}|$ = 12
+
+$|I_7 \cup I_{11}|$ = 142 + 90 -12 = 220
+
+## Question eight
+Using the binomial theorem, the sum can be expressed as $(1 - x)^{2n}$
