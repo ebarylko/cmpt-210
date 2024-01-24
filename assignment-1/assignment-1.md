@@ -76,3 +76,20 @@ Therefore, the number of bijective functions is $n!$.
 For a bijective function, $|A| = |B|$. Since this condition is not satisfied,
 there exists no possible bijective function considering the condition that r < n.
 
+
+### We have 5 identical black balls and 1 ball each of 5 colors {red, green, blue, yellow, violet}. In how many different ways can we choose 5 balls?
+
+Since the black balls are identical, I know that the sequences of the form
+$(black_1, black_2, red, green, blue)$ is equivalent to 
+$(black_4, black_5, red, green, blue)$. Since I would be double counting by
+not considering these types of cases, I know that what matters is the number
+of black balls. Therefore, I must focus on counting the cardinality of 
+the power set of the five non-black colors. With every subset, if there are
+less than five balls in the set, I add the black balls to the set. This way, 
+I avoid overcounting by only adding black balls to the unique subsets.
+
+The number different ways we can we choose 5 balls is $|\mathcal{P}({red, green, blue, yellow, violet})|$ 
+
+= $2^{|{red, green, blue, yellow, violet}|}$ = 32.
+
+There are 32 different ways we can we choose 5 balls. 
