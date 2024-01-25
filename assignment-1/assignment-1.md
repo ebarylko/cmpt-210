@@ -127,6 +127,32 @@ $P = (L \times L \times L \times D \times D \times D) \cup (L \times L \times L 
 
 Since $P$ is pairwise disjoint, $|P| = |L_{3l3d}| \cup |L_{5l}| \cup |L_{2c}|$.
 
+$|L_{3l3d}|$ 
 
+= $|L \times L \times L \times D \times D \times D|$ 
 
+= $|L| \times |L| \times |L| \times |D| \times |D| \times |D|$ 
 
+= $26^3 \times 10^3$ 
+
+$|L_{5l}| = |L \times L \times L \times L \times L|$
+
+= $|L| \times |L| \times |L| \times |L| \times |L|$
+
+= $26 \times 26 \times 26 \times 26 \times 26$
+
+= $26^5$
+
+$|L_{2c}| = |C \times C|$
+
+= $|C| \times |C|$
+
+= $36 \times 36$
+
+= $36^2$
+
+$|P| = |L_{3l3d}| \cup |L_{5l}| \cup |L_{2c}|$ 
+
+$|P|`= 26^3 \times 10^3 + 26^5 + 36^2$ 
+
+$|P| = 26^3(10^3 + 26^2) + 36^2$
