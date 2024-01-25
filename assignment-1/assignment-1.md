@@ -156,3 +156,24 @@ $|P| = |L_{3l3d}| \cup |L_{5l}| \cup |L_{2c}|$
 $|P|`= 26^3 \times 10^3 + 26^5 + 36^2$ 
 
 $|P| = 26^3(10^3 + 26^2) + 36^2$
+
+## Question five
+
+$\binom{n}{k} = \binom{n!}{k!(n-k)!}$
+
+$\binom{n - 1}{k - 1} = \binom{(n - 1)!}{(k - 1)!(n - k)!}$
+
+$\binom{n - 1}{k} = \binom{(n - 1)!}{(k)!(n - 1 - k)!}$
+
+$\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (n-1)!(\frac{1}{(k-1)!(n-k)!} + \frac{1}{k!(n - 1 - k)!})$
+
+$\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (n-1)!(\frac{k}{(k)!(n-k)!} + \frac{n - k}{k!(n - k)!})$
+
+$\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (n-1)!(\frac{n}{(k)!(n-k)!})$ 
+
+$\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (\frac{n!}{(k)!(n-k)!})$  
+
+= $\binom{n}{k}$
+
+
+
