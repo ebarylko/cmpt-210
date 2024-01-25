@@ -106,21 +106,21 @@ the set of digits.
 Let $L_{3l3d}$ be the set of all licence plates where three letters are followed
 by three digits.
 
-$L_{3l3d} = L \times L \times L \times D \times D \times D$
+$L_{3l3d} = L^3 \times D^3$
 
 Let $L_{5l}$ be the set of all licence plates where there are five letters.
 
-$L_{5l} = L \times L \times L \times L \times L$
+$L_{5l} = L^5$
 
 Let $L_{2c}$ be the set of all licence plates with two characters.
 
 Let $C = L \cup D$.
 
-$L_{2c} = C \times C$
+$L_{2c} = C^2$
 
 $P = L_{3l3d} \cup L_{5l} \cup L_{2c}$ 
 
-$P = (L \times L \times L \times D \times D \times D) \cup (L \times L \times L \times L \times L) \cup (C \times C)$
+$P = (L^3 \times D^3) \cup (L^5) \cup (C^2)$
 
 
 ### Using the sum rule and the product rule, compute |P|
@@ -129,19 +129,21 @@ Since $P$ is pairwise disjoint, $|P| = |L_{3l3d}| \cup |L_{5l}| \cup |L_{2c}|$.
 
 $|L_{3l3d}|$ 
 
-= $|L \times L \times L \times D \times D \times D|$ 
+= $|L^3 \times D^3|$ 
 
-= $|L| \times |L| \times |L| \times |D| \times |D| \times |D|$ 
+= $|L|^3 \times |D|^3$ 
 
 = $26^3 \times 10^3$ 
 
-$|L_{5l}| = |L \times L \times L \times L \times L|$
+$|L_{5l}| = |L^5|$
 
-= $|L| \times |L| \times |L| \times |L| \times |L|$
-
-= $26 \times 26 \times 26 \times 26 \times 26$
+= $|L|^5$
 
 = $26^5$
+
+$|C| = |L \cup D| = |L| + |D| - |L \cap D|$
+
+$|C| = 26 + 10 - 0 = 36$
 
 $|L_{2c}| = |C \times C|$
 
@@ -252,3 +254,15 @@ $|I_3 \cup I_7 \cup I_5| = 1099
 There are 1099 positive integers less than or equal to 2023 that are divisible by 3, 5 or 7.
 
 ## Question nine
+### SFU ID numbers are 9 digit numbers that start with 3. How many students do we need in this class such that there are at least two students with the same sum of their SFU ID digits?
+
+Since the first digit is the same, I only need to think about the remaining eight
+digits. 
+
+For each of the remaining eight digits, there are $8^10$ possible selections.
+
+How many possible values are there for the id numbers?
+The largest possible value for an id can be 399999999, in which the largest possible 
+sum is 75.
+
+Since the first digit must be 3, we have a minimum value for the sum of t/sev
