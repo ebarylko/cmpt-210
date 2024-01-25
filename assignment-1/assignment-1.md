@@ -159,6 +159,8 @@ $|P| = 26^3(10^3 + 26^2) + 36^2$
 
 ## Question five
 
+### Prove Pascal's identity algebraically
+
 $\binom{n}{k} = \binom{n!}{k!(n-k)!}$
 
 $\binom{n - 1}{k - 1} = \binom{(n - 1)!}{(k - 1)!(n - k)!}$
@@ -175,5 +177,16 @@ $\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (\frac{n!}{(k)!(n-k)!})$
 
 = $\binom{n}{k}$
 
+## Question six
 
+### In how many ways can 12 identical mathematics books be distributed among the students Anna, Beth, Candy, and Daniel?
+
+I must distribute 12 bananas among 4 lunchboxes.
+
+I have three dividers and 12 bananas.
+
+The ways of distributing 12 identical mathematics books among Anna, Beth, Candy, and Daniel is the same number
+of ways of distributing 12 donuts among four people.
+
+The number of ways to do this are $\binom{12 + 3}{3} = \binom{15}{3}$ many ways.
 
