@@ -216,3 +216,39 @@ an alphabet {0, 1, 2, 3} is $4^6$ many ways.
 
 There are $4^6$ number of sequences describing the exercise 
 patterns of the week.
+
+## Question eight
+
+### How many positive integers less than or equal to 2023 are divisible by 3, 5 or 7?
+
+Let $I_3$ be the set of positive integers $\le 2023$ divisible by 3
+
+Let $I_5$ be the set of positive integers $\le 2023$ divisible by 5
+
+Let $I_7$ be the set of positive integers $\le 2023$ divisible by 7
+
+$|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_5| - |I_7 \cap I_5| + |I_7 \cap I_5 \cap I_ 3|$ (by exclusion-inclusion theory)
+
+$|I_3| = 674$ 
+
+$|I_5| = 404$
+
+$|I_7| = 289$
+
+$|I_7 \cap I_3| = 96$
+
+$|I_5 \cap I_3| = 134$
+
+$|I_7 \cap I_5| = 57$
+
+$|I_7 \cap I_5 \cap I_ 3| = 19$
+
+$|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_5| - |I_7 \cap I_5| + |I_7 \cap I_5 \cap I_ 3|$
+
+$|I_3 \cup I_7 \cup I_5| = 674 + 404 + 289 - 96 - 134 - 57 + 19$
+
+$|I_3 \cup I_7 \cup I_5| = 1099
+
+There are 1099 positive integers less than or equal to 2023 that are divisible by 3, 5 or 7.
+
+## Question nine
