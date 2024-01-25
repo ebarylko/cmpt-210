@@ -190,3 +190,29 @@ of ways of distributing 12 donuts among four people.
 
 The number of ways to do this are $\binom{12 + 3}{3} = \binom{15}{3}$ many ways.
 
+## Question seven
+
+### Next week, I’m going to get really fit! On day 1, I’ll exercise for 5 minutes. On each subsequent day, I’ll exercise 0, 1, 2, or 3 minutes more than the previous day. For example, the number of minutes that I exercise on the seven days of next week might be (5, 6, 9, 9, 9, 11, 12). How many such sequences are possible?
+
+To find the number of such possible sequences, I will define a bijection 
+that will count the number of ways to create a string of length six using 
+an alphabet {0, 1, 2, 3}. 
+
+For any string of the form defined above, I can map it to a sequence where 
+the number of minutes exercised on the ith day 
+(i $\in$ {2, 3, 4, 5, 6, 7) is the sum of the elements in the string 
+from the first position to the ith - 1th position plus five.
+
+For any sequence of the form described in the beginning, I can map it
+to a string which describes how much more the person exercised 
+relative to the last day. 
+
+Since I have a bijection, the number of such possible sequences is 
+equivalent to the number of ways to create a string of length six using
+an alphabet {0, 1, 2, 3}. 
+
+The number of ways to create a string of length six using
+an alphabet {0, 1, 2, 3} is $4^6$ many ways.
+
+There are $4^6$ number of sequences describing the exercise 
+patterns of the week.
