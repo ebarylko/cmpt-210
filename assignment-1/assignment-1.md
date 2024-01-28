@@ -1,3 +1,28 @@
+## Question 1
+
+### Using venn diagrams
+
+![Venn diagram proof](venn-diagram.jpeg)
+
+From the photo, it can be seen that A ∪ (B ∩ C) = $(A \cup B) \cap (A \cup C)$
+
+### Using the distributive law for binary literals
+Using the following equivalencies: 
+* $\cup$ = +
+* $\cap$ = *
+
+A ∪ (B ∩ C) = $A + (B * C)$
+
+Using the distributive law, A + (B*C) = (A + B) * (A + C)
+
+$A + (B * C) = (A + B) * (A + C)$
+
+Using the equivalencies stated above, $(A + B) * (A + C) = (A \cup B) \cap (A \cup C)$
+
+
+Since we showed that A ∪ (B ∩ C) = $A + (B * C)$, and $A + (B * C) = (A \cup B) \cap (A \cup C)$, 
+we can conclude that A ∪ (B ∩ C) = $(A \cup B) \cap (A \cup C)$
+
 ## Question 2
 
 Set $A$ has r elements and set $B$ has n elements
