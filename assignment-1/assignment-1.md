@@ -25,7 +25,42 @@ we can conclude that A ∪ (B ∩ C) = $(A \cup B) \cap (A \cup C)$
 
 ### prove that |A ∪ B ∪ C| = |A| + |B| + |C| − |A ∩ B| − |B ∩ C| − |A ∩ C| + |A ∩ B ∩ C|.
 
-$|A \cup B \cup C| = (A - B - C) + (B - A - C) + (C - B - A) + (A \cap C - (A \cap B \cap C)) + (A \cap B - (A \cap B \cap C)) + (C \cap B - (A \cap B \cap C)) + (A \cap B \cap C)$
+Everything in A, everything in B not in A, everything in C not in A
+pr(a U B U C) = pr(A) + pr(B - A) + pr(C - B - A)
+pr(B - A) = pr(B - A - C) + pr(C \cap B - (A \cap B \ cap C))
+pr(C) = pr(C - A - B)
+
+To get |B|, I need (A \cap B)
+B = (B - A) + (A \cap B)
+From there I get a term of - (A \cap B)
+To get |C|, I need (A \cap C), (B \cap c)
+C = (C - A - B) + (A \cap C) + (B \cap C) - (A \cap B \cap C)
+From this, I get -(A \cap C), -(B \cap C), -(A \cap B \cap C)
+
+$A \cap B \cap C = A \cup (B - A) \cup (C - B - A)$
+
+Since the collection of the sets on the right hand side is pairwise disjoint,
+this means that $|A \cup (B - A) \cup (C - B - A)| = |A| + |(B - A)| + |(C - B - A)|$  
+
+I have the following relationship between B and (B - A):
+$B = (B - A) \cup (A \cap B)$ 
+
+Since $B$ is pairwise disjoint, $|B| = |(B - A)| + |(A \cap B)|$
+
+Using the relationship above, I have $(B - A) = B - (A \cap B), which means |(B - A)| = |B| - |(A \cap B)|$
+
+I have the following relationship for C:
+$C = (C - A - B) \cup (A \cap C) \cup (B \cap C) - (A \cap B \cap C)$
+
+Since $C$ is pairwise disjoint, $|C| = |(C - A - B)| + |(A \cap C)| + |(B \cap C)| - |(A \cap B \cap C)|$
+
+Using the relationship above, I have that $|(C - A - B)| = |C| - |(A \cap C)| - |(B \cap C)| + |(A \cap B \cap C)|$
+
+Using the equivalencies for A, (B - A), and (C - B - A),
+
+$A \cup B \cup C = A \cup B \cup C - (A \cap B) - (A \cap C) - (B \cap C) \cup (A \cap B \cap C)$
+
+$|A \cup B \cup C| = |A| \cup |B| \cup |C| - |(A \cap B)| - |(A \cap C)| - |(B \cap C)| + |(A \cap B \cap C)|$
 
 ## Question 2
 
