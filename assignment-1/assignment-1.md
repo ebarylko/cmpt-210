@@ -265,4 +265,39 @@ How many possible values are there for the id numbers?
 The largest possible value for an id can be 399999999, in which the largest possible 
 sum is 75.
 
-Since the first digit must be 3, we have a minimum value for the sum of t/sev
+Since the first digit must be 3, we have a minimum value for the sum of the digits
+being 3.
+
+Since our values can range from 3 to 75, this means we have 73 possible 
+sums for any id.
+
+Using the pigeonhole principle with the pigeons being the students and 
+the possible sums being the pigeonholes, I know that with less than 74 students 
+I cannot guarantee know that there are two students which have the same 
+sum of their SFU ID digits. The minimum number of students to guarantee 
+that two of them have the same sum of their SFU ID digits is 74, since 
+that implies that two of them have the same sum.
+
+## Question ten
+
+### Prove that the number of different ways 2n students can be paired up is equal to (2n)!/2^nn!
+
+For $2n$ students, there are $(2n)!$ permutations of the students. 
+
+For each permutation, we pick the first n students. The n students we pick can
+be arranged in $n!$ many ways, but since any arrangement of the n
+students still result in the same students being selected, we divide by
+$n!$ to get the unique groups of students selected. 
+
+For the pairings of the $n$ selected students and $n$ remaining students,
+we have that the pair (a, b) is the same as the pair (b, a). Since the 
+order of the students in a pair can be swapped and and still produce the 
+same pairing, we must divide by two in order to account for this.
+
+Since this occurs for every pair of students and we have $n$ students, 
+we must divide by a factor of $2^n$ in order to avoid double counting.
+
+Therefore, the  number of different ways 2n students can be paired up is 
+equal to $\frac{(2n)!}{2^nn!}$.
+
+## Question 11
