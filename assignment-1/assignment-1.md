@@ -23,6 +23,10 @@ Using the equivalencies stated above, $(A + B) * (A + C) = (A \cup B) \cap (A \c
 Since we showed that A ∪ (B ∩ C) = $A + (B * C)$, and $A + (B * C) = (A \cup B) \cap (A \cup C)$, 
 we can conclude that A ∪ (B ∩ C) = $(A \cup B) \cap (A \cup C)$
 
+### prove that |A ∪ B ∪ C| = |A| + |B| + |C| − |A ∩ B| − |B ∩ C| − |A ∩ C| + |A ∩ B ∩ C|.
+
+$|A \cup B \cup C| = (A - B - C) + (B - A - C) + (C - B - A) + (A \cap C - (A \cap B \cap C)) + (A \cap B - (A \cap B \cap C)) + (C \cap B - (A \cap B \cap C)) + (A \cap B \cap C)$
+
 ## Question 2
 
 Set $A$ has r elements and set $B$ has n elements
