@@ -365,3 +365,79 @@ Therefore, the  number of different ways 2n students can be paired up is
 equal to $\frac{(2n)!}{2^nn!}$.
 
 ## Question 11
+
+### Combinatorial proof
+
+#### For this, let S be the number of length-n strings that can be composed using a’s, b’s and must contain exactly one c. For example, if n = 4, then, aacb, abbc are valid strings. On the other hand, aabb, acac are not valid. Count |S| in two ways to prove the above identity. [20 marks]
+
+First way to count |S|:
+
+Since we have a string of length n and only one c can be in the string, 
+there are n possible locations where c can be placed. For the remaining 
+n - 1 locations, we can have either a or b in its location. For every 
+n location where c could be placed, I have $2^{n -1}$ possible options for 
+the orderings of the a's and b's.
+
+Second way to count |S|:
+
+I can think of the number of length-n strings that can be
+composed using a’s, b’s and exactly one c as the product of the 
+cardinality of a powerset of a set of size $n - 1$ and n.
+
+For any string of the form described above, a way of 
+generating them is selecting x ($x \in [0, n - 1]$) a's and filling the 
+remaining n - x - 1 spots with b's. Then, pick any spot in the string to 
+hold the unique character c.
+
+For any generated string, there are always n options to place the character
+c, so we can factor it out.
+
+The number of ways to generate the sequences of a's and b's is the same
+as the size of the powerset of size n - 1. pr(|{set of size n - 1}|) =
+$2^{n - 1}$. 
+
+Therefore, there are $n * 2^{n - 1}$ many length-n strings that can 
+be composed of a’s and b’s and only contain one c.
+
+### Algebraic proof
+
+Applying the binomial theorem to $(1 + x)^n$, it is equivalent to
+${\displaystyle\sum_{i=0}^{n}} x^i\binom{n}{i}$  
+
+The derivative of the expression above is 
+${\displaystyle\sum_{i=0}^{n}} \binom{n}{i}ix^{i - 1}$  
+
+When  $i = 0$, the first term of the sum is zero, so we may remove it 
+from the summation.
+
+
+The derivative of the expression is
+${\displaystyle\sum_{i=1}^{n}} \binom{n}{i}ix^{i - 1}$  
+
+
+= ${\displaystyle\sum_{i=1}^{n}} \frac{n!}{i!(n - i)!}ix^{i - 1}$   
+
+= ${\displaystyle\sum_{i=1}^{n}} \frac{n!}{(i - 1)!(n - i)!}x^{i - 1}$   
+
+= $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}x^{i - 1}$
+
+Let $k = i - 1$.
+
+$n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}x^{i - 1}$
+
+ = $n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}x^{k}$
+
+= $n(x + 1)^{n - 1}$ 
+
+= $n
+
+= $n(x + 1)^{n - 1}$
+
+= $n{\displaystyle\sum_{i=0}^{n}} \frac{(n - 1)!}{i!(n - i)!}in^{i - 1}$   
+
+Let $k = i + 1$
+
+= $n{\displaystyle\sum_{i=0}^{n - 1}} \frac{(n - 1)!}{(i + 1)!(n - i - 1)!}in^{i - 1}$   
+
+
+
