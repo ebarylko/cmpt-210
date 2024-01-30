@@ -429,15 +429,3 @@ $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}x^{i - 1}$
 
 = $n(x + 1)^{n - 1}$ 
 
-= $n
-
-= $n(x + 1)^{n - 1}$
-
-= $n{\displaystyle\sum_{i=0}^{n}} \frac{(n - 1)!}{i!(n - i)!}in^{i - 1}$   
-
-Let $k = i + 1$
-
-= $n{\displaystyle\sum_{i=0}^{n - 1}} \frac{(n - 1)!}{(i + 1)!(n - i - 1)!}in^{i - 1}$   
-
-
-
