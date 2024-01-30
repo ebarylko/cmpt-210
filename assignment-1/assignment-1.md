@@ -297,19 +297,19 @@ Let $I_7$ be the set of positive integers $\le 2023$ divisible by 7
 
 $|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_5| - |I_7 \cap I_5| + |I_7 \cap I_5 \cap I_ 3|$ (by exclusion-inclusion principle)
 
-$|I_3| = 674$ 
+$|I_3| = \lfloor \frac{2023}{3} \rfloor =  674$ 
 
-$|I_5| = 404$
+$|I_5| = \lfloor \frac{2023}{5} \rfloor = 404$
 
-$|I_7| = 289$
+$|I_7| = \lfloor \frac{2023}{7} \rfloor  = 289$
 
-$|I_7 \cap I_3| = 96$
+$|I_7 \cap I_3| = \lfloor \frac{2023}{21} \rfloor = 96$
 
-$|I_5 \cap I_3| = 134$
+$|I_5 \cap I_3| = \lfloor \frac{2023}{15} \rfloor = 134$
 
-$|I_7 \cap I_5| = 57$
+$|I_7 \cap I_5| = \lfloor \frac{2023}{35} \rfloor = 57$
 
-$|I_7 \cap I_5 \cap I_ 3| = 19$
+$|I_7 \cap I_5 \cap I_ 3| = \lfloor \frac{2023}{105} \rfloor  = 19$
 
 $|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_5| - |I_7 \cap I_5| + |I_7 \cap I_5 \cap I_ 3|$
 
