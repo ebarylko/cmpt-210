@@ -407,6 +407,7 @@ ${\displaystyle\sum_{i=0}^{n}} x^i\binom{n}{i}$
 The derivative of the expression above is 
 ${\displaystyle\sum_{i=0}^{n}} \binom{n}{i}ix^{i - 1}$  
 
+
 When  $i = 0$, the first term of the sum is zero, so we may remove it 
 from the summation.
 
@@ -414,27 +415,27 @@ from the summation.
 The derivative of the expression is
 ${\displaystyle\sum_{i=1}^{n}} \binom{n}{i}ix^{i - 1}$  
 
+If I want to obtain
+${\displaystyle\sum_{i=1}^{n}} \binom{n}{k}kx$ from my previous expression, 
+I must set $x = 1$.
 
-= ${\displaystyle\sum_{i=1}^{n}} \frac{n!}{i!(n - i)!}ix^{i - 1}$   
+After setting $x = 1$, I have that
+${\displaystyle\sum_{i=1}^{n}} \binom{n}{i}ix^{i - 1}$  
+= ${\displaystyle\sum_{i=1}^{n}} \binom{n}{i}i$
 
-= ${\displaystyle\sum_{i=1}^{n}} \frac{n!}{(i - 1)!(n - i)!}x^{i - 1}$   
+= ${\displaystyle\sum_{i=1}^{n}} \frac{n!}{i!(n - i)!}i$   
 
-= $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}x^{i - 1}$
+= ${\displaystyle\sum_{i=1}^{n}} \frac{n!}{(i - 1)!(n - i)!}$   
+
+= $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}$
 
 Let $k = i - 1$.
 
-$n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}x^{i - 1}$
+$n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}$
 
- = $n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}x^{k}$
+ = $n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}$
 
-= $n(x + 1)^{n - 1}$ 
+= $n(1 + 1)^{n - 1} = n2^{n - 1}$ 
 
-If I let $x = 1$, then the summation two lines above become
-$n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}1^{k}$
-
-
-= $n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}$
-
-= $(1 + 1)^{n - 1} = 2^{n - 1}$
-
-Using the equivalency above, I can say that  $n(x + 1)^{n - 1} = n2^{n - 1}$ 
+I have therefore proved that ${\displaystyle\sum_{i=1}^{n}} \binom{n}{k}kx = n2^{n - 1}$ 
+ 
