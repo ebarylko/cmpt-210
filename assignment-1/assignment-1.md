@@ -51,11 +51,13 @@ $|(C - A - B)| = |C| - |(A \cap C)| - |(B \cap C) - (A \cap B \cap C)|$
 
 $|(C - A - B)| = |C| - |(A \cap C)| - |(B \cap C)| + |(A \cap B \cap C)|$
 
-Using the equivalencies for A, (B - A), and (C - B - A),
+Using the equivalencies for |A|, |(B - A)|, and |(C - B - A)|,
 
-$A \cup B \cup C = A \cup B \cup C - (A \cap B) - (A \cap C) - (B \cap C) \cup (A \cap B \cap C)$
+$|A \cup B \cup C| = |A| + |(B - A)| + |(C - B - A)|$
 
-$|A \cup B \cup C| = |A| \cup |B| \cup |C| - |(A \cap B)| - |(A \cap C)| - |(B \cap C)| + |(A \cap B \cap C)|$
+=
+
+$|A \cup B \cup C| = |A| + |B| + |C| - |(A \cap B)| - |(A \cap C)| - |(B \cap C)| + |(A \cap B \cap C)|$
 
 ## Question 2
 
