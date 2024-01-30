@@ -429,3 +429,12 @@ $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}x^{i - 1}$
 
 = $n(x + 1)^{n - 1}$ 
 
+If I let $x = 1$, then the summation two lines above become
+$n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}1^{k}$
+
+
+= $n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}$
+
+= $(1 + 1)^{n - 1} = 2^{n - 1}$
+
+Using the equivalency above, I can say that  $n(x + 1)^{n - 1} = n2^{n - 1}$ 
