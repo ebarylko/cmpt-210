@@ -151,8 +151,8 @@ $(black_4, black_5, red, green, blue)$. Since I would be double counting by
 not considering these types of cases, I know that what matters is the number
 of black balls. Therefore, I must focus on counting the number of 
 ways of generating subsets of balls containing non-black colors and then 
-fill the 5 - n remaining spaces of the subsets with black balls. With this,
-I will obtain unique subsets and not overcount.
+fill the $5 - |subset|$ remaining spaces of the subset with black balls for 
+each subset. With this, I will obtain unique subsets and not overcount.
 
 The cardinality of the power set of the five non-black colors is 
 $|\mathcal{P}({red, green, blue, yellow, violet})|$ 
@@ -387,17 +387,16 @@ composed using a’s, b’s and exactly one c as the product of the
 cardinality of the powerset of a set of size $n - 1$ and n.
 
 For any string of the form described above, a way of 
-generating them is selecting x ($x \in [0, n - 1]$) a's and filling the 
-remaining n - x - 1 spots with b's. Then, pick any spot in the string to 
-hold the unique character c.
+generating them is selecting x ($x \in [0, n - 1]$) number of 
+a's and filling the remaining n - x - 1 spots with b's.
+Then, we can pick any spot in the string to hold the unique character c.
 
-For any generated string, there are always n options to place the character
-c.
+For any string, there are always n locations where c can be placed.
 
 The number of ways to generate the sequences of a's and b's is the same
 as the size of the powerset of size n - 1 since we are counting all 
 the possible ways of selecting 0, 1, 2, 3.... n - 1 a's from a 
-string of length n - 1. \mathcal{P}({set of size n - 1}) =
+string of length n - 1. $\mathcal{P}({set of size n - 1}) =$
 $2^{n - 1}$. 
 
 Therefore, there are $n * 2^{n - 1}$ many length-n strings that can 
