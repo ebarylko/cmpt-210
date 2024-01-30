@@ -232,9 +232,9 @@ $|P| = 26^3(10^3 + 26^2) + 36^2$
 
 $\binom{n}{k} = \binom{n!}{k!(n-k)!}$
 
-$\binom{n - 1}{k - 1} = \binom{(n - 1)!}{(k - 1)!(n - k)!}$
+$\binom{n - 1}{k - 1} = \frac{(n - 1)!}{(k - 1)!(n - k)!}$
 
-$\binom{n - 1}{k} = \binom{(n - 1)!}{(k)!(n - 1 - k)!}$
+$\binom{n - 1}{k} = \frac{(n - 1)!}{(k)!(n - 1 - k)!}$
 
 $\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (n-1)!(\frac{1}{(k-1)!(n-k)!} + \frac{1}{k!(n - 1 - k)!})$
 
@@ -242,7 +242,7 @@ $\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (n-1)!(\frac{k}{(k)!(n-k)!} + \frac{n
 
 $\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (n-1)!(\frac{n}{(k)!(n-k)!})$ 
 
-$\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (\frac{n!}{(k)!(n-k)!})$  
+$\binom{n - 1}{k - 1} + \binom{n - 1}{k} =  \frac{n!}{(k)!(n-k)!}$  
 
 = $\binom{n}{k}$
 
