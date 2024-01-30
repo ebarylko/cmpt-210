@@ -103,13 +103,14 @@ as the values that each element in $A$ maps to.
 
 We can define a bijection between the number of injective functions and 
 the number of ways we can form a string of size r using the values from 1 
-to n, where the element in the ith position in the string represents the value
-in $B$ that $f(r_i)$ maps to. 
+to n, where the element in the ith position in the string represents the index
+of the element in $B$ that $f(r_i)$ maps to. 
 
 For every string of the form described above, we can map it to a function 
-that maps the values of $r_i$ to their corresponding value in $B$. For every 
-injective function, we can map it to a string which describes the value 
-that $r_i$ maps to.
+that maps the values of $r_i$ to corresponding index of the 
+element which they map to in $B$. For every injective function, we can map
+it to a string which describes the index of the value in $B$ that $r_i$
+maps to.
 
 Since we have a bijection, we know that counting the number of ways we
 can form a string of size r using the values from 1 to n is equivalent to 
@@ -118,7 +119,7 @@ counting the number of injective functions.
 The number of ways we can form a string of size r using the values from 1
 to n is $\binom{n}{r} * r!$.
 
-Therefore, the number of injective functions is $\binom{n}{r} * r!$.
+Therefore, the number of injective functions is $\binom{n}{r} * r! = \frac{n!}{(n - r)!}$.
 
 ### If r = n, what is the number of bijective functions f : A → B?
 For a function to be bijective, it must be injective and surjective. This means
@@ -126,32 +127,35 @@ that every element in $B$ is mapped to by a unique element in $A$.
 
 We can define a bijection between the number of bijective functions and
 the number of ways to permute a string of n elements, where the element in the
-ith position is the value that $f(r_i)$ maps to. For any string of the 
-form described recently, it can be mapped to a function that maps $r_i$ to 
-the values in the sequence. Any function can be mapped to a string which
-describes the value that the ith element of $A$ maps to. 
+ith position is the index of the element in $B$ that $f(r_i)$ maps to.
+For any string of the form described recently, it can be mapped to a
+function that maps $r_i$ to the item in $B$ with that index.
+Any function can be mapped to a string which describes the index of the
+element that the ith element of $A$ maps to. 
 
 The number of ways to permute a string of n elements is $n!$.
 
 Therefore, the number of bijective functions is $n!$.
 
 ### If r < n, what is the number of bijective functions f : A → B?
-For a bijective function, $|A| = |B|$. Since this condition is not satisfied,
-there exists no possible bijective function considering the condition that r < n.
+For a bijective function, $|A| = |B|$. Since this condition is not 
+satisfied, there exists no possible bijective functions considering the 
+condition that r < n.
 
 
 ### We have 5 identical black balls and 1 ball each of 5 colors {red, green, blue, yellow, violet}. In how many different ways can we choose 5 balls?
 
-Since the black balls are identical, I know that the sequences of the form
+Since the black balls are identical, I know that the sequence of the form
 $(black_1, black_2, red, green, blue)$ is equivalent to 
 $(black_4, black_5, red, green, blue)$. Since I would be double counting by
 not considering these types of cases, I know that what matters is the number
-of black balls. Therefore, I must focus on counting the cardinality of 
-the power set of the five non-black colors. With every subset, if there are
-less than five balls in the set, I add the black balls to the set. This way, 
-I avoid overcounting by only adding black balls to the unique subsets.
+of black balls. Therefore, I must focus on counting the number of 
+ways of generating subsets of balls containing non-black colors and then 
+fill the 5 - n remaining spaces of the subsets with black balls. With this,
+I will obtain unique subsets and not overcount.
 
-The number different ways we can we choose 5 balls is $|\mathcal{P}({red, green, blue, yellow, violet})|$ 
+The cardinality of the power set of the five non-black colors is 
+$|\mathcal{P}({red, green, blue, yellow, violet})|$ 
 
 = $2^{|{red, green, blue, yellow, violet}|}$ 
 
