@@ -358,7 +358,7 @@ $n!$ to get the unique groups of students selected.
 
 For the pairings of the $n$ selected students and $n$ remaining students,
 we have that the pair (a, b) is the same as the pair (b, a). Since the 
-order of the students in a pair can be swapped and and still produce the 
+order of the students in a pair can be swapped and still produce the 
 same pairing, we must divide by two in order to account for this.
 
 Since this occurs for every pair of students and we have $n$ students, 
@@ -381,11 +381,13 @@ n - 1 locations, we can have either a or b in its location. For every
 n location where c could be placed, I have $2^{n -1}$ possible options for 
 the orderings of the a's and b's.
 
+$|S| = n2^{n - 1}$
+
 Second way to count |S|:
 
 I can think of the number of length-n strings that can be
 composed using a’s, b’s and exactly one c as the product of the 
-cardinality of a powerset of a set of size $n - 1$ and n.
+cardinality of the powerset of a set of size $n - 1$ and n.
 
 For any string of the form described above, a way of 
 generating them is selecting x ($x \in [0, n - 1]$) a's and filling the 
@@ -393,10 +395,12 @@ remaining n - x - 1 spots with b's. Then, pick any spot in the string to
 hold the unique character c.
 
 For any generated string, there are always n options to place the character
-c, so we can factor it out.
+c.
 
 The number of ways to generate the sequences of a's and b's is the same
-as the size of the powerset of size n - 1. pr(|{set of size n - 1}|) =
+as the size of the powerset of size n - 1 since we are counting all 
+the possible ways of selecting 0, 1, 2, 3.... n - 1 a's from a 
+string of length n - 1. \mathcal{P}({set of size n - 1}) =
 $2^{n - 1}$. 
 
 Therefore, there are $n * 2^{n - 1}$ many length-n strings that can 
