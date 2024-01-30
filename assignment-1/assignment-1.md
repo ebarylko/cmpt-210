@@ -45,7 +45,7 @@ $C = (C - A - B) \cup (A \cap C) \cup (B \cap C \cap \overline{A})$
 
 Since $C$ is pairwise disjoint, $|C| = |(C - A - B)| + |(A \cap C)| + |(B \cap C \overline{A})|$
 
-Using the relationship above, I have that $|(C - A - B)| = |C| - |(A \cap C)| - |(B \cap C \overline{A})|$
+Using the relationship above, I have that $|(C - A - B)| = |C| - |(A \cap C)| - |(B \cap C \cap \overline{A})|$
 
 $|(C - A - B)| = |C| - |(A \cap C)| - |(B \cap C) - (A \cap B \cap C)|$
 
