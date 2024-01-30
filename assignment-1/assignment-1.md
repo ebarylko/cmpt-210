@@ -282,7 +282,8 @@ an alphabet {0, 1, 2, 3}.
 The number of ways to create a string of length six using
 an alphabet {0, 1, 2, 3} is $4^6$ many ways.
 
-There are $4^6$ number of sequences describing the exercise 
+
+There are $4^6 = 4096$ number of sequences describing the exercise 
 patterns of the week.
 
 ## Question eight
