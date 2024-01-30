@@ -250,14 +250,12 @@ $\binom{n - 1}{k - 1} + \binom{n - 1}{k} = (\frac{n!}{(k)!(n-k)!})$
 
 ### In how many ways can 12 identical mathematics books be distributed among the students Anna, Beth, Candy, and Daniel?
 
-I must distribute 12 bananas among 4 lunchboxes.
+The ways of distributing 12 identical mathematics books among Anna, Beth, 
+Candy, and Daniel is the same as the number of ways of picking 12 donuts 
+with four different flavors.
 
-I have three dividers and 12 bananas.
-
-The ways of distributing 12 identical mathematics books among Anna, Beth, Candy, and Daniel is the same number
-of ways of distributing 12 donuts among four people.
-
-The number of ways to do this are $\binom{12 + 3}{3} = \binom{15}{3}$ many ways.
+There are $\binom{12 + 3}{3} = \binom{15}{3}$ many ways to distribute 
+12 identical mathematics books among Anna, Beth, Candy, and Daniel.
 
 ## Question seven
 
@@ -265,16 +263,17 @@ The number of ways to do this are $\binom{12 + 3}{3} = \binom{15}{3}$ many ways.
 
 To find the number of such possible sequences, I will define a bijection 
 that will count the number of ways to create a string of length six using 
-an alphabet {0, 1, 2, 3}. 
+the alphabet of {0, 1, 2, 3}. 
 
 For any string of the form defined above, I can map it to a sequence where 
 the number of minutes exercised on the ith day 
-(i $\in$ {2, 3, 4, 5, 6, 7) is the sum of the elements in the string 
-from the first position to the ith - 1th position plus five.
+(i $\in$ {2, 3, 4, 5, 6, 7}) is the sum of five and 
+the sum of the elements in the string from the first position to the 
+ith - 1th position.
 
-For any sequence of the form described in the beginning, I can map it
-to a string which describes how much more the person exercised 
-relative to the last day. 
+For any sequence of the form described in the question, I can map it
+to a string of size six where the ith position describes how much more the
+person exercised relative to the last day. 
 
 Since I have a bijection, the number of such possible sequences is 
 equivalent to the number of ways to create a string of length six using
@@ -296,7 +295,7 @@ Let $I_5$ be the set of positive integers $\le 2023$ divisible by 5
 
 Let $I_7$ be the set of positive integers $\le 2023$ divisible by 7
 
-$|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_5| - |I_7 \cap I_5| + |I_7 \cap I_5 \cap I_ 3|$ (by exclusion-inclusion theory)
+$|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_5| - |I_7 \cap I_5| + |I_7 \cap I_5 \cap I_ 3|$ (by exclusion-inclusion principle)
 
 $|I_3| = 674$ 
 
@@ -316,7 +315,7 @@ $|I_3 \cup I_7 \cup I_5| = |I_3| + |I_5| + |I_7| - |I_7 \cap I_3| - |I_3 \cap I_
 
 $|I_3 \cup I_7 \cup I_5| = 674 + 404 + 289 - 96 - 134 - 57 + 19$
 
-$|I_3 \cup I_7 \cup I_5| = 1099
+$|I_3 \cup I_7 \cup I_5| = 1099$
 
 There are 1099 positive integers less than or equal to 2023 that are divisible by 3, 5 or 7.
 
@@ -444,5 +443,5 @@ $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}$
 
 = $n(1 + 1)^{n - 1} = n2^{n - 1}$ 
 
-I have therefore proved that ${\displaystyle\sum_{i=1}^{n}} \binom{n}{k}kx = n2^{n - 1}$ 
+I have therefore proved that ${\displaystyle\sum_{i=1}^{n}} \binom{n}{k}k = n2^{n - 1}$ 
  
