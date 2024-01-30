@@ -325,24 +325,22 @@ There are 1099 positive integers less than or equal to 2023 that are divisible b
 Since the first digit is the same, I only need to think about the remaining eight
 digits. 
 
-For each of the remaining eight digits, there are $8^10$ possible selections.
+The largest possible value for an id is 399999999, which means the 
+largest possible sum of the digits is 75.
 
-How many possible values are there for the id numbers?
-The largest possible value for an id can be 399999999, in which the largest possible 
-sum is 75.
+The smallest possible value for an id is 300000000, which
+means the minimum value for the sum of the digits is 3.
 
-Since the first digit must be 3, we have a minimum value for the sum of the digits
-being 3.
-
-Since our values can range from 3 to 75, this means we have 73 possible 
-sums for any id.
+Since our sums can range from 3 to 75, this means we have 73 unique
+sums for the ids.
 
 Using the pigeonhole principle with the pigeons being the students and 
-the possible sums being the pigeonholes, I know that with less than 74 students 
-I cannot guarantee know that there are two students which have the same 
-sum of their SFU ID digits. The minimum number of students to guarantee 
-that two of them have the same sum of their SFU ID digits is 74, since 
-that implies that two of them have the same sum.
+the possible sums being the pigeonholes, I know that with less 
+than 74 students I cannot guarantee that there are 
+at least two students which have the same sum of their SFU ID digits.
+The minimum number of students needed to guarantee that at least 
+two of them have the same sum of their SFU ID digits is 74 
+since that implies that two ids map to the same sum.
 
 ## Question ten
 
