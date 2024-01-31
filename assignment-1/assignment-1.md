@@ -265,15 +265,15 @@ To find the number of such possible sequences, I will define a bijection
 that will count the number of ways to create a string of length six using 
 the alphabet of {0, 1, 2, 3}. 
 
-For any string of the form defined above, I can map it to a sequence where 
-the number of minutes exercised on the ith day 
-(i $\in$ {2, 3, 4, 5, 6, 7}) is the sum of five and 
+For any string of the form defined above of length six,
+I can map it to a sequence where the number of minutes exercised on the 
+ith day (i $\in$ {2, 3, 4, 5, 6, 7}) is the sum of five and 
 the sum of the elements in the string from the first position to the 
-ith - 1th position.
+(i - 1)th position.
 
-For any sequence of the form described in the question, I can map it
+For any sequence of length seven described in the question, I can map it
 to a string of size six where the ith position describes how much more the
-person exercised relative to the last day. 
+person exercised relative to the ith day. 
 
 Since I have a bijection, the number of such possible sequences is 
 equivalent to the number of ways to create a string of length six using
