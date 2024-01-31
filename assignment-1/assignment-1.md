@@ -277,10 +277,10 @@ person exercised relative to the ith day.
 
 Since I have a bijection, the number of such possible sequences is 
 equivalent to the number of ways to create a string of length six using
-an alphabet {0, 1, 2, 3}. 
+the numbers from the set {0, 1, 2, 3}. 
 
 The number of ways to create a string of length six using
-an alphabet {0, 1, 2, 3} is $4^6$ many ways.
+the numbers in {0, 1, 2, 3} is $4^6$ many ways.
 
 
 There are $4^6 = 4096$ number of sequences describing the exercise 
