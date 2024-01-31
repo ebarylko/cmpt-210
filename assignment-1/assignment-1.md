@@ -143,6 +143,7 @@ satisfied, there exists no possible bijective functions considering the
 condition that r < n.
 
 
+## Question 3
 ### We have 5 identical black balls and 1 ball each of 5 colors {red, green, blue, yellow, violet}. In how many different ways can we choose 5 balls?
 
 Since the black balls are identical, I know that the sequence of the form
