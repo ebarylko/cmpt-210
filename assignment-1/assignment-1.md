@@ -440,9 +440,9 @@ Let $k = i - 1$.
 
 $n{\displaystyle\sum_{i=1}^{n}} \frac{(n - 1)!}{(i - 1)!(n - i)!}$
 
- = $n{\displaystyle\sum_{0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}$
+ = $n{\displaystyle\sum_{k = 0}^{n - 1}} \frac{(n - 1)!}{(k)!(n - k - 1)!}$
 
-= $n{\displaystyle\sum_{i=1}^{n}} \binom{n - 1}{k}$  
+= $n{\displaystyle\sum_{k=0}^{n - 1}} \binom{n - 1}{k}$  
 
 = $n(1 + 1)^{n - 1} = n2^{n - 1}$  (by binomial theorem)
 
