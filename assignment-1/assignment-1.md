@@ -343,6 +343,9 @@ The minimum number of students needed to guarantee that at least
 two of them have the same sum of their SFU ID digits is 74 
 since that implies that two ids map to the same sum.
 
+We need 74 students in the class to guarantee that at least two 
+students have the same value for the sum of their SFU ID digits.
+
 ## Question ten
 
 ### Prove that the number of different ways 2n students can be paired up is equal to (2n)!/2^nn!
