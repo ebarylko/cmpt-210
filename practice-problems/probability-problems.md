@@ -51,3 +51,31 @@ There are $\binom{51}{4}$ ways of picking four cards from the remaining cards.
 Using the number of ways of dealing five cards from the last sub question,
 The probability that the friend has the ace of spades in their 5 cards is
 $\frac{\binom{51}{4}}{\binom{52}{5}}$.
+
+## Question 3
+Suppose we made a loaded dice of 6 sides such that $Pr[1] = \frac{1}{16}, Pr[2] = Pr[3] = Pr[4] = Pr[5] = \frac{1}{8}$.
+Calculate the probability of getting either a 1 or 3 or 6.
+
+
+Let $S$ be the sample space of the possible dice rolls, where $S = (1, 2, 3, 4, 5, 6)$.
+
+Let $R_i$ be the event where $i$ was rolled, $i \in S$.
+
+We know that $Pr(S) = 1 = {\displaystyle\sum_{W \in S}^{} Pr(W)}$   
+
+${\displaystyle\sum_{W \in S}^{} Pr(W)} = Pr(1) + Pr(2) +Pr(3) +Pr(4) +Pr(5) +Pr(6)$   
+
+$Pr(1) + Pr(2) +Pr(3) +Pr(4) +Pr(5) +Pr(6) = \frac{1}{16} + 4\frac{1}{8} + Pr(6)$
+
+$\frac{1}{16} + 4\frac{1}{8} + Pr(6) = 1$
+
+$Pr(6) = 1 - \frac{9}{16} = \frac{7}{16}$
+
+Since any subset of three events from $S$ is three ways disjoint (is there a proper term for three sets which are disjoint?)
+
+Since we can only have one result after rolling the dice, we know that $Pr(R_1 \cup R_3 \cup R_6) = Pr(R_1) + Pr(R_3) + Pr(R_6)$ (using inclusion-exclusion theory)
+
+
+$Pr(R_1 \cup R_3 \cup R_6) = \frac{1}{16} + \frac{1}{8} + \frac{7}{16} = \frac{10}{16} = \frac{5}{8}$
+
+The probability of getting either a 1 or 3 or 6 is $\frac{5}{8}$.
