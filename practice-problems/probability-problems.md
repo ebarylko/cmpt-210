@@ -79,3 +79,31 @@ Since we can only have one result after rolling the dice, we know that $Pr(R_1 \
 $Pr(R_1 \cup R_3 \cup R_6) = \frac{1}{16} + \frac{1}{8} + \frac{7}{16} = \frac{10}{16} = \frac{5}{8}$
 
 The probability of getting either a 1 or 3 or 6 is $\frac{5}{8}$.
+
+## Question 4
+An urn contains 10 white, 5 yellow, and 10 blue marbles. A marble is chosen at random.
+
+### What is the probability it is yellow?
+Since we are choosing randomly, this implies this is a uniform probability space. 
+
+Let $S$ be the sample space consisting of all the balls in the urn.
+
+This means that the probability of choosing a single marble is $\frac{1}{|S|} = \frac{1}{25}$.
+
+Let $Y$ be the subset of all the yellow balls in the urn.
+
+Pr(marble chosen is yellow) = $\frac{|Y|}{|S|} = \frac{5}{25} = \frac{1}{5}$
+
+The probability that a yellow marble is chosen is $\frac{1}{5}$.
+
+### We are told that the chosen marble is not blue. What is the probability it is yellow?
+We must calculate Pr(chosen marble is yellow | chosen marble is not blue).
+
+Let $M_y$ be the event that the chosen marble is yellow, and $M_b$ be the event that the chosen marble is not blue.
+
+$Pr(M_y| M_b) = \frac{Pr(M_y \cap M_b)}{Pr(M_b)}$
+
+$\frac{Pr(M_y \cap M_b)}{Pr(M_b)} = \frac{5}{25} * \frac{25}{15} = \frac{1}{3}$
+
+Pr(chosen marble is yellow | chosen marble is not blue) = $\frac{1}{3}.
+
