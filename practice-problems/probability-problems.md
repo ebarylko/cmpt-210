@@ -105,5 +105,24 @@ $Pr(M_y| M_b) = \frac{Pr(M_y \cap M_b)}{Pr(M_b)}$
 
 $\frac{Pr(M_y \cap M_b)}{Pr(M_b)} = \frac{5}{25} * \frac{25}{15} = \frac{1}{3}$
 
-Pr(chosen marble is yellow | chosen marble is not blue) = $\frac{1}{3}.
+Pr(chosen marble is yellow | chosen marble is not blue) = $\frac{1}{3}$.
 
+## Question five
+
+### Two integers are simultaneously chosen at random from {1, 2, 3, . . . , 100}. What is the probability that we chose {3, 5}?
+
+Does the order of the numbers drawn matter? Is {3, 5} equivalent to {5, 3}
+
+Assuming the order of the numbers does not matter.
+
+Let $S$ be the sample space of pairs of numbers from the set of natural numbers from 1 to 100.
+
+Since we draw two integers at random, this implies that $S$ is a uniform probability space. 
+
+Pr(a pair is picked) = $\frac{1}{|S|} = \frac{1}{\binom{100}{2}}$.
+
+Let $E$ be the event that the pair {3, 5} is picked. 
+
+$Pr(E) = |E|\frac{1}{\binom{100}{2}} = \frac{1}{\binom{100}{2}}$
+
+The probability that we chose {3, 5} is $\frac{1}{\binom{100}{2}}$.
