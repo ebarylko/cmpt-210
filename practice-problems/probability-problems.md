@@ -126,3 +126,85 @@ Let $E$ be the event that the pair {3, 5} is picked.
 $Pr(E) = |E|\frac{1}{\binom{100}{2}} = \frac{1}{\binom{100}{2}}$
 
 The probability that we chose {3, 5} is $\frac{1}{\binom{100}{2}}$.
+
+##  Question six
+
+### Two integers are chosen at random from {1, 2, 3, . . . , 100}, one after the other without putting the first back. What is the probability that we chose {3, 5}?
+
+If we pick the first integer and then the second one afterwards, then it is the same as what we did above.
+
+Ask professor if you are thinking about it wrong.
+
+## Question seven
+
+### Two teams A and B are asked to separately design a new product within a month. From past experience we know that, (a) The probability that team A is successful is 2/3, (b) The probability that team B is successful is 1/2, (c) The probability that at least one team is successful is 3/4. Assuming that exactly one successful design is produced, what is the probability that it was designed by team B.
+
+If the teams separately design the products, then the success/failure of one team does not affect the other team in any way.
+
+Let $A$ be the event that team A succeeds. $Pr(A) = \frac{2}{3}$.
+
+Let $B$ be the event that team B succeeds. $Pr(B) = \frac{1}{2}$.
+
+$Pr(B \cup A) = \frac{3}{4}$
+
+Let $C$ be the event that only one team made a successful design.
+
+$C = (A \cap \overline{B}) \cup (B \cap \overline{A})$
+
+Calculate: Pr(B | C)
+
+$Pr(B | C) = \frac{Pr(B \cap C)}{Pr(C)}$
+
+$Pr(C) = Pr((A \cap \overline{B}) \cup (B \cap \overline{A}))  = Pr(A \cap \overline{B}) + Pr((B \cap \overline{A})) - Pr((A \cap \overline{B}) \cap (B \cap \overline{A}))$ (exclusion-inclusion theory)
+
+Since $C$ is pairwise disjoint, this implies $Pr((A \cap \overline{B}) \cap (B \cap \overline{A})) = 0$
+
+$Pr(C) =  Pr(A \cap \overline{B}) + Pr((B \cap \overline{A}))$
+
+$Pr(C) = \frac{2}{3}\frac{1}{2} + \frac{1}{2}\frac{1}{3} = \frac{1}{2}$
+
+$Pr(B \cap C) = Pr(B \cap ((A \cap \overline{B}) \cup (B \cap \overline{A})))$
+
+$Pr(B \cap C) = Pr((B \cap A \cap \overline{B}) \cup (B \cap \overline{A}))$
+
+$Pr(B \cap C) = Pr(\emptyset \cup (B \cap \overline{A}))$
+
+$Pr(B \cap C) = Pr(B \cap \overline{A})$
+
+$Pr(B \cap C) = \frac{1}{2}{1}{3} = \frac{1}{6}$
+
+$Pr(B | C) = \frac{Pr(B \cap C)}{Pr(C)}$
+
+$Pr(B | C) = \frac{1}{3}$
+
+The probability that exactly one successful design is produced by team B is $\frac{1}{3}$
+
+## Question eight
+### Two players take turns flipping a fair coin. Whoever flips heads first is declared the winner. What is the probability that the first player wins?
+
+Since we have a fair coin, the probability of obtaining a heads is equal to the probability of getting a tails, which is $\frac{1}{2}$.
+
+Let $O$ represent the set of odd natural numbers.
+
+Let $P_i$ represent the event that the first player wins on the ith turn, $i \in O$.
+
+$P_1$ = \frac{1}{2}$.
+
+$P_3$ = \frac{1}{2}\frac{1}{2}\frac{1}{2} = \frac{1}{8}$.
+
+$P_5$ = \frac{1}{2}\frac{1}{2}\frac{1}{2}\frac{1}{2} \frac{1}{2}  = \frac{1}{32}$.
+
+$P_i = 2^{-i}$.
+
+To account for the probability of the first player always winning, I must sum the probabilites of winning under every 
+possible turn.
+
+When calculating $Pr(P_1 \cup P_2 + ..... P_n)$, Since each event is disjoint from the others, I know that
+$Pr(P_1 \cup P_2 + ..... P_n) =  Pr(P_1) + Pr(P_2) + ..... Pr(P_n).
+
+I end up with $\frac{1}{2} + \frac{1}{8} + \frac{1}{32} + ..... \frac{1}{2^n}$. Since this is a geometric series, 
+with $r = \frac{1}{4}, a = \frac{1}{2}$.
+
+$Pr(P_1 \cup P_2 + ..... P_n) = \frac{\frac{1}{2}}{1 - \frac{1}{4}} = \frac{2}{3}$
+
+The probability that the first player wins is $\frac{2}{3}$.
