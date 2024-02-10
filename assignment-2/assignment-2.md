@@ -63,23 +63,7 @@ $\frac{1}{n^2}(n -1 + n -2 + .... 1)$
 
 ### Given that the first dice is between 1 and m (for m ≤ n), what is the probability that the second dice lands on a higher value than does the first? 
 
-This is similar to the first part of the question, but we are now limiting the range of 
-values that the first die can take on.
-
-Instead of $Pr(X_1) + Pr(X_2) + ... Pr(X_{n - 1}) + Pr(X_n)$, we now have
-$Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$. 
-
-I have two cases to analyze:
-* m = n
-* $m < n$
-
-In the first case, $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ becomes
-$Pr(X_1) + Pr(X_2) + ... Pr(X_{m - 1})$ since $Pr(X_n) = 0$.
-
-This expression is equivalent to what I solved in the earlier part, having a probability
-of  $\frac{(n - 1)(n)}{2n^2}$.
-
-In the second case, I must calculate $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$.
+In this case, I must calculate $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$.
 
 Knowing that $Pr(X_m) = \frac{n - m}{n^2}$, the expression $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ 
 is equivalent to $\frac{1}{n^2}(n -1 + n - 2 + .... n - m)$
@@ -90,10 +74,9 @@ $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$
 
 = $\frac{(2n - m -1)(m)}{2n^2}$
 
-Since either $m = n$ or $m < n$, we can sum the probabilities of both cases since they are disjoint.
-
 The probability that the second dice lands on a higher value than the first is
-$\frac{2nm + n^2 - n - m^2 - m}{2n^2}$.
+
+$\frac{(2n - m -1)(m)}{2n^2}$.
 
 
 ## Question three
