@@ -181,3 +181,5 @@ $|SO| = \frac{n}{2} * \frac{n}{2} = \frac{n^2}{4}$
 $Pr(SO) = \frac{|SO|}{|S|}$
 
 $Pr(SO) = \frac{n^2}{4\binom{n}{2}}$
+
+$Pr(SO) = \frac{n}{2n - 2}$
