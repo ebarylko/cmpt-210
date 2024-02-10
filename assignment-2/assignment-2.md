@@ -83,3 +83,48 @@ $\frac{(2n - m -1)(m)}{2n^2}$.
 Suppose that an insurance company classifies people into one of three classes – good risks, average risks, and bad risks. Their records indicate that the probabilities that good, average, and bad risk persons will be involved in an accident over a 1-year span are, respectively, 0.05, 0.15, and 0.30. If 20% percent of the population are good risk, 50% percent are average risk and 30% percent are bad risk,
 
 ### What is the probability that a person has an accident in a fixed year? 
+Let G, A, and B be the events where a person has good, average, and bad risk respectively.
+
+$Pr(G) = 0.2$
+
+$Pr(A) = 0.5$
+
+$Pr(B) = 0.3$
+
+Let AC be the event where someone is involved in an accident. 
+
+$Pr(AC | G) = 0.05$
+
+$Pr(AC | A) = 0.15$
+
+$Pr(AC | B) = 0.30$
+
+Using the law of total probability, $Pr(AC) = Pr(AC | G)Pr(G) + Pr(AC | A)Pr(A) + Pr(AC | B)Pr(B)$
+
+$Pr(AC) = 0.05 * 0.2 + 0.5 * 0.15 + 0.3 * 0.3$
+
+$Pr(AC) = 0.175$
+
+### If a policy holder had no accidents in the 1-year span, what is the probability that they are good risk?
+
+Calculate $Pr(G | AC^{\complement})$
+
+$Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complement})}$
+
+$Pr(AC^{\complement}) = 1 - Pr(AC)  = 0.825 $
+
+Pr(G | AC^{\complement}) = \frac{G \cap AC^{\complement}}{Pr(AC^{\complement})}
+
+$Pr(AC | G) = \frac{Pr(AC \cap G)}{Pr(G)}$
+
+$Pr(AC \cap G) = Pr(AC | G)Pr(G)$
+
+$Pr(G | AC) = \frac{Pr(AC \cap G)}{Pr(AC)}$
+
+$Pr(G | AC) = \frac{Pr(AC | G)Pr(G)}{Pr(AC)}$
+
+$Pr(G | AC) =\frac{0.01}{0.175} \approx 0.0571$
+
+$Pr(G \cap AC^{\complement}) = 1 - $Pr(G | AC)$
+
+$Pr(G \cap AC^{\complement}) = 0.94$
