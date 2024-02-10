@@ -117,14 +117,67 @@ Pr(G | AC^{\complement}) = \frac{G \cap AC^{\complement}}{Pr(AC^{\complement})}
 
 $Pr(AC | G) = \frac{Pr(AC \cap G)}{Pr(G)}$
 
-$Pr(AC \cap G) = Pr(AC | G)Pr(G)$
+$Pr(AC^{\complement} | G) = \frac{Pr(AC^{\complement} \cap G)}{Pr(G)}$
 
-$Pr(G | AC) = \frac{Pr(AC \cap G)}{Pr(AC)}$
+$Pr(G \cap AC^{\complement}) = (AC^{\complement} | G)Pr(G)$
 
-$Pr(G | AC) = \frac{Pr(AC | G)Pr(G)}{Pr(AC)}$
+$Pr(G \cap AC^{\complement}) = 0.95 * 0.2 = 0.19
 
-$Pr(G | AC) =\frac{0.01}{0.175} \approx 0.0571$
+$Pr(G | AC^{\complement}) = \frac{0.19}{0.825} = 0.23$
 
-$Pr(G \cap AC^{\complement}) = 1 - $Pr(G | AC)$
+The probability that a policy holder has a good risk is 23%.
 
-$Pr(G \cap AC^{\complement}) = 0.94$
+## Question four
+
+Two integers are selected at random from {1, 2, . . . , n}
+
+Let $C$ be the set of integers from 1 to n.
+
+###  What is the probability that the integers are consecutive?
+If the integers are selected at random, that means this is a uniform probability space. 
+
+Let $S$ be the set of all possible pairs of integers from $C$. 
+
+$|S| = \binom{n}{2}$
+
+Using the fact it is a uniform probability space, the probability of picking a pair of integers 
+is $\frac{1}{|S|} = \frac{1}{\binom{n}{2}}$.
+
+For the numbers (1, 2, 3, 4, 5), there are four pairs of consecutive numbers, being (1, 2), (2, 3),
+(3, 4), and (4, 5).
+
+For the numbers (1, 2, 3), there are two pairs of consecutive numbers, being (1, 2) and (2, 3).
+
+For n consecutive numbers, we have n - 1  pairs of consecutive numbers. 
+
+Let $T$ be the event that the pair of integers selected from $C$ are consecutive numbers.
+
+Using the characteristic of a uniform probability space that $Pr(E) = \frac{|E|}{|S|}$,
+$Pr(T) = \frac{|T|}{|S|}$
+
+$Pr(T) = \frac{n - 1}{\binom{n}{2}}$
+
+### What is the probability that their sum is odd?
+
+To be sure that two numbers will have an odd sum, the numbers being summed must be even and 
+odd. By summing a number of the form $2k + 1$ and another number of the form 
+$2t$, $t, k \in \mathbb{Z}$, we will obtain $2(k + t) + 1$, another odd number.
+
+Let $C^{\text{even}}$ be the set of all the even integers in $C$.
+
+Let $C^{\text{odd}}$ be the set of all the odd integers in $C$.
+
+Since we need to generate all the pairs $(a, b), a \in C^{\text{even}}, b \in C^{\text{odd}}$, 
+this is equivalent to doing $C^{\text{even}} X C^{\text{odd}}$.
+
+Let $SO = C^{\text{even}} X C^{\text{odd}}$.
+
+Since we have a uniform probability space, $Pr(SO) = \frac{|SO|}{|S|}$
+
+$|SO| = |C^{\text{even}}| X |C^{\text{odd}}|$
+
+$|SO| = \frac{n}{2} * \frac{n}{2} = \frac{n^2}{4}$
+
+$Pr(SO) = \frac{|SO|}{|S|}$
+
+$Pr(SO) = \frac{n^2}{4\binom{n}{2}}$
