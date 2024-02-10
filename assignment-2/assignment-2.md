@@ -90,4 +90,13 @@ $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$
 
 = $\frac{(2n - m -1)(m)}{2n^2}$
 
+Since either $m = n$ or $m < n$, we can sum the probabilities of both cases since they are disjoint.
 
+The probability that the second dice lands on a higher value than the first is
+$\frac{2nm + n^2 - n - m^2 - m}{2n^2}$.
+
+
+## Question three
+Suppose that an insurance company classifies people into one of three classes – good risks, average risks, and bad risks. Their records indicate that the probabilities that good, average, and bad risk persons will be involved in an accident over a 1-year span are, respectively, 0.05, 0.15, and 0.30. If 20% percent of the population are good risk, 50% percent are average risk and 30% percent are bad risk,
+
+### What is the probability that a person has an accident in a fixed year? 
