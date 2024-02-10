@@ -139,45 +139,31 @@ Ask professor if you are thinking about it wrong.
 
 ### Two teams A and B are asked to separately design a new product within a month. From past experience we know that, (a) The probability that team A is successful is 2/3, (b) The probability that team B is successful is 1/2, (c) The probability that at least one team is successful is 3/4. Assuming that exactly one successful design is produced, what is the probability that it was designed by team B.
 
-If the teams separately design the products, then the success/failure of one team does not affect the other team in any way.
+Let the following symbols have the meaning associated to them:
+* $FS$: first team failed and the second team succeeded
+* $FF$: Both teams failed
+* $SF$:first team succeeded and the second team failed
+* $SS$: both teams succeeded
+* A: Team A succeeded
+* B: Team B succeeded
 
-Let $A$ be the event that team A succeeds. $Pr(A) = \frac{2}{3}$.
+$Pr(A) = Pr(SS) + Pr(SF) = \frac{2}{3}$
 
-Let $B$ be the event that team B succeeds. $Pr(B) = \frac{1}{2}$.
+$Pr(B) = Pr(SS) + Pr(FS) = \frac{1}{2}$
 
-$Pr(B \cup A) = \frac{3}{4}$
+$Pr(B \cup A) = Pr(SS) + Pr(SF) + Pr(FS) = \frac{3}{4}$
 
-Let $C$ be the event that only one team made a successful design.
+Calculate $Pr(FS| SF \cup FS)$
 
-$C = (A \cap \overline{B}) \cup (B \cap \overline{A})$
+$Pr(FS| SF \cup FS) = \frac{Pr(FS \cap (SF \cup FS))}{Pr(SF \cup FS)}$
 
-Calculate: Pr(B | C)
+= $\frac{Pr(FS)}{Pr(SF) + Pr(FS))}$
 
-$Pr(B | C) = \frac{Pr(B \cap C)}{Pr(C)}$
+= $\frac{\frac{3}{4} - \frac{2}{3}}{\frac{3}{4} - \frac{1}{2} + \frac{3}{4} - \frac{2}{3}}$
 
-$Pr(C) = Pr((A \cap \overline{B}) \cup (B \cap \overline{A}))  = Pr(A \cap \overline{B}) + Pr((B \cap \overline{A})) - Pr((A \cap \overline{B}) \cap (B \cap \overline{A}))$ (exclusion-inclusion theory)
+= $\frac{\frac{3}{4} - \frac{2}{3}}{\frac{3}{4} - \frac{1}{2} + \frac{3}{4} - \frac{2}{3}}$
 
-Since $C$ is pairwise disjoint, this implies $Pr((A \cap \overline{B}) \cap (B \cap \overline{A})) = 0$
-
-$Pr(C) =  Pr(A \cap \overline{B}) + Pr((B \cap \overline{A}))$
-
-$Pr(C) = \frac{2}{3}\frac{1}{2} + \frac{1}{2}\frac{1}{3} = \frac{1}{2}$
-
-$Pr(B \cap C) = Pr(B \cap ((A \cap \overline{B}) \cup (B \cap \overline{A})))$
-
-$Pr(B \cap C) = Pr((B \cap A \cap \overline{B}) \cup (B \cap \overline{A}))$
-
-$Pr(B \cap C) = Pr(\emptyset \cup (B \cap \overline{A}))$
-
-$Pr(B \cap C) = Pr(B \cap \overline{A})$
-
-$Pr(B \cap C) = \frac{1}{2}{1}{3} = \frac{1}{6}$
-
-$Pr(B | C) = \frac{Pr(B \cap C)}{Pr(C)}$
-
-$Pr(B | C) = \frac{1}{3}$
-
-The probability that exactly one successful design is produced by team B is $\frac{1}{3}$
+$\frac{1}{4}$
 
 ## Question eight
 ### Two players take turns flipping a fair coin. Whoever flips heads first is declared the winner. What is the probability that the first player wins?
