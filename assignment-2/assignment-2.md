@@ -206,3 +206,26 @@ be hearts.
 Using the fact we have a uniform probability space, $Pr(H) = \frac{|H|}{|S|}$ 
 
 $Pr(H) = \frac{\binom{13}{3}}{\binom{52}{3}}$
+
+### Compute the probability that none of the three cards is a heart
+
+Let $NH$ be the event that none of the three drawn cards is a heart.
+
+$Pr(NH) = \frac{|NH|}{|S|}$
+
+The number of ways to draw three cards which are not hearts is $\binom{39}{3} = |NH|$
+
+$Pr(NH) = \frac{\binom{39}{3}}{\binom{52}{3}}$
+
+
+### Compute the probability that exactly one of the three cards is a heart
+
+Let $OH$ be the event that one of the three cards is a heart.
+
+$Pr(OH) = \frac{|OH|}{|S|}$
+
+The number of ways to draw three cards where only one of them is a heart is
+$13\binom{39}{2} = |OH|$
+
+$Pr(OH) = \frac{13\binom{39}{2}}{\binom{52}{3}}$
+
