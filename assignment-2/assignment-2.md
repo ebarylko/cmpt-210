@@ -229,3 +229,105 @@ $13\binom{39}{2} = |OH|$
 
 $Pr(OH) = \frac{13\binom{39}{2}}{\binom{52}{3}}$
 
+## Question six
+
+### Suppose we have n students and k tasks need to be assigned to these students. Since the professor is lazy, he assigns each task to a randomly selected student. A student gets angry if they are assigned more than one task. Calculate the probability that no student gets angry.
+
+The tasks are not unique.
+
+Since $k$ can take on any positive integer value, we have the case where $k > n$ and where
+$k \le n$.
+
+Since the probability that a professor selects a student is random, the probability that 
+they select k students is also random, implying we have a uniform probability space.
+
+For the students not to be angry, each student must have no task or one task.
+
+Let $NA$ be the event that no student gets angry.
+
+Let $T$ be the event that there are more tasks than students.
+
+$Pr(NA) = Pr(NA| T) + Pr(NA|T^{\complement})$
+
+By letting the tasks be the pigeons and the students be the pigeonholes, 
+by pigeonhole principle there is at least one student which has two tasks 
+when the number of tasks is greater than the number of students.
+
+Therefore, $Pr(NA|T) = 0$ regardless of any value of $k > n$.
+
+In the case where $k \le n$, the professor must pick k unique students to distribute 
+the tasks amongst to avoid any student having more than one task. 
+
+The ways the professor can do this is $\binom{n}{k}$.
+
+Let $S$ be all the ways that the professor can distribute k tasks among n students.
+
+Since we have a probability space, $Pr(NA) = \frac{|NA|}{|S|}$.
+
+To find all the ways that the professor can distribute k tasks among n students, we must
+sum the ways the professor can distribute k tasks to one student, to two students, 
+to three students, ...... to k students
+
+I cannot use the donuts and multiple flavors approach since $k < n$.
+
+How should I model this?
+
+## Question seven
+The Canadian football team has probability 0.1 of winning against Tier 1 teams, probability 0.25 of winning against Tier 2 teams and probability 0.5 of winning against Tier 3 teams. Half the teams in the league are Tier 1 while a quarter of them are Tier 2 and a quarter of them are Tier 3. The odds of an event A is given by:
+
+Let $W$ be the event the Canadian team wins.
+
+Let $T_1$ be the event the Canadian team encounters a Tier 1 team. 
+
+Let $T_2$ be the event the Canadian team encounters a Tier 2 team.
+
+Let $T_3$ be the event the Canadian team encounters a Tier 3 team.
+
+$Pr(T_1) = 0.5$
+
+$Pr(T_2) = 0.25$
+
+$Pr(T_3) = 0.25$
+
+$Pr(W | T_1) = 0.1$
+
+$Pr(W | T_2) = 0.25$
+
+$Pr(W | T_3) = 0.5$
+
+
+### What are the odds that the Canadian football team wins against a randomly chosen team?
+
+$Pr(W) = Pr(W|T_1)Pr(T_1) + Pr(W| T_2)Pr(T_2) + Pr(W| T_3)Pr(T_3)$
+
+$Pr(W) = 0.5*0.1 + 0.25*0.25 + 0.25*0.5$
+
+$Pr(W) = 0.5*0.1 + 0.25*0.25 + 0.25*0.5$
+
+$Pr(W) = 0.2375$
+
+$Odds(W) = \frac{Pr(W)}{1 - Pr(W)}$
+
+
+$Odds(W) = \frac0.2375}{0.7625}$
+
+$Odds(W) = 0.31$
+
+### Given that Canada wins the game, what is the probability that the opponent was a Tier 2 team?
+
+$Pr(T_2 | W) = ?$
+
+
+$Pr(T_2 | W) = \frac{Pr(T_2 \cap W)}{Pr(W)}$
+
+Pr(W | T_2) = \frac{Pr(T_2 \cap W)}{Pr(T_2)}
+
+$Pr(T_2 \cap W) = Pr(W | T_2)Pr(T_2)$
+
+$Pr(T_2 | W) = \frac{Pr(W | T_2)Pr(T_2)}{Pr(W)}$
+
+$Pr(T_2 | W) = \frac{Pr(W | T_2)Pr(T_2)}{Pr(W)}$
+
+$Pr(T_2 | W) = \frac{0.0625}{0.2375}$
+
+$Pr(T_2 | W) = 0.26$
