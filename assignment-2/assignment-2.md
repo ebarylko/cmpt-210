@@ -183,3 +183,26 @@ $Pr(SO) = \frac{|SO|}{|S|}$
 $Pr(SO) = \frac{n^2}{4\binom{n}{2}}$
 
 $Pr(SO) = \frac{n}{2n - 2}$
+
+### Question five
+Three cards are drawn one after the other from an ordinary 52-card deck without replacement (once a card is drawn, it is not placed back in the deck). 
+
+### Compute the probability that all of the three cards is a heart
+
+Let $H$ be the event that all the three cards are a heart.
+
+Since we have an ordinary card deck, this implies that the probability of picking any three 
+cards is the same regardless of what is picked. 
+
+Since we have a uniform probability space, $Pr(E) = \frac{|E|}{|S|}$, where $S$ is the sample 
+space.
+
+Let $S$ be all the possible combination of three cards from the deck. There are 
+$\binom{52}{3}$ many ways to pick three cards from the deck, meaning $|S| = \binom{52}{3}$.
+
+$|H| = \binom{13}{3}$ since it represents all the ways to have all the three drawn cards to 
+be hearts.
+
+Using the fact we have a uniform probability space, $Pr(H) = \frac{|H|}{|S|}$ 
+
+$Pr(H) = \frac{\binom{13}{3}}{\binom{52}{3}}$
