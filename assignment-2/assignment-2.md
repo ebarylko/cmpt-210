@@ -331,3 +331,62 @@ $Pr(T_2 | W) = \frac{Pr(W | T_2)Pr(T_2)}{Pr(W)}$
 $Pr(T_2 | W) = \frac{0.0625}{0.2375}$
 
 $Pr(T_2 | W) = 0.26$
+
+## Question eight
+
+A class consisting of 4 men and 12 women is randomly divided into four groups (labelled Group A, Group B, Group C and Group D) each of size 4.
+
+We have a uniform probability space we randomly pick the people to form the groups.
+
+### What is the number of possible groups that can be formed?
+
+To form the four groups, I must pick four people to be in group A, then pick 
+four people from the remaining 12 to be in group B, and then pick four people from the 
+remaining 8 to be in group C, and put the remaining people in group D.
+
+This can be modeled as $\binom{16}{4}\binom{12}{4}\binom{8}{4}\binom{4}{4}$
+
+Expanding the last expression out, we have
+$\frac{16!}{12!4!}\frac{12!}{8!4!}\frac{8!}{4!4!}\frac{4!}{4!}$ =
+
+$\frac{16!}{(4!)^4}$
+
+We have $\frac{16!}{(4!)^4}$ many possible formations for groups A, B, C, and D.
+
+### Suppose we impose the restriction that each group needs to have exactly 1 man, what is the number of possible groups that can be formed?
+
+If each group has one man, then I only need to pick three people to be in group A, then
+another three people to be in group B from the remaining 9, three people to be in group 
+C from the remaining six, and put the people that are left into group D.
+
+For the ordering of the men, there are 4! ways of having the men be in different groups.
+
+This can be modeled as $\binom{12}{3}\binom{9}{3}\binom{6}{3}\binom{3}{3}$
+
+Expanding the last expression out, we have
+$\frac{12!}{9!6!}\frac{9!}{3!6!}\frac{6!}{3!3!}\frac{3!}{3!}$ =
+
+$\frac{12!}{(3!)^4}$.
+
+
+### Use the above results to calculate the probability that each group includes exactly man
+
+Since we have a uniform probability space, $Pr(E) = \frac{|E|}{|S|}$, where $S$ is our sample 
+space.
+
+Let $M$ be the event we have one man in every group.
+
+Let $S$ be all the ways of making four groups.
+
+$Pr(M) = \frac{|M|}{|S|}$
+
+$Pr(M) = \frac{\frac{12!}{(3!)^4}}{\frac{16!}{(4!)^4}}$
+
+
+$Pr(M) = \frac{12!}{(3!)^4}}\frac{(4!)^4}{16!}$
+
+$Pr(M) = \frac{4^4}{13 * 14 * 15 * 16}$
+
+$Pr(M) = \frac{1}{13 * 14 * 15}$
+
+$Pr(M) = \frac{1}{2730}$
