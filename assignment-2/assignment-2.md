@@ -427,8 +427,6 @@ $Pr(B_j | {S_i}^{\complement})$
 
 = $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
-= $\frac{Pr(B_i \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
-
 $Pr(S_i) = Pr(S_i|B_i)Pr(B_i) + Pr(S_i|{B_i}^{\complement})Pr({B_i}^{\complement})$ (by The Law of Total Probability)
 
 $Pr(S_i) = Pr(S_i|B_i)Pr(B_i)$ 
