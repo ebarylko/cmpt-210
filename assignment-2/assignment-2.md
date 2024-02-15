@@ -581,3 +581,44 @@ $Pr(G |M) = \frac{1}{8}\frac{48}{13}$
 
 $Pr(G |M) = \frac{6}{13}$
 
+
+## Question 11
+
+### For an event A and two mutually exclusive events E1 and E2, prove the following statement.
+
+Calculate $Pr[E_1 ∪ E_2|A]$:
+
+$Pr[E_1 ∪ E_2|A]$
+
+= $\frac{Pr((E_1 +  E_2  (- E_1 \cap E_2 )) \cap  A)}{Pr(A)}$
+
+Since $E_1$ and $E_2$ are mutually exclusive, $E_1 \cap E_2  = \emptyset$
+
+= $\frac{Pr((E_1 +  E_2 (- E_1 \cap E_2 )) \cap  A)}{Pr(A)}$
+
+= $\frac{Pr((E_1 +  E_2) \cap  A)}{Pr(A)}$
+
+= $\frac{Pr((E_1 \cap A) +  (E_2 \cap A)))}{Pr(A)}$
+
+
+= $\frac{Pr(E_1 \cap A) +  Pr(E_2 \cap A)}{Pr(A)}$
+
+= $Pr[E_1|A] + Pr[E_2|A]$
+
+### For an event A and two mutually exclusive events E1 and E2, prove the following statement
+
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap (E_1 \cup E_2))}{Pr(E_1 \cup E_2)}$
+
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2 $due to being disjoint)
+
+$Pr(A| E_1) = \frac{Pr(A \cap E_1)}{Pr(E_1)}$
+
+$Pr(A \cap E_1) = Pr(A| E_1)Pr(E_1)$
+
+$Pr(A| E_2) = \frac{Pr(A \cap E_2)}{Pr(E_2)}$
+
+$Pr(A \cap E_2) = Pr(A| E_2)Pr(E_2)$
+
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2 $due to being disjoint)
+
+= $\frac{Pr(A| E_1)Pr(E_1) + Pr(A| E_2)Pr(E_2)}{Pr(E_1) + Pr(E_2)}$
