@@ -414,8 +414,32 @@ Let $B_i$ be the event that a ball is in box i. $Pr(B_i) = p_i$
 
 Let $S_i$ be the event that the box was discovered in box i. $Pr(S_i | B_i) = a_i$
 
+$Pr(S_i|{B_i}^{\complement}) = 0$
+
+### Case: i = j
+
 Calculate: $Pr(B_j | {S_i}^{\complement})$
 
 $Pr(B_j | {S_i}^{\complement})$
 
 = $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
+
+= $\frac{Pr(B_i \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
+
+$Pr(S_i) = Pr(S_i|B_i)Pr(B_i) + Pr(S_i|{B_i}^{\complement})$ (by The Law of Total Probability)
+
+$Pr(S_i) = Pr(S_i|B_i)Pr(B_i)$ 
+
+$Pr(S_i) = a_ip_i$ 
+
+$Pr({S_i}^{\complement}) = 1 - a_ip_i$ 
+
+$Pr({S_i}^{\complement} | B_i) = \frac{Pr({S_i}^{\complement}  \cap B_i)}{Pr(B_i)}$
+
+$Pr({S_i}^{\complement}  \cap B_i) = Pr({S_i}^{\complement} | B_i)Pr(B_i)$
+
+$Pr({S_i}^{\complement}  \cap B_i) = (1 - a_i)p_i$
+
+$Pr(B_j | {S_i}^{\complement}) = \frac{Pr(B_i \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
+
+$Pr(B_j | {S_i}^{\complement}) = \frac{(1 - a_i)p_i}{1 - a_ip_i}$
