@@ -469,20 +469,28 @@ $Pr(B_j | {S_i}^{\complement})$
 
 = $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
+In order to calculate the value of $Pr(B_j \cap {S_i}^{\complement})$, I can expand out
+the expression $Pr({S_i}^{\complement} | B_j)$.
+
 $Pr({S_i}^{\complement} | B_j) = \frac{Pr({S_i}^{\complement} \cap B_j)}{Pr(B_j)}$
 
 $Pr({S_i}^{\complement} \cap B_j) =  Pr({S_i}^{\complement} | B_j)Pr(B_j)$
 
-$Pr({S_i}^{\complement} | B_j) = 1$ since the box will never be found in box i
+I can simplify the above expression by using the fact 
+that $Pr({S_i}^{\complement} | B_j) = 1$ since the box will never be found in box i
 if it is in box j.
 
-$Pr({S_i}^{\complement} \cap B_j) =  Pr({S_i}^{\complement} | B_j)Pr(B_j)$
+The expression
+$Pr({S_i}^{\complement} \cap B_j) =  Pr({S_i}^{\complement} | B_j)Pr(B_j)$ becomes
 
 $Pr({S_i}^{\complement} \cap B_j) =  Pr(B_j)$
 
+Using the fact that $Pr(B_j)$ = $p_j$. 
+
 $Pr({S_i}^{\complement} \cap B_j) =  p_j$
 
-Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i = t$,
+Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i = t$, and that 
+$Pr({S_i}^{\complement} \cap B_j) =  p_j$, 
 
 $Pr(B_j | {S_i}^{\complement})$
 
