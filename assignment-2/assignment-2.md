@@ -417,7 +417,6 @@ Let $B_i$ be the event that a ball is in box i. $Pr(B_i) = p_i$
 
 Let $S_i$ be the event that the box was discovered in box i. $Pr(S_i | B_i) = a_i$
 
-$Pr(S_i|{B_i}^{\complement}) = 0$
 
 ### Case: i = j
 
@@ -427,19 +426,36 @@ $Pr(B_j | {S_i}^{\complement})$
 
 = $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
-$Pr(S_i) = Pr(S_i|B_i)Pr(B_i) + Pr(S_i|{B_i}^{\complement})Pr({B_i}^{\complement})$ (by The Law of Total Probability)
+If I want to calculate the value of $Pr({S_i}^{\complement})$, I can find the 
+value of $Pr(S_i)$ and take the complement. Using the Law of Total Probability below, 
+I find that $Pr(S_i)$  is $Pr(S_i|B_i)Pr(B_i) + Pr(S_i|{B_i}^{\complement})Pr({B_i}^{\complement})$ 
 
-$Pr(S_i) = Pr(S_i|B_i)Pr(B_i)$ 
+Using the fact that $Pr(S_i|{B_i}^{\complement}) = 0$, I can rewrite the above expression 
+as $Pr(S_i) = Pr(S_i|B_i)Pr(B_i)$ 
+
+Using that $Pr(B_i) = p_i$ and $Pr(S_i | B_i) = a_i$, the above expression becomes
 
 $Pr(S_i) = a_ip_i$ 
 
+Computing the complement of the above expression, I obtain
+
 $Pr({S_i}^{\complement}) = 1 - a_ip_i$ 
+
+I now found the value for $Pr({S_i}^{\complement})$, and now I must find the value
+$Pr(B_j \cap {S_i}^{\complement})$. To do this, I can expand out the expression
+$Pr({S_i}^{\complement} | B_i)$.
 
 $Pr({S_i}^{\complement} | B_i) = \frac{Pr({S_i}^{\complement}  \cap B_i)}{Pr(B_i)}$
 
 $Pr({S_i}^{\complement}  \cap B_i) = Pr({S_i}^{\complement} | B_i)Pr(B_i)$
 
+Using that $Pr({S_i}^{\complement} | B_i) =  (1 - a_i)$ and $Pr(B_i) = p_i$ in the above expression,
+I obtain
+
 $Pr({S_i}^{\complement}  \cap B_i) = (1 - a_i)p_i$
+
+Using the values of $Pr({S_i}^{\complement}$ and $Pr({S_i}^{\complement})$ in
+$Pr(B_j | {S_i}^{\complement})$, I obtain
 
 $Pr(B_j | {S_i}^{\complement}) = \frac{Pr(B_i \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
