@@ -475,14 +475,14 @@ $Pr(B_j | {S_i}^{\complement})$
 ```mermaid
 graph TD
         Q[Professor Plum] -->|1/6| A
-        A[Has opportunity]-->|1/2| B[Professor plum has a revolver] --> |1/12|J[Colonel mustard is shot]
+        A[Has opportunity]-->|1/2| B[Professor plum has a revolver] --> |1/12|J[Colonel Mustard is shot]
        
         A-->|1/2| C[Professor plum does not have the revolver]
-        C--> |1/12|E[Colonel Mustard is shot]
+        C--> |1/12|E[Colonel Mustard is not shot]
        
 
         Q --> |5/6| I[Does not have opportunity]-->|1/2| T[Professor plum has a revolver] --> |5/12|K[Colonel Mustard is not shot]
-        I--> |1/2|Y[Professor plum has a revolver] --> |5/12|N[Colonel mustard is shot]
+        I--> |1/2|Y[Professor plum has a revolver] --> |5/12|N[Colonel Mustard is not shot]
 ```
 ```mermaid
 graph TD
@@ -490,11 +490,11 @@ graph TD
         A[Has opportunity]-->|3/8| B[Mr Green has a revolver] --> |1/8|J[Colonel Mustard is shot]
        
         A-->|5/8| C[Mr Green does not have the revolver]
-        C--> |5/24|E[Colonel Mustard is shot]
+        C--> |5/24|E[Colonel Mustard is not shot]
        
 
-        Q --> |2/3| I[Does not have opportunity]-->|3/8| T[Mr Green has a revolver] --> |1/4|K[Colonel mustard is not shot]
-        I--> |5/8|Y[Mr Green does not have a revolver] --> |5/12|N[Colonel mustard is not shot]
+        Q --> |2/3| I[Does not have opportunity]-->|3/8| T[Mr Green has a revolver] --> |1/4|K[Colonel Mustard is not shot]
+        I--> |5/8|Y[Mr Green does not have a revolver] --> |5/12|N[Colonel Mustard is not shot]
 ```
 ```mermaid
 graph TD
@@ -505,6 +505,57 @@ graph TD
     C--> |7/16|E[Colonel Mustard is not shot]
 
 
-    Q --> |1/2| I[Does not have opportunity]-->|1/8| T[Miss Scarlet has a revolver] --> |1/16|K[Colonel mustard is not shot]
-    I--> |7/8|Y[Miss Scarlet does not have a revolver] --> |7/16|N[Colonel mustard is not shot]
+    Q --> |1/2| I[Does not have opportunity]-->|1/8| T[Miss Scarlet has a revolver] --> |1/16|K[Colonel Mustard is not shot]
+    I--> |7/8|Y[Miss Scarlet does not have a revolver] --> |7/16|N[Colonel Mustard is not shot]
 ```
+
+### What is the probability that Colonel Mustard is shot? 
+The probability that Colonel Mustard is shot is the sum of all the outcomes where he 
+is shot by either Professor Plum, Mr Green, or Miss Scarlet.
+
+Let $M$ be the event where Colonel Mustard is shot. 
+
+Let $S$ be the event that Miss Scarlet has motive.
+
+Let $P$ be the event that Professor Plum has motive.
+
+Let $G$ be the event that Mr Green has motive.
+
+$Pr(M) = Pr(M|G)Pr(G) + Pr(M|S)Pr(S) + Pr(M|P)Pr(P)$ (using the Law of Total Probability)
+
+We can obtain these probabilities from the edge diagrams above, resulting in
+$Pr(M)$ being $\frac{1}{8} + \frac{1}{16} + \frac{1}{12}$, corresponding to the probabilities
+Pr(M|G)Pr(G), Pr(M|S)Pr(S), Pr(M|P)Pr(P) respectively.
+
+$Pr(M)  = \frac{13}{48}$
+
+###  What is the probability that Colonel Mustard is shot, given that Miss Scarlet does not have the revolver?
+
+
+Let $S$ be the event that Miss Scarlet has the revolver.
+
+Let $P$ be the event that Professor Plum has the revolver.
+
+Let $G$ be the event that Mr Green has the revolver.
+
+We are asked to find $Pr(M | S^{\complement})$.
+
+$Pr(M | S^{\complement}) = \frac{Pr(M \cap S^{\complement})}{Pr(S^{\complement})}$
+
+Since we know that $Pr(S) = \frac{1}{2}$ from the tree diagram,
+$Pr(S^{\complement}) = 1 - Pr(S)$
+
+$Pr(S^{\complement}) = \frac{1}{2}$
+
+For $Pr(M \cap S^{\complement})$, we can sum up all the outcomes where 
+Colonel Mustard was shot by Professor Plum or by Mr Green.
+
+$Pr(M \cap S^{\complement}) = \frac{1}{12} + \frac{1}{8}$
+
+$Pr(M \cap S^{\complement}) = \frac{5}{24}$
+
+$Pr(M | S^{\complement}) = \frac{Pr(M \cap S^{\complement})}{Pr(S^{\complement})}$
+
+$Pr(M | S^{\complement}) = \frac{5}{24}*2$
+
+$Pr(M | S^{\complement}) = \frac{5}{12}$
