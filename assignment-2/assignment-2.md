@@ -580,16 +580,9 @@ Calculate $Pr[E_1 ∪ E_2|A]$:
 
 $Pr[E_1 ∪ E_2|A]$
 
-= $\frac{Pr((E_1 +  E_2  (- E_1 \cap E_2 )) \cap  A)}{Pr(A)}$
+= $\frac{Pr((E_1 \cup  E_2) \cap  A))}{Pr(A)}$
 
-Since $E_1$ and $E_2$ are mutually exclusive, $E_1 \cap E_2  = \emptyset$
-
-= $\frac{Pr((E_1 +  E_2 (- E_1 \cap E_2 )) \cap  A)}{Pr(A)}$
-
-= $\frac{Pr((E_1 +  E_2) \cap  A)}{Pr(A)}$
-
-= $\frac{Pr((E_1 \cap A) +  (E_2 \cap A)))}{Pr(A)}$
-
+= $\frac{Pr(E_1 \cap A) +  Pr(E_2 \cap A)}{Pr(A)}$ (Due to $E_1$ and $E_2$ being mutually exclusive)
 
 = $\frac{Pr(E_1 \cap A) +  Pr(E_2 \cap A)}{Pr(A)}$
 
