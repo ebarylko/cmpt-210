@@ -609,7 +609,7 @@ Since $E_1$ and $E_2$ are mutually exclusive, $E_1 \cap E_2  = \emptyset$
 
 $Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap (E_1 \cup E_2))}{Pr(E_1 \cup E_2)}$
 
-$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2 $due to being disjoint)
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2$ due to being disjoint)
 
 $Pr(A| E_1) = \frac{Pr(A \cap E_1)}{Pr(E_1)}$
 
@@ -619,6 +619,30 @@ $Pr(A| E_2) = \frac{Pr(A \cap E_2)}{Pr(E_2)}$
 
 $Pr(A \cap E_2) = Pr(A| E_2)Pr(E_2)$
 
-$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2 $due to being disjoint)
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2$ due to being disjoint)
 
 = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A| E_2)Pr(E_2)}{Pr(E_1) + Pr(E_2)}$
+
+### Prove that the above rule generalizes the law of total probability
+
+Let the following be two properties concerning $E_1 \text{and} E_2$.
+* $E_1 \cup E_2 = S$
+* $E_1 \cap E_2 = \emptyset$
+
+These two properties imply that $E_2 = {E_1}^{\complement}$. If this were not true,
+then we would violate property two by the fact of having a shared element, when we 
+are given that there are none.
+
+Using this knowledge, I can rewrite the expression $\frac{Pr(A| E_1)Pr(E_1) + Pr(A| E_2)Pr(E_2)}{Pr(E_1) + Pr(E_2)}$
+
+as = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})}{Pr(E_1 cup E_2)}$
+
+as = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})}{Pr(S)}$
+
+Using the fact that $P(S) = 1$, the expression above becomes
+
+$Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})$.
+
+This is the equation for  the law of total probability when partitioning on $E_1$ and
+${E_1}^{\complement}$
+
