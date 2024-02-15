@@ -590,7 +590,7 @@ $Pr[E_1 ∪ E_2|A]$
 
 $Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap (E_1 \cup E_2))}{Pr(E_1 \cup E_2)}$
 
-$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2$ due to being disjoint)
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \text{and} E_2$ are disjoint)
 
 $Pr(A| E_1) = \frac{Pr(A \cap E_1)}{Pr(E_1)}$
 
@@ -600,7 +600,7 @@ $Pr(A| E_2) = \frac{Pr(A \cap E_2)}{Pr(E_2)}$
 
 $Pr(A \cap E_2) = Pr(A| E_2)Pr(E_2)$
 
-$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ (Since $E_1 \cup E_2 = E_1 \cup E_2$ due to being disjoint)
+$Pr[A|E_1 ∪ E_2] = \frac{Pr(A \cap E_1 ) + Pr(A \cap E_2)}{Pr(E_1) + Pr(E_2)}$ 
 
 = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A| E_2)Pr(E_2)}{Pr(E_1) + Pr(E_2)}$
 
