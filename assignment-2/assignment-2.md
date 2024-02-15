@@ -616,9 +616,9 @@ are given that there are none.
 
 Using this knowledge, I can rewrite the expression $\frac{Pr(A| E_1)Pr(E_1) + Pr(A| E_2)Pr(E_2)}{Pr(E_1) + Pr(E_2)}$
 
-as = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})}{Pr(E_1 cup E_2)}$
+as  $\frac{Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})}{Pr(E_1 cup E_2)}$
 
-as = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})}{Pr(S)}$
+ = $\frac{Pr(A| E_1)Pr(E_1) + Pr(A|{E_1}^{\complement})Pr({E_1}^{\complement})}{Pr(S)}$
 
 Using the fact that $P(S) = 1$, the expression above becomes
 
