@@ -367,7 +367,7 @@ C from the remaining six, and put the people that are left into group D.
 
 For the ordering of the men, there are 4! ways of having the men be in different groups.
 
-This can be modeled as $\4!binom{12}{3}\binom{9}{3}\binom{6}{3}\binom{3}{3}$
+This can be modeled as $4!\binom{12}{3}\binom{9}{3}\binom{6}{3}\binom{3}{3}$
 
 Expanding the last expression out, we have
 $4!\frac{12!}{9!6!}\frac{9!}{3!6!}\frac{6!}{3!3!}\frac{3!}{3!}$ =
@@ -443,3 +443,27 @@ $Pr({S_i}^{\complement}  \cap B_i) = (1 - a_i)p_i$
 $Pr(B_j | {S_i}^{\complement}) = \frac{Pr(B_i \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
 $Pr(B_j | {S_i}^{\complement}) = \frac{(1 - a_i)p_i}{1 - a_ip_i}$
+
+### Case: i != j
+
+Calculate: $Pr(B_j | {S_i}^{\complement})$
+
+$Pr(B_j | {S_i}^{\complement})$
+
+= $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
+
+$Pr({S_i}^{\complement} | B_j) = \frac{Pr({S_i}^{\complement} \cap B_j)}{Pr(B_j)}$
+
+$Pr({S_i}^{\complement} \cap B_j) =  Pr({S_i}^{\complement} | B_j)Pr(B_j)$
+
+$Pr({S_i}^{\complement} \cap B_j) =  Pr(B_j)$
+
+$Pr({S_i}^{\complement} \cap B_j) =  p_j$
+
+Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i \neq j$,
+
+$Pr(B_j | {S_i}^{\complement})$
+
+= $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
+
+= $\frac{p_j}{1 - a_ip_i}$
