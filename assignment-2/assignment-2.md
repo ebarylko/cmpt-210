@@ -426,7 +426,7 @@ $Pr(B_j | {S_i}^{\complement})$
 
 = $\frac{Pr(B_i \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
-$Pr(S_i) = Pr(S_i|B_i)Pr(B_i) + Pr(S_i|{B_i}^{\complement})$ (by The Law of Total Probability)
+$Pr(S_i) = Pr(S_i|B_i)Pr(B_i) + Pr(S_i|{B_i}^{\complement})Pr({B_i}^{\complement})$ (by The Law of Total Probability)
 
 $Pr(S_i) = Pr(S_i|B_i)Pr(B_i)$ 
 
@@ -456,11 +456,16 @@ $Pr({S_i}^{\complement} | B_j) = \frac{Pr({S_i}^{\complement} \cap B_j)}{Pr(B_j)
 
 $Pr({S_i}^{\complement} \cap B_j) =  Pr({S_i}^{\complement} | B_j)Pr(B_j)$
 
+$Pr({S_i}^{\complement} | B_j) = 1$ since the box will never be found in box i
+if it is in box j.
+
+$Pr({S_i}^{\complement} \cap B_j) =  Pr({S_i}^{\complement} | B_j)Pr(B_j)$
+
 $Pr({S_i}^{\complement} \cap B_j) =  Pr(B_j)$
 
 $Pr({S_i}^{\complement} \cap B_j) =  p_j$
 
-Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i \neq j$,
+Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i \eq j$,
 
 $Pr(B_j | {S_i}^{\complement})$
 
