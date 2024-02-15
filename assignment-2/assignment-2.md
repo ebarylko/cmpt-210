@@ -559,3 +559,25 @@ $Pr(M | S^{\complement}) = \frac{Pr(M \cap S^{\complement})}{Pr(S^{\complement})
 $Pr(M | S^{\complement}) = \frac{5}{24}*2$
 
 $Pr(M | S^{\complement}) = \frac{5}{12}$
+
+### What is the probability that Mr. Green had an opportunity, given that Colonel Mustard was shot?
+
+Let $M$ be the event where Colonel Mustard is shot.
+
+Let $S$ be the event that Miss Scarlet has motive.
+
+Let $P$ be the event that Professor Plum has motive.
+
+Let $G$ be the event that Mr Green has motive.
+
+$Pr(G |M) = \frac{Pr(G \cap M)}{Pr(M)}$
+
+From the tree diagram given in the first part of the question, we have that 
+$Pr(M)$ and $Pr(G \cap M)$ is $\frac{13}{48} \text{and} \frac{1}{8}$, respectively.
+
+$Pr(G |M) = \frac{Pr(G \cap M)}{Pr(M)}$
+
+$Pr(G |M) = \frac{1}{8}\frac{48}{13}$
+
+$Pr(G |M) = \frac{6}{13}$
+
