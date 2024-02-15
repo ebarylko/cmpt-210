@@ -61,22 +61,28 @@ $\frac{1}{n^2}(n -1 + n -2 + .... 1)$
 
 = $\frac{(n - 1)(n)}{2n^2}$
 
+= $\frac{(n - 1)}{2n}$
+
 ### Given that the first dice is between 1 and m (for m ≤ n), what is the probability that the second dice lands on a higher value than does the first? 
 
 In this case, I must calculate $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$.
 
+For all the possible rolls, I know that I am limited to $m$ values for the first roll 
+and $n$ values for the second roll. The total number of values in my new sample space 
+is $mn$.
+
 Knowing that $Pr(X_m) = \frac{n - m}{n^2}$, the expression $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ 
-is equivalent to $\frac{1}{n^2}(n -1 + n - 2 + .... n - m)$
+is equivalent to $\frac{1}{mn}(n -1 + n - 2 + .... n - m)$
 
 Summing the values from [n - m, n - 1], it is $\frac{(2n - m -1)(m)}{2}$.
 
 $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ 
 
-= $\frac{(2n - m -1)(m)}{2n^2}$
+= $\frac{(2n - m -1)(m)}{2mn}$
 
 The probability that the second dice lands on a higher value than the first is
 
-$\frac{(2n - m -1)(m)}{2n^2}$.
+$\frac{(2n - m -1)}{2n}$.
 
 
 ## Question three
@@ -113,7 +119,7 @@ $Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complemen
 
 $Pr(AC^{\complement}) = 1 - Pr(AC)  = 0.825 $
 
-Pr(G | AC^{\complement}) = \frac{G \cap AC^{\complement}}{Pr(AC^{\complement})}
+$Pr(G | AC^{\complement}) = \frac{G \cap AC^{\complement}}{Pr(AC^{\complement})}$
 
 $Pr(AC | G) = \frac{Pr(AC \cap G)}{Pr(G)}$
 
@@ -121,7 +127,7 @@ $Pr(AC^{\complement} | G) = \frac{Pr(AC^{\complement} \cap G)}{Pr(G)}$
 
 $Pr(G \cap AC^{\complement}) = (AC^{\complement} | G)Pr(G)$
 
-$Pr(G \cap AC^{\complement}) = 0.95 * 0.2 = 0.19
+$Pr(G \cap AC^{\complement}) = 0.95 * 0.2 = 0.19$
 
 $Pr(G | AC^{\complement}) = \frac{0.19}{0.825} = 0.23$
 
@@ -255,22 +261,23 @@ when the number of tasks is greater than the number of students.
 
 Therefore, $Pr(NA|T) = 0$ regardless of any value of $k > n$.
 
-In the case where $k \le n$, the professor must pick k unique students to distribute 
-the tasks amongst to avoid any student having more than one task. 
+In the case where $k \le n$, the professor must pick k students, assign a task to each 
+one, and find the number of permutations of the tasks among the students.
 
-The ways the professor can do this is $\binom{n}{k}$.
+The ways the professor can do this is $\frac{n!}{(n- k)!}$.
 
 Let $S$ be all the ways that the professor can distribute k tasks among n students.
 
+Since every task can be given to any student, that means we have $k^n$ possible task 
+distributions.
+
+$|S| = k^n$ .
+
 Since we have a probability space, $Pr(NA) = \frac{|NA|}{|S|}$.
 
-To find all the ways that the professor can distribute k tasks among n students, we must
-sum the ways the professor can distribute k tasks to one student, to two students, 
-to three students, ...... to k students
+$Pr(NA) = \frac{\frac{n!}{(n- k)!}}{k^n}$.
 
-I cannot use the donuts and multiple flavors approach since $k < n$.
-
-How should I model this?
+$Pr(NA) = \frac{\frac{n!}{(n- k)!}}{k^n}$.
 
 ## Question seven
 The Canadian football team has probability 0.1 of winning against Tier 1 teams, probability 0.25 of winning against Tier 2 teams and probability 0.5 of winning against Tier 3 teams. Half the teams in the league are Tier 1 while a quarter of them are Tier 2 and a quarter of them are Tier 3. The odds of an event A is given by:
@@ -308,8 +315,7 @@ $Pr(W) = 0.2375$
 
 $Odds(W) = \frac{Pr(W)}{1 - Pr(W)}$
 
-
-$Odds(W) = \frac0.2375}{0.7625}$
+$Odds(W) = \frac{0.2375}{0.7625}$
 
 $Odds(W) = 0.31$
 
@@ -361,12 +367,12 @@ C from the remaining six, and put the people that are left into group D.
 
 For the ordering of the men, there are 4! ways of having the men be in different groups.
 
-This can be modeled as $\binom{12}{3}\binom{9}{3}\binom{6}{3}\binom{3}{3}$
+This can be modeled as $\4!binom{12}{3}\binom{9}{3}\binom{6}{3}\binom{3}{3}$
 
 Expanding the last expression out, we have
-$\frac{12!}{9!6!}\frac{9!}{3!6!}\frac{6!}{3!3!}\frac{3!}{3!}$ =
+$4!\frac{12!}{9!6!}\frac{9!}{3!6!}\frac{6!}{3!3!}\frac{3!}{3!}$ =
 
-$\frac{12!}{(3!)^4}$.
+$4!\frac{12!}{(3!)^4}$.
 
 
 ### Use the above results to calculate the probability that each group includes exactly man
@@ -380,13 +386,36 @@ Let $S$ be all the ways of making four groups.
 
 $Pr(M) = \frac{|M|}{|S|}$
 
-$Pr(M) = \frac{\frac{12!}{(3!)^4}}{\frac{16!}{(4!)^4}}$
+$Pr(M) = \frac{4!\frac{12!}{(3!)^4}}{\frac{16!}{(4!)^4}}$
 
 
-$Pr(M) = \frac{12!}{(3!)^4}}\frac{(4!)^4}{16!}$
+$Pr(M) = 4!\frac{12!}{(3!)^4}\frac{(4!)^4}{16!}$
 
-$Pr(M) = \frac{4^4}{13 * 14 * 15 * 16}$
+$Pr(M) = \frac{(4!)^5 12!}{16!(3!)^4}$
 
-$Pr(M) = \frac{1}{13 * 14 * 15}$
+$Pr(M) = \frac{4^4 * 4! * 12!}{16!}$
 
-$Pr(M) = \frac{1}{2730}$
+$Pr(M) = \frac{4^4 * 4!}{16 * 15 * 14 * 13}$
+
+$Pr(M) = \frac{4^2 * 4!}{15 * 14 * 13}$
+
+$Pr(M) = \frac{4^3 * 3}{15 * 7 * 13}$
+
+$Pr(M) = 0.141$
+
+## Question nine
+
+A ball is in one of n boxes. It is in box i with probability pi. If the ball is in box i, a
+search of that box will discover it with probability αi.
+
+### Prove that the conditional probability that the ball is in box j, given that a search of box i did not discover it, is
+
+Let $B_i$ be the event that a ball is in box i. $Pr(B_i) = p_i$
+
+Let $S_i$ be the event that the box was discovered in box i. $Pr(S_i | B_i) = a_i$
+
+Calculate: $Pr(B_j | {S_i}^{\complement})$
+
+$Pr(B_j | {S_i}^{\complement})$
+
+= $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
