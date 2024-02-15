@@ -467,3 +467,44 @@ $Pr(B_j | {S_i}^{\complement})$
 = $\frac{Pr(B_j \cap {S_i}^{\complement})}{Pr({S_i}^{\complement})}$
 
 = $\frac{p_j}{1 - a_ip_i}$
+
+## Question 10
+
+### Make a tree diagram
+
+```mermaid
+graph TD
+        Q[Professor Plum] -->|1/6| A
+        A[Has opportunity]-->|1/2| B[Professor plum has a revolver] --> |1/12|J[Colonel mustard is shot]
+       
+        A-->|1/2| C[Professor plum does not have the revolver]
+        C--> |1/12|E[Colonel Mustard is shot]
+       
+
+        Q --> |5/6| I[Does not have opportunity]-->|1/2| T[Professor plum has a revolver] --> |5/12|K[Colonel Mustard is not shot]
+        I--> |1/2|Y[Professor plum has a revolver] --> |5/12|N[Colonel mustard is shot]
+```
+```mermaid
+graph TD
+        Q[Mr Green] -->|1/3| A
+        A[Has opportunity]-->|3/8| B[Mr Green has a revolver] --> |1/8|J[Colonel Mustard is shot]
+       
+        A-->|5/8| C[Mr Green does not have the revolver]
+        C--> |5/24|E[Colonel Mustard is shot]
+       
+
+        Q --> |2/3| I[Does not have opportunity]-->|3/8| T[Mr Green has a revolver] --> |1/4|K[Colonel mustard is not shot]
+        I--> |5/8|Y[Mr Green does not have a revolver] --> |5/12|N[Colonel mustard is not shot]
+```
+```mermaid
+graph TD
+    Q[Miss Scarlet] -->|1/2| A
+    A[Has opportunity]-->|1/8| B[Miss Scarlet has a revolver] --> |1/16|J[Colonel Mustard is shot]
+
+    A-->|7/8| C[Miss Scarlet does not have the revolver]
+    C--> |7/16|E[Colonel Mustard is not shot]
+
+
+    Q --> |1/2| I[Does not have opportunity]-->|1/8| T[Miss Scarlet has a revolver] --> |1/16|K[Colonel mustard is not shot]
+    I--> |7/8|Y[Miss Scarlet does not have a revolver] --> |7/16|N[Colonel mustard is not shot]
+```
