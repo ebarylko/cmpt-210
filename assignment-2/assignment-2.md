@@ -2,6 +2,9 @@
 
 ### Prove that the probability that exactly one of the events A or B occurs is equal to Pr[A] + Pr[B] − 2 Pr[A ∩ B].
 
+Below, I will expand out the probabilities of A and B in order to obtain the regions
+of A and B which do not intersect.
+
 $Pr(A) = Pr(A - B) + Pr(A \cap B)$
 
 $Pr(A - B) =  Pr(A) - Pr(A \cap B)$
@@ -14,7 +17,10 @@ The probability that exactly one of the events A or B occurs is $Pr((A - B) \cup
 
 Since (B - A) and (A - B) are disjoint, $Pr((A - B) \cup (B - A)) = Pr(A - B) + Pr(B - A)$
 
-$Pr((A - B) \cup (B - A)) =  Pr(A) - Pr(A \cap B) + Pr(B) - Pr(A \cap B)$ 
+Using the equivalencies for $Pr(B - A)$ and $Pr(A - B)$ stated above in the below expression, 
+I have that $Pr((A - B) \cup (B - A))$ becomes
+
+$Pr(A) - Pr(A \cap B) + Pr(B) - Pr(A \cap B)$ 
 
 = $Pr(A) + Pr(B) - 2Pr(A \cap B)$
 
@@ -589,7 +595,7 @@ Using these values in the expression below,
 
 $Pr(G |M) = \frac{Pr(G \cap M)}{Pr(M)}$
 
-$ = Pr(G |M) = \frac{1}{8}\frac{48}{13}$
+$= Pr(G |M) = \frac{1}{8}\frac{48}{13}$
 
 $= Pr(G |M) = \frac{6}{13}$
 
