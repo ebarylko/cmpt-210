@@ -41,15 +41,14 @@ $P(X_x) = \frac{n - x}{n^2}$
 
 
 To calculate the probability that the second die has a higher value than the first,
-we must consider all the possible values for the first die where a larger value
-can be rolled for the second die. Our range of values for the first die 
-is limited to [1, n]. 
+we must consider all the possible values for the first die. Our range of values 
+for the first die is limited to [1, n]. 
 
 When summing all the probabilities, $Pr(X_1 + X_2 + ... X_n)$, we notice that the events 
 are disjoint and the expression $Pr(X_1 + X_2 + ... X_{n})$ simplifies to 
 $Pr(X_1) + Pr(X_2) + ... Pr(X_{n - 1}) + Pr(X_n)$.
 
-Note: Pr(X_n) is zero since there is no larger value that the second die can be.
+Note: $Pr(X_n)$ is zero since there is no larger value that the second die can take on.
 
 We can factor out the $\frac{1}{n^2}$ term from the summation, and we are left with 
 $\frac{1}{n^2}(n -1 + n -2 + .... 1)$.
@@ -74,7 +73,7 @@ is $mn$.
 Knowing that $Pr(X_m) = \frac{n - m}{n^2}$, the expression $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ 
 is equivalent to $\frac{1}{mn}(n -1 + n - 2 + .... n - m)$
 
-Summing the values from [n - m, n - 1], it is $\frac{(2n - m -1)(m)}{2}$.
+Summing the values from [n - m, n - 1], it is $\frac{(2n - m -1)(m)}{2}$. (Using the summation formula)
 
 $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ 
 
@@ -119,15 +118,19 @@ $Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complemen
 
 $Pr(AC^{\complement}) = 1 - Pr(AC)  = 0.825 $
 
-$Pr(G | AC^{\complement}) = \frac{G \cap AC^{\complement}}{Pr(AC^{\complement})}$
+$Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complement})}$
 
 $Pr(AC | G) = \frac{Pr(AC \cap G)}{Pr(G)}$
 
 $Pr(AC^{\complement} | G) = \frac{Pr(AC^{\complement} \cap G)}{Pr(G)}$
 
-$Pr(G \cap AC^{\complement}) = (AC^{\complement} | G)Pr(G)$
+$Pr(G \cap AC^{\complement}) = Pr(AC^{\complement} | G)Pr(G)$
+
+$Pr(G \cap AC^{\complement}) = (1 - Pr(AC | G))* 0.2 = 0.19$
 
 $Pr(G \cap AC^{\complement}) = 0.95 * 0.2 = 0.19$
+
+$Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complement})}$
 
 $Pr(G | AC^{\complement}) = \frac{0.19}{0.825} = 0.23$
 
@@ -465,7 +468,7 @@ $Pr({S_i}^{\complement} \cap B_j) =  Pr(B_j)$
 
 $Pr({S_i}^{\complement} \cap B_j) =  p_j$
 
-Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i = j$,
+Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i = t$,
 
 $Pr(B_j | {S_i}^{\complement})$
 
