@@ -584,8 +584,6 @@ $Pr[E_1 ∪ E_2|A]$
 
 = $\frac{Pr(E_1 \cap A) +  Pr(E_2 \cap A)}{Pr(A)}$ (Due to $E_1$ and $E_2$ being mutually exclusive)
 
-= $\frac{Pr(E_1 \cap A) +  Pr(E_2 \cap A)}{Pr(A)}$
-
 = $Pr[E_1|A] + Pr[E_2|A]$
 
 ### For an event A and two mutually exclusive events E1 and E2, prove the following statement
