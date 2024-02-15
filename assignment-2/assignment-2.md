@@ -373,7 +373,7 @@ For the ordering of the men, there are 4! ways of having the men be in different
 This can be modeled as $4!\binom{12}{3}\binom{9}{3}\binom{6}{3}\binom{3}{3}$
 
 Expanding the last expression out, we have
-$4!\frac{12!}{9!6!}\frac{9!}{3!6!}\frac{6!}{3!3!}\frac{3!}{3!}$ =
+$4!\frac{12!}{9!3!}\frac{9!}{3!6!}\frac{6!}{3!3!}\frac{3!}{3!}$ =
 
 $4!\frac{12!}{(3!)^4}$.
 
