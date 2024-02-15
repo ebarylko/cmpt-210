@@ -465,7 +465,7 @@ $Pr({S_i}^{\complement} \cap B_j) =  Pr(B_j)$
 
 $Pr({S_i}^{\complement} \cap B_j) =  p_j$
 
-Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i \eq j$,
+Using $Pr({S_i}^{\complement}) = 1 - a_ip_i$ from the case $i = j$,
 
 $Pr(B_j | {S_i}^{\complement})$
 
