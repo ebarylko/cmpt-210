@@ -535,7 +535,7 @@ Let $G$ be the event that Mr Green has motive.
 
 $Pr(M) = Pr(M|G)Pr(G) + Pr(M|S)Pr(S) + Pr(M|P)Pr(P)$ (using the Law of Total Probability)
 
-We can obtain these probabilities from the edge diagrams above, resulting in
+We can obtain these probabilities from the tree diagram above, resulting in
 $Pr(M)$ being $\frac{1}{8} + \frac{1}{16} + \frac{1}{12}$, corresponding to the probabilities
 Pr(M|G)Pr(G), Pr(M|S)Pr(S), Pr(M|P)Pr(P) respectively.
 
@@ -555,22 +555,21 @@ We are asked to find $Pr(M | S^{\complement})$.
 $Pr(M | S^{\complement}) = \frac{Pr(M \cap S^{\complement})}{Pr(S^{\complement})}$
 
 Since we know that $Pr(S) = \frac{1}{8}$ from the tree diagram,
-$Pr(S^{\complement}) = 1 - Pr(S)$
+$Pr(S^{\complement}) = 1 - Pr(S) = \frac{7}{8}$
 
-$Pr(S^{\complement}) = \frac{7}{8}$
+To calculate $Pr(M \cap S^{\complement})$, we can sum up all the outcomes where 
+Colonel Mustard was shot by Professor Plum or by Mr Green in the diagram.
 
-For $Pr(M \cap S^{\complement})$, we can sum up all the outcomes where 
-Colonel Mustard was shot by Professor Plum or by Mr Green.
+Doing this, we obtain that $Pr(M \cap S^{\complement}) = \frac{1}{12} + \frac{1}{8} = \frac{5}{24}$
 
-$Pr(M \cap S^{\complement}) = \frac{1}{12} + \frac{1}{8}$
-
-$Pr(M \cap S^{\complement}) = \frac{5}{24}$
+Using the fact that $Pr(M \cap S^{\complement}) = \frac{5}{24}$ and $Pr(S^{\complement}) = \frac{7}{8}$ in 
+the expression below,
 
 $Pr(M | S^{\complement}) = \frac{Pr(M \cap S^{\complement})}{Pr(S^{\complement})}$
 
-$Pr(M | S^{\complement}) = \frac{5}{24}\frac{8}{7}$
+= $Pr(M | S^{\complement}) = \frac{5}{24}\frac{8}{7}$
 
-$Pr(M | S^{\complement}) = \frac{5}{21}$
+= $Pr(M | S^{\complement}) = \frac{5}{21}$
 
 ### What is the probability that Mr. Green had an opportunity, given that Colonel Mustard was shot?
 
@@ -586,12 +585,13 @@ $Pr(G |M) = \frac{Pr(G \cap M)}{Pr(M)}$
 
 From the tree diagram given in the first part of the question, we have that 
 $Pr(M)$ and $Pr(G \cap M)$ is $\frac{13}{48} \text{and} \frac{1}{8}$, respectively.
+Using these values in the expression below,
 
 $Pr(G |M) = \frac{Pr(G \cap M)}{Pr(M)}$
 
-$Pr(G |M) = \frac{1}{8}\frac{48}{13}$
+$ = Pr(G |M) = \frac{1}{8}\frac{48}{13}$
 
-$Pr(G |M) = \frac{6}{13}$
+$= Pr(G |M) = \frac{6}{13}$
 
 
 ## Question 11
