@@ -336,7 +336,7 @@ $Pr(W | T_3) = 0.5$
 
 ### What are the odds that the Canadian football team wins against a randomly chosen team?
 
-$Pr(W) = Pr(W|T_1)Pr(T_1) + Pr(W| T_2)Pr(T_2) + Pr(W| T_3)Pr(T_3)$
+$Pr(W) = Pr(W|T_1)Pr(T_1) + Pr(W| T_2)Pr(T_2) + Pr(W| T_3)Pr(T_3)$ (Using the Law of Total Probability)
 
 $Pr(W) = 0.5 * 0.1 + 0.25 * 0.25 + 0.25 * 0.5$
 
@@ -357,13 +357,20 @@ $Pr(T_2 | W) = ?$
 
 $Pr(T_2 | W) = \frac{Pr(T_2 \cap W)}{Pr(W)}$
 
+In order to get the value for $\frac{Pr(T_2 \cap W)$, I can expand out the expression
+$Pr(W | T_2)$.
+
 $Pr(W | T_2) = \frac{Pr(T_2 \cap W)}{Pr(T_2)}$
 
 $Pr(T_2 \cap W) = Pr(W | T_2)Pr(T_2)$
 
-$Pr(T_2 | W) = \frac{Pr(W | T_2)Pr(T_2)}{Pr(W)}$
+Substituting the value of $Pr(T_2 \cap W)$ in $Pr(T_2 | W) = \frac{Pr(T_2 \cap W)}{Pr(W)}$,
+I obtain
 
 $Pr(T_2 | W) = \frac{Pr(W | T_2)Pr(T_2)}{Pr(W)}$
+
+Using the values of $Pr(T_2) =  0.25$, $Pr(W) = 0.2375$, and $Pr(W| T_2) = 0.25$ in
+$Pr(T_2 | W) = \frac{Pr(W | T_2)Pr(T_2)}{Pr(W)}$, it simplifies to
 
 $Pr(T_2 | W) = \frac{0.0625}{0.2375}$
 
