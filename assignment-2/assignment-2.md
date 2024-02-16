@@ -539,9 +539,9 @@ $Pr(B_j | {S_i}^{\complement})$
 
 ```mermaid
 graph LR
-        A[Start] --> |1/3| B[Mr Green has motive]
-        A --> |1/2| C[Miss Scarlet has motive]
-        A --> |1/6| D[Professor Plum has motive]
+        A[Start] --> |1/3| B[Mr Green has opportunity]
+        A --> |1/2| C[Miss Scarlet has opportunity]
+        A --> |1/6| D[Professor Plum has opportunity]
 
         B --> |1/2| E[Professor Plum has the revolver] -->|1/6|N[Colonel Mustard is not shot]
          B --> |3/8| F[Mr Green has the revolver]--> |1/8|O[Colonel Mustard is shot]
@@ -562,11 +562,11 @@ is shot by either Professor Plum, Mr Green, or Miss Scarlet.
 
 Let $M$ be the event where Colonel Mustard is shot. 
 
-Let $S$ be the event that Miss Scarlet has motive.
+Let $S$ be the event that Miss Scarlet has opportunity.
 
-Let $P$ be the event that Professor Plum has motive.
+Let $P$ be the event that Professor Plum has opportunity.
 
-Let $G$ be the event that Mr Green has motive.
+Let $G$ be the event that Mr Green has opportunity.
 
 $Pr(M) = Pr(M|G)Pr(G) + Pr(M|S)Pr(S) + Pr(M|P)Pr(P)$ (using the Law of Total Probability)
 
@@ -610,11 +610,11 @@ $Pr(M | S^{\complement}) = \frac{Pr(M \cap S^{\complement})}{Pr(S^{\complement})
 
 Let $M$ be the event where Colonel Mustard is shot.
 
-Let $S$ be the event that Miss Scarlet has motive.
+Let $S$ be the event that Miss Scarlet has opportunity.
 
-Let $P$ be the event that Professor Plum has motive.
+Let $P$ be the event that Professor Plum has opportunity.
 
-Let $G$ be the event that Mr Green has motive.
+Let $G$ be the event that Mr Green has opportunity.
 
 $Pr(G |M) = \frac{Pr(G \cap M)}{Pr(M)}$
 
