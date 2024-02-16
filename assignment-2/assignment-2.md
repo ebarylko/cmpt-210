@@ -357,7 +357,7 @@ $Pr(T_2 | W) = ?$
 
 $Pr(T_2 | W) = \frac{Pr(T_2 \cap W)}{Pr(W)}$
 
-In order to get the value for $\frac{Pr(T_2 \cap W)$, I can expand out the expression
+In order to get the value for $Pr(T_2 \cap W)$, I can expand out the expression
 $Pr(W | T_2)$.
 
 $Pr(W | T_2) = \frac{Pr(T_2 \cap W)}{Pr(T_2)}$
