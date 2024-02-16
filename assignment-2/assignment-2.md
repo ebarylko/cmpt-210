@@ -59,8 +59,9 @@ Note: $Pr(X_n)$ is zero since there is no larger value that the second die can t
 We can factor out the $\frac{1}{n^2}$ term from the summation, and we are left with 
 $\frac{1}{n^2}(n -1 + n -2 + .... 1)$.
 
-Using the fact that the summation of the numbers from 1 to n is $\frac{n(n + 1)}{2}$, 
-the summation from 1 to n - 1 is $\frac{(n - 1)(n)}{2}$.
+Using the fact that the summation of the numbers from 1 to n is $\frac{n(n + 1)}{2}$ and 
+that all the terms of $Pr(X_1) + Pr(X_2) + ... Pr(X_{n - 1}) + Pr(X_n)$ have a denominator
+of $\frac{1}{n^2}$, $Pr(X_1) + Pr(X_2) + ... Pr(X_{n - 1}) + Pr(X_n)$ simplifies to
 
 $\frac{1}{n^2}(n -1 + n -2 + .... 1)$
 
@@ -81,9 +82,11 @@ is equivalent to $\frac{1}{mn}(n -1 + n - 2 + .... n - m)$
 
 Summing the values from [n - m, n - 1], it is $\frac{(2n - m -1)(m)}{2}$. (Using the summation formula)
 
-$Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ 
+Using the fact that $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ has a common denominator of 
+$\frac{1}{nm}$ and that the sum of numbers from [n - m, n - 1] is $\frac{(2n - m -1)(m)}{2}$,
+We can simplify $Pr(X_1) + Pr(X_2) + ... Pr(X_{m})$ to
 
-= $\frac{(2n - m -1)(m)}{2mn}$
+$\frac{(2n - m -1)(m)}{2mn} = \frac{(2n - m -1)}{2n}$
 
 The probability that the second dice lands on a higher value than the first is
 
