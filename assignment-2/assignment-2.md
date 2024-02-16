@@ -450,7 +450,7 @@ search of that box will discover it with probability αi.
 
 Let $B_i$ be the event that a ball is in box i. $Pr(B_i) = p_i$
 
-Let $S_i$ be the event that the box was discovered in box i. $Pr(S_i | B_i) = a_i$
+Let $S_i$ be the event that the ball was discovered in box i. $Pr(S_i | B_i) = a_i$
 
 
 ### Case: i = j
