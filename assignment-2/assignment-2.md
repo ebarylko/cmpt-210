@@ -125,25 +125,39 @@ Calculate $Pr(G | AC^{\complement})$
 
 $Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complement})}$
 
+Since I know the value of $Pr(AC)$ I can calculate its complement to obtain
+$Pr(AC^{\complement})$.
+
 $Pr(AC^{\complement}) = 1 - Pr(AC)  = 0.825 $
 
-$Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complement})}$
+In order to obtain $Pr(G \cap AC^{\complement})$, I can expand out the expression
+$Pr(AC^{\complement} | G) $.
 
-$Pr(AC | G) = \frac{Pr(AC \cap G)}{Pr(G)}$
+[//]: # ()
+[//]: # ($Pr&#40;G | AC^{\complement}&#41; = \frac{Pr&#40;G \cap AC^{\complement}&#41;}{Pr&#40;AC^{\complement}&#41;}$)
 
+[//]: # ()
 $Pr(AC^{\complement} | G) = \frac{Pr(AC^{\complement} \cap G)}{Pr(G)}$
 
+I can now find an expression for $Pr(AC^{\complement} \cap G)$, obtaining
+
 $Pr(G \cap AC^{\complement}) = Pr(AC^{\complement} | G)Pr(G)$
+
+Using the values that  $Pr(AC^{\complement} | G) = 1 - Pr(AC | G)$ and $Pr(G) = 0.2$, the 
+above expression becomes
 
 $Pr(G \cap AC^{\complement}) = (1 - Pr(AC | G))* 0.2 = 0.19$
 
 $Pr(G \cap AC^{\complement}) = 0.95 * 0.2 = 0.19$
 
+Using the above value of $Pr(G \cap AC^{\complement})$ and that $Pr(AC^{\complement})$
+is 0.825, the below expression simplifies to 
+
 $Pr(G | AC^{\complement}) = \frac{Pr(G \cap AC^{\complement})}{Pr(AC^{\complement})}$
 
 $Pr(G | AC^{\complement}) = \frac{0.19}{0.825} = 0.23$
 
-The probability that a policy holder has a good risk is 23%.
+The probability that a policy holder without accidents in a year has a good risk is 23%.
 
 ## Question four
 
