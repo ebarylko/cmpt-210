@@ -304,7 +304,7 @@ $|S| = k^n$ .
 
 Since we have a uniform probability space, $Pr(NA) = \frac{|NA|}{|S|}$.
 
-Using the values of $|NA| = \frac{n!}{(n- k)!$ and $|S| = k^n in $PR(NA)$,
+Using the values of $|NA| = \frac{n!}{(n- k)}!$ and $|S| = k^n in $PR(NA)$,
 
 $Pr(NA) = \frac{\frac{n!}{(n- k)!}}{k^n}$.
 
