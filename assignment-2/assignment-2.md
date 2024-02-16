@@ -187,6 +187,8 @@ Let $T$ be the event that the pair of integers selected from $C$ are consecutive
 Using the characteristic of a uniform probability space that $Pr(E) = \frac{|E|}{|S|}$,
 $Pr(T) = \frac{|T|}{|S|}$
 
+Using the value of $|S| = \binom{n}{2}$ and that $|T| = n - 1$, $P(T)$ becomes
+
 $Pr(T) = \frac{n - 1}{\binom{n}{2}}$
 
 ### What is the probability that their sum is odd?
@@ -210,11 +212,14 @@ $|SO| = |C^{\text{even}}| X |C^{\text{odd}}|$
 
 $|SO| = \frac{n}{2} * \frac{n}{2} = \frac{n^2}{4}$
 
-$Pr(SO) = \frac{|SO|}{|S|}$
+Using the value of $|SO| = \frac{n^2}{4}$ and that $|S| = \binom{n}{2}$ in calculating $PR(SO)$,
+We have that $PR(SO)$ is
 
-$Pr(SO) = \frac{n^2}{4\binom{n}{2}}$
+$\frac{|SO|}{|S|}$
 
-$Pr(SO) = \frac{n}{2n - 2}$
+$= \frac{n^2}{4\binom{n}{2}}$
+
+$= \frac{n}{2n - 2}$
 
 ### Question five
 Three cards are drawn one after the other from an ordinary 52-card deck without replacement (once a card is drawn, it is not placed back in the deck). 
