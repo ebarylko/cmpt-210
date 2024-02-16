@@ -270,8 +270,6 @@ $Pr(OH) = \frac{13\binom{39}{2}}{\binom{52}{3}}$
 
 ### Suppose we have n students and k tasks need to be assigned to these students. Since the professor is lazy, he assigns each task to a randomly selected student. A student gets angry if they are assigned more than one task. Calculate the probability that no student gets angry.
 
-The tasks are not unique.
-
 Since $k$ can take on any positive integer value, we have the case where $k > n$ and where
 $k \le n$.
 
@@ -304,7 +302,9 @@ distributions.
 
 $|S| = k^n$ .
 
-Since we have a probability space, $Pr(NA) = \frac{|NA|}{|S|}$.
+Since we have a uniform probability space, $Pr(NA) = \frac{|NA|}{|S|}$.
+
+Using the values of $|NA| = \frac{n!}{(n- k)!$ and $|S| = k^n$ in $PR(NA)$,
 
 $Pr(NA) = \frac{\frac{n!}{(n- k)!}}{k^n}$.
 
