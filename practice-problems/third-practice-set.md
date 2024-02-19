@@ -106,3 +106,25 @@ we obtain
 $\frac{1}{3}\frac{3}{2 + {\beta}_1} = \frac{1}{2 + {\beta}_1}$
 
 ## Question three
+Suppose that a standard deck of cards is shuffled and I pick 2 cards at random.
+
+### What is the probability that exactly one of these cards is a spade card?
+
+Since two cards are picked at random, I know I have a uniform probability space. 
+
+Due to having a uniform probability space, $Pr(E) = \frac{|E|}{|S|}$, where $E$ is the event of 
+interest and $S$ is the sample space.
+
+Since $S$ is all the possible ways of picking pairs of cards, there are 
+$\binom{52}{2}$ many ways of doing so. Therefore, $|S| = \binom{52}{2}$.
+
+My event of interest is where only one of the two cards is a spade. Let $SP$ be a symbol denoting
+this event.
+
+In order to get the cardinality of $SP$, I must find all the ways of picking a single spade and 
+any other card which is not a spade. There are 13 * 39 = 507 many pairs fulfilling these 
+conditions, implying $|SP| = 507$.
+
+Now that I have the cardinality of both $SP$ and $S$, I can solve for $Pr(SP)$.
+
+Using the fact that $Pr(E) = \frac{|E|}{|S|}$, $Pr(SP) = \frac{|SP|}{|S|} = \frac{507}{\binom{52}{2}}$
