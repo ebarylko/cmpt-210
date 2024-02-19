@@ -128,3 +128,18 @@ conditions, implying $|SP| = 507$.
 Now that I have the cardinality of both $SP$ and $S$, I can solve for $Pr(SP)$.
 
 Using the fact that $Pr(E) = \frac{|E|}{|S|}$, $Pr(SP) = \frac{|SP|}{|S|} = \frac{507}{\binom{52}{2}}$
+
+### What is the probability that at least one of these cards is a spade card?
+
+Let $MS$ be the event where at least one of the cards is a spade card.
+
+To calculate $Pr(MS)$, I can calculate $Pr({MS}^{\complement})$ and then take its complement.
+
+To calculate $Pr({MS}^{\complement})$, I must find all the ways of picking two cards which 
+are not spades. There are $\binom{39}{2}$ many ways to do so. As a result of this, 
+$|{MS}^{\complement}| = \binom{39}{2}$.
+
+Using the properties of a uniform probability space, $Pr({MS}^{\complement}) = \frac{|{MS}^{\complement}|}{|S|}$
+
+Using that $|{MS}^{\complement}| = \binom{39}{2}$ and $|S| = \binom{52}{2}$, the above expression
+becomes $\frac{{\binom{39}{2}}{\binom{52}{2}}$
