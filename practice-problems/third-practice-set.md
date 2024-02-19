@@ -92,7 +92,7 @@ by using $Pr({S_1}^{\complement} | R_2) = 1$, $Pr(R_2) = \frac{1}{3}$, and
 $Pr({S_1}^{\complement}) = \frac{2 + {\beta}_1}{3}$
 we obtain
 
-$\frac{1}{3}frac{3}{2 + {\beta}_1} = \frac{1}{2 + {\beta}_1}$
+$\frac{1}{3}\frac{3}{2 + {\beta}_1} = \frac{1}{2 + {\beta}_1}$
 
 #### i = 3
 
@@ -103,6 +103,6 @@ by using $Pr({S_1}^{\complement} | R_3) = 1$, $Pr(R_3) = \frac{1}{3}$, and
 $Pr({S_1}^{\complement}) = \frac{2 + {\beta}_1}{3}$
 we obtain
 
-$\frac{1}{3}frac{3}{2 + {\beta}_1} = \frac{1}{2 + {\beta}_1}$
+$\frac{1}{3}\frac{3}{2 + {\beta}_1} = \frac{1}{2 + {\beta}_1}$
 
 ## Question three
