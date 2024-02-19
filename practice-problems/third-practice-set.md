@@ -142,4 +142,4 @@ $|{MS}^{\complement}| = \binom{39}{2}$.
 Using the properties of a uniform probability space, $Pr({MS}^{\complement}) = \frac{|{MS}^{\complement}|}{|S|}$
 
 Using that $|{MS}^{\complement}| = \binom{39}{2}$ and $|S| = \binom{52}{2}$, the above expression
-becomes $\frac{{\binom{39}{2}}{\binom{52}{2}}$
+becomes $\frac{\binom{39}{2}}{\binom{52}{2}}$
