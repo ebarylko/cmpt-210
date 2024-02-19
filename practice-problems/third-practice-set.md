@@ -79,7 +79,7 @@ $\frac{Pr({S_1}^{\complement} | R_i)Pr(R_i)}{Pr({S_1}^{\complement})}$
 Using $Pr({S_1}^{\complement}) = \frac{2 + {\beta}_1}{3}$, the above expression becomes
 
 $\frac{Pr({S_1}^{\complement} | R_1)Pr(R_1)}{Pr({S_1}^{\complement})}$, which 
-simplifies to ${\beta}_1}\frac{1}{3}\frac{3}{2 + {\beta}_1}$.
+simplifies to ${\beta}_1\frac{1}{3}\frac{3}{2 + {\beta}_1}$.
 
 The expression above further simplifies to $\frac{{\beta}_1}}{2 + {\beta}_1}$
 
