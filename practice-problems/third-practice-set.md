@@ -149,6 +149,8 @@ complement of $Pr({MS}^{\complement})$, obtaining 1 -  $\frac{\binom{39}{2}}{\bi
 
 ### If I know that at least one of the cards is a spade card, what is the probability that the other card is also a spade card.
 
+Revise this question.
+
 $Let $BS$ be the event where both cards are spades.
 
 I must calculate $Pr(BS | MS)$. Expanding this expression out, I obtain
