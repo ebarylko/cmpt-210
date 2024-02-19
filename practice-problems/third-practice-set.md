@@ -143,3 +143,18 @@ Using the properties of a uniform probability space, $Pr({MS}^{\complement}) = \
 
 Using that $|{MS}^{\complement}| = \binom{39}{2}$ and $|S| = \binom{52}{2}$, the above expression
 becomes $\frac{\binom{39}{2}}{\binom{52}{2}}$
+
+Knowing the value of $Pr({MS}^{\complement})$, I can calculate $Pr(MS)$ by taking the 
+complement of $Pr({MS}^{\complement})$, obtaining 1 -  $\frac{\binom{39}{2}}{\binom{52}{2}}$.
+
+### If I know that at least one of the cards is a spade card, what is the probability that the other card is also a spade card.
+
+$Let $BS$ be the event where both cards are spades.
+
+I must calculate $Pr(BS | MS)$. Expanding this expression out, I obtain
+
+$Pr(BS | MS) = \frac{Pr(BS \cap MS)}{Pr(MS)}$
+
+$Pr(BS | MS) = \frac{\frac{\binom{13}{2}}{\binom{52}{2}}}{1 -  \frac{\binom{39}{2}}{\binom{52}{2}}}$
+
+$Pr(BS | MS) = 0.13$
