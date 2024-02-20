@@ -160,3 +160,28 @@ $Pr(BS | MS) = \frac{Pr(BS \cap MS)}{Pr(MS)}$
 $Pr(BS | MS) = \frac{\frac{\binom{13}{2}}{\binom{52}{2}}}{1 -  \frac{\binom{39}{2}}{\binom{52}{2}}}$
 
 $Pr(BS | MS) = 0.13$
+
+## Question four
+
+$Prove that if E_1 and E_2 are independent, so are {E_1}^{\complement} and {E_2}^{\complement}$
+
+Since $E_1$ and $E_2$ are independent, this implies that $Pr(E_1E_2) = Pr(E_1)Pr(E_2)$.
+
+
+$Pr({E_1}^{\complement}{E_2}^{\complement}) = \overline{Pr(E_1 \cup E_2)}$ (by De Morgan)
+
+$Pr({E_1}^{\complement}{E_2}^{\complement}) = \overline{Pr(E_1 \cup E_2)}$
+
+Expanding out $\overline{Pr(E_1 \cup E_2)}$, we obtain $\overline{Pr(E_1) + Pr(E_2) - Pr(E_1 \cap E_2)}$,
+which is equivalent to  $1 - Pr(E_1) - Pr(E_2) + Pr(E_1 \cap E_2)$.
+
+We now have that
+$Pr({E_1}^{\complement}{E_2}^{\complement})  = 1 - Pr(E_1) - Pr(E_2) + Pr(E_1 \cap E_2)$
+
+We can rewrite the expression as
+$Pr({E_1}^{\complement}{E_2}^{\complement})  = (1 - Pr(E_1))(1 - Pr(E_2))$, which is 
+equivalent to  
+$Pr({E_1}^{\complement}{E_2}^{\complement})  = Pr({E_1}^{\complement})Pr({E_2}^{\complement})$.
+
+The above statement proves that $E_1$ and $E_2$ being independent implies the 
+independence of ${E_1}^{\complement} and {E_2}^{\complement}$.
