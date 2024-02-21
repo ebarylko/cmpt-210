@@ -269,7 +269,7 @@ ${PDF}_M(x) = \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$.
 
 ### Completely specify the CDF(M)?
 
-${CDF}_M(x) = {\displaystyle\sum_{i = 1}^{x}} \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$. 
+${CDF}_M(x) = {\displaystyle\sum_{i = 1}^{x} \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$. 
 
 
 
