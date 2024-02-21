@@ -197,7 +197,7 @@ matches coin 1.
 If $E_1, E_2,$ and $E_3$ are pairwise independent, then it means that for every pair of events 
 $E_i, E_j, i, j \in (1, 2, 3), Pr(E_iE_j) = Pr(E_i)Pr(E_j)$
 
-No matter what pair of events are picked, I am always checking whether $Pr(\text{coin i matches coin j))$ 
+No matter what pair of events are picked, I am always checking whether $Pr(\text{coin i matches coin j})$ 
 influences $Pr(\text{coin i matches coin k})$, for $i, j, k \in (1, 2, 3)$, where i, j, k take on 
 one of the values in (1, 2, 3). 
 
