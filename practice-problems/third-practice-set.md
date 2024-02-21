@@ -237,4 +237,39 @@ Since ${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i) = CDF(b)$, we can say that
 $CDF(b) \ge CDF(a)$.
 
 
+## Question seven
+ Three balls are to be randomly selected (without replacement) from an urn containing 20 balls numbered 1 through 20. The random variable M is the maximal value on the selected balls.
+
+### Calculate Pr[M = 5]?
+
+If I randomly select three balls, this means the probability of selecting one triplet is the 
+same as selecting a distinct triplet. Therefore, I have a uniform probability space.
+
+For $Pr(M = 5)$, this evaluates to $\frac{|\text{set of all triplets where five is the maximum value}|}{|S|}$,
+where $|S|$ is the sample space consisting of all possible triplets.
+
+$|S| = \binom{20}{3}$.
+
+Let $M5$ be the event where a selected triplet has five as the maximum value. To count 
+the cardinality of this event, I must find all the ways of generating a triplet where 
+five is the largest value.
+
+To do this, I can select five as one of the balls and then choose 2 balls from (1, 2, 3, 4).
+I can do this in $\binom{4}{2}$ many ways. Therefore, $|M5| = \binom{4}{2}$
+
+Now that I have calculated $|M5|$, I can obtain the value of $Pr(M5)$.
+
+Using the fact that I am within a uniform probability space, $Pr(M5) = \frac{|M5|}{|S|}$.
+
+$Pr(M5) = \frac{\binom{4}{2}}{\binom{20}{3}}$.
+
+### Completely specify the PDF(M)
+
+${PDF}_M(x) = \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$. 
+
+### Completely specify the CDF(M)?
+
+${CDF}_M(x) = {\displaystyle\sum_{i = 1}^{x}} \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$. 
+
+
 
