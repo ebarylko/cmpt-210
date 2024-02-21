@@ -297,3 +297,25 @@ $Pr(X = 1) = 0.21 + 0.21 = 0.42$
 
 $Pr(X = 2) = 0.49$
 
+
+### What is the domain, codomain of IE ?
+
+The domain of $I_E$ is $(a, d)^2$, while the codomain of $I_E$ is $\set{0, 1}$
+
+### For every i in the codomain of IE , compute Pr[IE = i]?
+
+#### For i = 0
+
+$Pr(I_E = 0) = 0.09$
+
+#### For i = 1
+
+$Pr(I_E = 1) = 0.91$
+
+### How does X relate to IE 
+
+Is there anything else I can comment on?
+
+$Pr(I_E = 1) = Pr(X = 1) + Pr(X = 2)$
+
+$Pr(I_E = 0) = Pr(X = 0)$
