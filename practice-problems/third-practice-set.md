@@ -163,7 +163,7 @@ $Pr(BS | MS) = 0.13$
 
 ## Question four
 
-$Prove that if E_1 and E_2 are independent, so are {E_1}^{\complement} and {E_2}^{\complement}$
+Prove that if $E_1$ and $E_2$ are independent, so are ${E_1}^{\complement} and {E_2}^{\complement}$
 
 Since $E_1$ and $E_2$ are independent, this implies that $Pr(E_1E_2) = Pr(E_1)Pr(E_2)$.
 
@@ -184,4 +184,57 @@ equivalent to
 $Pr({E_1}^{\complement}{E_2}^{\complement})  = Pr({E_1}^{\complement})Pr({E_2}^{\complement})$.
 
 The above statement proves that $E_1$ and $E_2$ being independent implies the 
-independence of ${E_1}^{\complement} and {E_2}^{\complement}$.
+independence of ${E_1}^{\complement}$ and ${E_2}^{\complement}$.
+
+## Question five
+
+Suppose that we flip three fair, mutually-independent coins. Define the following events: E1 is the event
+that coin 1 matches coin 2, E2 is the event that coin 2 matches coin 3 and E3 is the event that coin 3
+matches coin 1.
+
+### Are E1, E2 and E3 pairwise independent?
+
+If $E_1, E_2,$ and $E_3$ are pairwise independent, then it means that for every pair of events 
+$E_i, E_j, i, j \in (1, 2, 3), Pr(E_iE_j) = Pr(E_i)Pr(E_j)$
+
+No matter what pair of events are picked, I am always checking whether $Pr(\text{coin i matches coin j))$ 
+influences $Pr(\text{coin i matches coin k})$, for $i, j, k \in (1, 2, 3)$, where i, j, k take on 
+one of the values in (1, 2, 3). 
+
+Regardless of if coins i and j match, I will still have a 50% chance of coins i and k 
+matching or not matching. This comes from the fact that the coins are mutually independent.
+
+Therefore, events $E_1, E_2$, and $E_3$ are pairwise independent.
+
+### Are E1, E2 and E3 mutually independent?
+
+If $E_1, E_2,$ and $E_3$ are mutually independent, then that means that all the events are 
+independent. As a consequence of this, $Pr(E_1 \cap E_2 \cap E_3) = Pr(E_1)Pr(E_2)Pr(E_3)$
+
+However, if $E_1$ and/or $E_2$ occur or do not occur, then that affects the probabilities of
+$E_3$ occurring. 
+
+If coins one and two match, and coins two and three match, then coins three and one must match.
+Similarly, if coins one and two match, but coins two and three do not match, then coins one and
+three will not match.
+
+Since the results of the first two events decide the outcome of the third event, these set of 
+events in not mutually independent.
+
+## Question six
+### Prove that CDF is an increasing function i.e. if a ≤ b, then CDF[a] ≤ CDF[b].
+
+We know that by definition CDF(a) is equivalent to $Pr(X \le a)$.
+
+Since $a \le b$, then $CDF(b)$ is equivalent to $CDF(a)$ + 
+${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i)$  
+
+For the expression ${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i)$, it takes on a 
+non-negative value. Therefore,
+${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i) + CDF(a) \ge CDF(a)$.
+
+Since ${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i) = CDF(b)$, we can say that 
+$CDF(b) \ge CDF(a)$.
+
+
+
