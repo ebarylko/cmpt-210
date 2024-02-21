@@ -271,5 +271,29 @@ ${PDF}_M(x) = \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$.
 
 ${CDF}_M(x) = {\displaystyle\sum_{i = 1}^{x} \frac{\binom{x - 1}{2}}{\binom{20}{3}}}, 0 < x \le 20$. 
 
+## Question eight
 
+### What is the domain, codomain of X?
+
+My domain is all the combinations of acceptable and defective components which the 
+individual buys.
+
+My domain is $(a, d)^2$.
+
+### For every i in the codomain of X, compute Pr[X = i]?
+My codomain is a set containing the number of acceptable components in two purchases.
+
+My codomain would then be $\set{0, 1, 2}$
+
+#### For X = 0
+
+$Pr(X = 0) = 0.09$
+
+#### For X = 1
+
+$Pr(X = 1) = 0.21 + 0.21 = 0.42$
+
+#### For X = 2
+
+$Pr(X = 2) = 0.49$
 
