@@ -233,7 +233,7 @@ For the expression ${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i)$, it takes on
 non-negative value. Therefore,
 ${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i) + CDF(a) \ge CDF(a)$.
 
-Since ${\displaystyle\sum_{a < i \le b}^{}} Pr(X = i) = CDF(b)$, we can say that 
+Since $CDF(A) + {\displaystyle\sum_{a < i \le b}^{}} Pr(X = i) = CDF(b)$, we can say that 
 $CDF(b) \ge CDF(a)$.
 
 
@@ -269,7 +269,7 @@ ${PDF}_M(x) = \frac{\binom{x - 1}{2}}{\binom{20}{3}}, 0 < x \le 20$.
 
 ### Completely specify the CDF(M)?
 
-${CDF}_M(x) = {\displaystyle\sum_{i = 1}^{x} \frac{\binom{x - 1}{2}}{\binom{20}{3}}}, 0 < x \le 20$. 
+${CDF}_M(x) = {\displaystyle\sum_{i = 1}^{x} \frac{\binom{i - 1}{2}}{\binom{20}{3}}}, 0 < x \le 20$. 
 
 ## Question eight
 
@@ -280,10 +280,11 @@ individual buys.
 
 My domain is $(a, d)^2$.
 
-### For every i in the codomain of X, compute Pr[X = i]?
 My codomain is a set containing the number of acceptable components in two purchases.
 
 My codomain would then be $\set{0, 1, 2}$
+
+### For every i in the codomain of X, compute Pr[X = i]?
 
 #### For X = 0
 
@@ -314,7 +315,7 @@ $Pr(I_E = 1) = 0.91$
 
 ### How does X relate to IE 
 
-Is there anything else I can comment on?
+$I_E = I_{X \ge 1}$
 
 $Pr(I_E = 1) = Pr(X = 1) + Pr(X = 2)$
 
