@@ -31,3 +31,34 @@ $\binom{5}{3}p^3(1-p)^2, \binom{5}{4}p^4(1 - p),$ and $\binom{5}{5}p^5$ respecti
 
 Summing up these values, we have that $Pr(T) =  \binom{5}{3}p^3(1-p)^2 + \binom{5}{4}p^4(1 - p) + p^5$. 
 
+## Question two
+
+For finding the p where a five component system is better than a three component system, we need a p such that 
+$\binom{5}{3}p^3(1-p)^2 + \binom{5}{4}p^4(1 - p) + \binom{5}{5}p^5 > \binom{3}{2}p^2(1 - p) + p^3$. 
+
+Simplifying the above expression, it becomes
+$10p^3(1-p)^2 + 5p^4(1 - p) + p^5 > 3p^2(1 - p) + p^3$. 
+
+Noting that every term contains a factor of $p^2$, we can factor it out and obtain
+$10p(1-p)^2 + 5p^2(1 - p) + p^3 > 3(1 - p) + p$, which is also equivalent to
+$10p(1-p)^2 + 5p^2(1 - p) + p^3 > 3 - 2p$.
+
+Moving over the $2p$ to the left and expanding the left hand side, we obtain
+$6p^3 - 15p^2 + 12p > 3$, which is equivalent to
+$2p^3 - 5p^2 + 4p > 1$.
+
+If we move the one over to the left and solve the inequality, we will know what value p must take on.
+
+Solving this inequality, $2p^3 - 5p^2 + 4p - 1 > 0$, we can use the root remainder theorem to find a possible 
+root. Inputting the value $p = 1$ into the expression $2p^3 - 5p^2 + 4p - 1$, we obtain 0. As a consequence of this,
+we know that $p -1$ is one of the factors of the expression.
+
+Factoring $p -1$ out of $2p^3 - 5p^2 + 4p - 1$, we obtain $2p^3 -3p + 1$. Applying the root remainder theorem and 
+using $p = 1$,  $2p^3 -3p + 1$ evaluates to zero. Therefore, we know that another root is $p -1$. Factoring $p -1$ 
+out of the expression, we obtain $2p - 1$.
+
+Using the work above, we can say that the inequality $2p^3 - 5p^2 + 4p - 1 > 0$ is equivalent to
+$(1-p)^2(2p - 1) > 0$. Solving the inequality now, we find that $p > \frac{1}{2}$.
+
+A five component system is better than a three component system when $p > \frac{1}{2}$.
+
