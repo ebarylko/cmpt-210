@@ -174,10 +174,26 @@ one of them has blue eyes affects the probability that the other has brown eyes?
 
 ### Part 2
 
+Let Br be the random variable counting the number of brown-eyed offspring in the additional five children.
 
+Assuming the children's eye colors are independent of each other (are they really?), I can say that 
+$Br \sim Bin(5, \frac{3}{4})$. 
 
+Using the fact that for a variable V with a binomial distribution, $E[V] = np$, I can calculate $E[Br] = 5 * \frac{3}{4} = \frac{15}{4}$.
 
+The expected number of children with brown eyes are $\frac{15}{4}$.
 
+## Question nine
+
+Calculating $E[I_E]$, we know that it is $1 * Pr(I_E = 1) + 0 * Pr(I_E = 0) = Pr(I_E = 1)$.
+
+Let $D_i$ be the change on day i. We can say that $Pr(I_E) = Pr(D_1 = 1 \cap D_2 = 2 \cap D_3 = 0)$.
+
+Since each of these random variables are independent, $Pr(D_1 = 1 \cap D_2 = 2 \cap D_3 = 0)$ becomes 
+$Pr(D_1 = 1)Pr(D_2 = 2)Pr(D_3 = 0)$.
+
+Using the values of $Pr(D_1 = 1) = 0.2, Pr(D_2 = 2) = 0.1,$ and $Pr(D_3 = 0) = 0.3$, 
+$Pr(I_E)$ can be calculated as $0.3 * 0.2 * 0.1$. 
 
 
 
