@@ -95,3 +95,32 @@ Let $X$ be a random variable denoting the amount won.
 $E[X] = 1,000,000 * \frac{4}{1,000,000} + 100,000 * \frac{5}{1,000,000} + 1000 * \frac{5000}{1,000,000}$
 
 $E[X] = 4 + \frac{5}{10} + 5 = 9.5\$$.
+
+## Question five 
+
+### Part 1
+$R \sim Bern(\frac{1}{2})$.
+
+$E[R] = 1 * \frac{1}{2} + 0 * \frac{1}{2} = \frac{1}{2}$.
+
+### Part 2
+
+$R \sim Bin(10, \frac{1}{2})$.
+
+$E[R] = np = 10 * \frac{1}{2} = 5$.
+
+### Part 3
+$R \sim Geo(n)$.
+
+$E[R] = \frac{1}{p} = \frac{1}{\frac{1}{2}} = 2$.
+
+## Question six
+
+$E[X] = 36 * \frac{36}{120} + 40 * \frac{40}{120} + 44 * \frac{44}{120}$
+
+$E[X] = 36 * \frac{3}{10} = 40 * \frac{1}{3} + 44 * \frac{11}{30}$
+
+$E[X] = 36 * \frac{9}{30} = 40 * \frac{10}{30} + 44 * \frac{11}{30} = \frac{1208}{30} = \frac{604}{15} \approx 40.27$
+
+
+
