@@ -62,3 +62,36 @@ $(1-p)^2(2p - 1) > 0$. Solving the inequality now, we find that $p > \frac{1}{2}
 
 A five component system is better than a three component system when $p > \frac{1}{2}$.
 
+## Question three
+
+### Part 1
+
+$PDF_X(3) = \frac{1}{6}$.
+
+$PDF_X(5) = \frac{1}{6}$.
+
+$PDF_X(7) = \frac{1}{6}$.
+
+$PDF_X(9) = \frac{1}{6}$.
+
+$PDF_X(11) = \frac{1}{6}$.
+
+$PDF_X(13) = \frac{1}{6}$.
+
+### Part 2
+
+$PDF_X(0) = \frac{1}{2}$.
+
+$PDF_X(1) = \frac{1}{6}$.
+
+$PDF_X(2) = \frac{1}{6}$.
+
+$PDF_X(3) = \frac{1}{6}$.
+
+## Question four
+
+Let $X$ be a random variable denoting the amount won.
+
+$E[X] = 1,000,000 * \frac{4}{1,000,000} + 100,000 * \frac{5}{1,000,000} + 1000 * \frac{5000}{1,000,000}$
+
+$E[X] = 4 + \frac{5}{10} + 5 = 9.5 USD$.
