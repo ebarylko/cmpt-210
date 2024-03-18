@@ -94,4 +94,4 @@ Let $X$ be a random variable denoting the amount won.
 
 $E[X] = 1,000,000 * \frac{4}{1,000,000} + 100,000 * \frac{5}{1,000,000} + 1000 * \frac{5000}{1,000,000}$
 
-$E[X] = 4 + \frac{5}{10} + 5 = 9.5\$ $.
+$E[X] = 4 + \frac{5}{10} + 5 = 9.5\$$.
