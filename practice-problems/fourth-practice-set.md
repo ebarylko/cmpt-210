@@ -110,7 +110,7 @@ $R \sim Bin(10, \frac{1}{2})$.
 $E[R] = np = 10 * \frac{1}{2} = 5$.
 
 ### Part 3
-$R \sim Geo(n)$.
+$R \sim Geo(\frac{1}{2})$.
 
 $E[R] = \frac{1}{p} = \frac{1}{\frac{1}{2}} = 2$.
 
