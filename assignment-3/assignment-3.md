@@ -26,3 +26,14 @@ $E[B]$ as $E[B] = 5 * \frac{4}{5} = 4$.
 
 The expected number of boards that Bruce will break is four.
 
+### In order to challenge Bruce Lee, he now has to break the bricks placed before him until he fails. He can break a brick with probability 0.2. He starts breaking the bricks one by one, but as soon as he fails, the challenge is over. On average, how many bricks will he attempt to break before the challenge is over
+Given that Bruce breaks each brick with probability $\frac{1}{5}$ and we are wishing to find the number of bricks he will break 
+before his last attempt fails, we can model this situation with a geometric distribution.
+
+Let $F$ be the r.v. denoting the number of bricks that Bruce attempted to break, where the last brick could not be broken.
+$F \sim Geo(\frac{1}{5})$.
+
+Using the fact that for any geometrically distributed r.v. X, $E[X] = \frac{1}{p}$, we can calculate the expected value of 
+F to be $\frac{1}{\frac{1}{5}} = 5$.
+
+Bruce will break an average of five blocks before he fails to break the next block. 
