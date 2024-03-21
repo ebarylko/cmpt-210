@@ -37,3 +37,56 @@ Using the fact that for any geometrically distributed r.v. X, $E[X] = \frac{1}{p
 F to be $\frac{1}{\frac{1}{5}} = 5$.
 
 Bruce will break an average of five blocks before he fails to break the next block. 
+
+## Question two
+
+### Fully specify the PDF for X
+
+From the $CDF$, we can see that the $PDF$ has non-zero probabilities for $x \in \{0, 1, 2, 3\}$.
+
+Given the value of $F(0)$, we know that it is equivalent to $Pr(X = 0)$ since there is no other element smaller than 
+zero with a non-zero probability. Therefore, $Pr(X = 0) = \frac{1}{2}$.
+
+Using the value of $F(0)$, I can calculate $Pr(X = 1)$ by calculating $F(1) - F(0)$, which is equivalent to $Pr(x \le 1) - Pr(x \le 0)$. 
+Doing this, I have that $Pr(x = 1) = \frac{2}{3} - {1}{2} = \frac{1}{6}$.
+
+Repeating the process above with $F(1)$ and $F(2)$ to calculate $Pr(X = 2)$, I obtain that $Pr(X = 2) = \frac{11}{12} - \frac{2}{3} = \frac{3}{12} = \frac{1}{4}$.
+
+In order to find $Pr(X = 3)$, I can calculate it by doing $F(3) - F(2) = 1 - \frac{11}{12} = \frac{1}{12}$.
+
+Using the values I calculated above, I can fully specify the PDF.
+
+$Pr(X = 0) = \frac{1}{2}$.
+
+$Pr(X = 1) = \frac{1}{6}$.
+
+$Pr(X = 2) = \frac{1}{4}$.
+
+$Pr(X = 3) = \frac{1}{12}$.
+
+### Calculate Pr[X ≤ 2]
+I know that $Pr(X \le 2) = F(2)$. Reading off the value of $F(2), I have that
+$Pr(X \le 2) = \frac{11}{12}$.
+
+### Calculate Pr[2 < X ≤ 4].
+
+Taking the expression $Pr(2 < x \le 4)$, we can convert it to the equivalent expression $Pr(3 \le x \le 4)$ since we are 
+looking at a discrete distribution.
+
+Noting that my distribution only contains non-zero probabilities for $x \in \{0, 1, 2, 3\}$,
+$Pr(3 \le x \le 4)$ can be also be represented as $Pr(3 \le x \le 3) = Pr(X = 3)$.
+
+Using the values of the $PDF$ computed in the last question, $Pr(X = 3) = Pr(2 < x \le 4) = \frac{1}{12}$.
+
+### Calculate E[X], E[X^2], Var[X]
+
+Using the formula of $E[X] = {\displaystyle\sum_{x \in X}^{}} x * Pr(X = x)$, the value of $E[X]$ can be calculated 
+as $0 * \frac{1}{2} + 1 * \frac{1}{6} + 2 * \frac{1}{4} + 3 * \frac{1}{12} = \frac{11}{12}$.
+
+Using the formula of $E[g(X)] = {\displaystyle\sum_{x \in X}^{}} g(x) * Pr(X = x)$ with $g(x) = x^2$,
+the value of $E[X^2]$ can be calculated as $0 * \frac{1}{2} + 1 * \frac{1}{6} + 4 * \frac{1}{4} + 9 * \frac{1}{12} = \frac{23}{12}$.
+
+Using the fact that $Var[X] = E[X^2] - (E[X])^2$ and that $E[X] = \frac{11}{12}$ and $E[X^2] = \frac{23}{12}$, 
+the value of $Var[X]$ is $\frac{23}{12} - {121}{144} = \frac{155}{144}$.
+
+### Calculate Pr[X = 2|X ≥ 2]
