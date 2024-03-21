@@ -19,3 +19,10 @@ Calculating $Pr(B = 1)$ and $Pr(B = 0)$, I find them to be $\binom{5}{1}(0.8)(0.
 Summing up $Pr(B = 2), Pr(B = 1),$ and $Pr(B = 0)$, I have that $Pr(B \le 2) = 0.05792$.
 
 Using this value, I have that $Pr(B \ge 3) = 1 - Pr(B \le 2) = 0.94208$.
+
+### If 10 boards are placed before him, what is the expected number of boards that he will break?
+Using the fact that the expectation for a binomally distributed R.V. is np, I can calculate 
+$E[B]$ as $E[B] = 5 * \frac{4}{5} = 4$.
+
+The expected number of boards that Bruce will break is four.
+
