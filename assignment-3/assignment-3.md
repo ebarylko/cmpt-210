@@ -87,6 +87,30 @@ Using the formula of $E[g(X)] = {\displaystyle\sum_{x \in X}^{}} g(x) * Pr(X = x
 the value of $E[X^2]$ can be calculated as $0 * \frac{1}{2} + 1 * \frac{1}{6} + 4 * \frac{1}{4} + 9 * \frac{1}{12} = \frac{23}{12}$.
 
 Using the fact that $Var[X] = E[X^2] - (E[X])^2$ and that $E[X] = \frac{11}{12}$ and $E[X^2] = \frac{23}{12}$, 
-the value of $Var[X]$ is $\frac{23}{12} - {121}{144} = \frac{155}{144}$.
+the value of $Var[X]$ is $\frac{23}{12} - \frac{121}{144} = \frac{155}{144}$.
 
 ### Calculate Pr[X = 2|X ≥ 2]
+
+$Pr(X = 2 | X \ge 2) = \frac{Pr(X = 2 \cap X \ge 2)}{Pr(X \ge 2} = \frac{Pr(X = 2}{Pr(X \ge 2)}$.
+
+Using the value for $Pr(X = 2) = \frac{1}{4}$ from part one of the question and that $Pr(X \ge 2) = F(3) - F(1) = 1 - \frac{2}{3} = \frac{1}{3}$,
+I can calculate the value of the expression above.
+
+$Pr(X = 2 | X \ge 2)  = \frac{\frac{1}{4}}{\frac{1}{3}} = \frac{3}{4}$ .
+
+### Calculate E[X|X ≥ 2]
+
+Using the formula for conditional expectation $E[X | A]  = {\displaystyle\sum_{x \in X}^{}} x * Pr(X = x| A)$, $E[X | X \ge 2]$ 
+can be calculated as $0 * Pr(X = 0 | X \ge 2) + 1 * Pr(X = 1| X \ge 2) + 2 * Pr(X = 2 | X \ge 2) + 3 * Pr(X = 3 | X \ge 2)$.
+
+Since $Pr(X = x | X \ge 2)$ only has non-zero probability for $x \ge 2$, the first two terms in the expectation disappear.
+
+To evaluate what remains of the expectation, I must calculate the value of $Pr(X = 3 | X \ge 2)$.
+
+Expanding out the expression, I obtain that it is equivalent to $\frac{Pr(X = 3)}{Pr(X \ge 2)} = \frac{\frac{1}{12}}{\frac{1}{3}} = \frac{1}{4}$.
+
+Using the values of $Pr(X = 2 | X \ge 2) = \frac{3}{4}$ and $Pr(X = 3 | X \ge 2) = \frac{1}{4}$, the value of the 
+conditional expectation is $2 * \frac{3}{4} + 3 * \frac{1}{4} = \frac{9}{4}$.
+
+
+
