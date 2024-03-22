@@ -118,13 +118,13 @@ ${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = nx(x + y)^{n - 1}$
 
 Start of proof:
 
-${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = {\displaystyle\sum_{k = 0}^{n}k \frac{n!}{k!}{(n - k)!}x^k y^{n - k}}$.
+${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = {\displaystyle\sum_{k = 0}^{n}k \frac{n!}{k!(n - k)!}x^k y^{n - k}}$.
 
 Dividing by a factor of $k$ on the numerator and denominator, we obtain
-${\displaystyle\sum_{k = 1}^{n} \frac{n!}{(k - 1)!}{(n - k)!}x^k y^{n - k}}$.
+${\displaystyle\sum_{k = 1}^{n} \frac{n!}{(k - 1)!(n - k)!}x^k y^{n - k}}$.
 
 We can then take out a factor of n and x from the expression, resulting in 
-$nx{\displaystyle\sum_{k = 1}^{n - 1} \frac{(n - 1)!}{(k - 1)!}{(n - k)!}x^{k - 1} y^{n - k}}$.
+$nx{\displaystyle\sum_{k = 1}^{n - 1} \frac{(n - 1)!}{(k - 1)!(n - k)!}x^{k - 1} y^{n - k}}$.
 
 ## Question four
 
