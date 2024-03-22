@@ -112,6 +112,19 @@ Expanding out the expression, I obtain that it is equivalent to $\frac{Pr(X = 3)
 Using the values of $Pr(X = 2 | X \ge 2) = \frac{3}{4}$ and $Pr(X = 3 | X \ge 2) = \frac{1}{4}$, the value of the 
 conditional expectation is $2 * \frac{3}{4} + 3 * \frac{1}{4} = \frac{9}{4}$.
 
+## Question three
+I will now prove that
+${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = nx(x + y)^{n - 1}$.
+
+Start of proof:
+
+${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = {\displaystyle\sum_{k = 0}^{n}k \frac{n!}{k!}{(n - k)!}x^k y^{n - k}}$.
+
+Dividing by a factor of $k$ on the numerator and denominator, we obtain
+${\displaystyle\sum_{k = 1}^{n} \frac{n!}{(k - 1)!}{(n - k)!}x^k y^{n - k}}$.
+
+We can then take out a factor of n and x from the expression, resulting in 
+$nx{\displaystyle\sum_{k = 1}^{n - 1} \frac{(n - 1)!}{(k - 1)!}{(n - k)!}x^{k - 1} y^{n - k}}$.
 
 ## Question four
 
@@ -131,7 +144,22 @@ Substituting the value for $Pr(X = x)$ I have from the question above, the expre
 ${\displaystyle\sum_{x \in X}^{}} x * (Pr(X \ge i) - Pr(X \ge i + i))$.
 
 Distributing the x in the expression above, we obtain
-${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{x \ge 1}^{}}xPr(X \ge x + i)$.
+${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{x \ge 1}^{}}xPr(X \ge x + 1)$.
+
+To simplify the above expression, let us define $k$ such that $k = x + 1$. Using the value of $k$ in the  
+second summation above with $x = k -1$ resulting as a consequence of the definition, the expression becomes 
+${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 1}^{}}(k - 1)Pr(X \ge k)$.
+
+Expanding out the expression, we obtain
+${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 1}^{}}kPr(X \ge k) + {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$, 
+which is equivalent to {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
+
+Therefore, we have proven that $E[X] = {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
+
+
+
+
+
 
 ### Part 3
 
