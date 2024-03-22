@@ -113,4 +113,26 @@ Using the values of $Pr(X = 2 | X \ge 2) = \frac{3}{4}$ and $Pr(X = 3 | X \ge 2)
 conditional expectation is $2 * \frac{3}{4} + 3 * \frac{1}{4} = \frac{9}{4}$.
 
 
+## Question four
+
+### Prove Pr[X = i] = Pr[X ≥ i] − Pr[X ≥ i + 1] 
+$Pr(X \ge i) = {\displaystyle\sum_{t \ge i}^{}} Pr(X = t)$
+
+$Pr(X \ge i + i) = {\displaystyle\sum_{t \ge i + i}^{}} Pr(X = t)$
+
+Taking the difference between $Pr(X \ge i)$ and $Pr(X \ge i + 1)$, I have that the only term that does not 
+cancel out is $Pr(X = i)$.
+
+Therefore, $Pr[X = i] = Pr[X ≥ i] − Pr[X ≥ i + 1]$.
+
+### Part 2
+Using the formula for expectation, it is  {\displaystyle\sum_{x \in X}^{}} x * Pr(X = x)$.
+Substituting the value for $Pr(X = x)$ I have from the question above, the expression becomes
+{\displaystyle\sum_{x \in X}^{}} x * (Pr(X \ge i) - Pr(X \ge i + i))$.
+
+Distributing the x in the expression above, we obtain
+${\displaystyle\sum_{x \in X}^{}} xPr(X \ge i) -  {\displaystyle\sum_{x \in X}^{}}xPr(X \ge i + i)$.
+
+### Part 3
+
 
