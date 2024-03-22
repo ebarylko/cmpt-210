@@ -126,12 +126,12 @@ cancel out is $Pr(X = i)$.
 Therefore, $Pr[X = i] = Pr[X ≥ i] − Pr[X ≥ i + 1]$.
 
 ### Part 2
-Using the formula for expectation, it is  {\displaystyle\sum_{x \in X}^{}} x * Pr(X = x)$.
+Using the formula for expectation, it is  ${\displaystyle\sum_{x \in X}^{}} x * Pr(X = x)$.
 Substituting the value for $Pr(X = x)$ I have from the question above, the expression becomes
-{\displaystyle\sum_{x \in X}^{}} x * (Pr(X \ge i) - Pr(X \ge i + i))$.
+${\displaystyle\sum_{x \in X}^{}} x * (Pr(X \ge i) - Pr(X \ge i + i))$.
 
 Distributing the x in the expression above, we obtain
-${\displaystyle\sum_{x \in X}^{}} xPr(X \ge i) -  {\displaystyle\sum_{x \in X}^{}}xPr(X \ge i + i)$.
+${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{x \ge 1}^{}}xPr(X \ge x + i)$.
 
 ### Part 3
 
