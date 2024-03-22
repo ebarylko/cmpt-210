@@ -160,7 +160,7 @@ ${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 1}^{
 
 Expanding out the expression, we obtain
 ${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 1}^{}}kPr(X \ge k) + {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$, 
-which is equivalent to {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
+which is equivalent to ${\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
 
 Therefore, we have proven that $E[X] = {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
 
