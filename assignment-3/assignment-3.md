@@ -126,6 +126,14 @@ ${\displaystyle\sum_{k = 1}^{n} \frac{n!}{(k - 1)!(n - k)!}x^k y^{n - k}}$.
 We can then take out a factor of n and x from the expression, resulting in 
 $nx{\displaystyle\sum_{k = 1}^{n - 1} \frac{(n - 1)!}{(k - 1)!(n - k)!}x^{k - 1} y^{n - k}}$.
 
+We can simplify the expression above by defining $t$ to be $t = k -1$, resulting in $k = t + 1$. Substituting in the 
+value of t in the expression above, we obtain 
+$nx{\displaystyle\sum_{t = 0}^{n - 1} \frac{(n - 1)!}{(t)!(n - t - 1)!}x^{t} y^{n - t - 1}}$, which is equivalent to
+$nx{\displaystyle\sum_{t = 0}^{n - 1} \binom{n - 1}{t}x^{t} y^{n - t - 1}},$ which is 
+equivalent to $nx(x + y)^{n - 1}$.
+
+.
+
 ## Question four
 
 ### Prove Pr[X = i] = Pr[X ≥ i] − Pr[X ≥ i + 1] 
