@@ -309,22 +309,22 @@ $E[R] = E[R | N6]Pr(N6) + E[R | {N6}^{\complement}]Pr({N6}^{\complement})$, wher
 on the first throw.
 
 Expanding out the expression $E[R | N6]$, it is equivalent to 
-$\displaystyle\sum_{i = 1}{\infty}i Pr(R = i | N6)$.
+$\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | N6)$.
 
 Since it is impossible to get a pair of sixes on the first throw, the first term of the summation can be discarded, resulting in 
-$\displaystyle\sum_{i = 2}{\infty}i Pr(R = i | N6)$.
+$\displaystyle\sum_{i = 2}^{\infty}i Pr(R = i | N6)$.
 
 We can rewrite the summation above as
-$\displaystyle\sum_{i = 2}{\infty}i p * (1 - p)^{i - 2}$, owing to the fact that the first $i - 2$ consecutive pairs
+$\displaystyle\sum_{i = 2}^{\infty}i p * (1 - p)^{i - 2}$, owing to the fact that the first $i - 2$ consecutive pairs
 of numbers will not contain consecutive sixes and only the last pair will contain two sixes. We can also recognize that 
-the expression above is equivalent to $\displaystyle\sum_{i = 2}{\infty}i Pr(R = i - 1)$.
+the expression above is equivalent to $\displaystyle\sum_{i = 2}^{\infty}i Pr(R = i - 1)$.
 
 Let us now define $t$ to be $i - 1$. Substituting t into the expression above, the summation now becomes
-$\displaystyle\sum_{t = 1}{\infty}(t + 1) Pr(R = t)$, which becomes
-$\displaystyle\sum_{t = 1}{\infty} tPr(R = t) + \displaystyle\sum_{t = 1}{\infty} Pr(R = t)$ after distributing the $(t + 1)$
+$\displaystyle\sum_{t = 1}^{\infty}(t + 1) Pr(R = t)$, which becomes
+$\displaystyle\sum_{t = 1}^{\infty} tPr(R = t) + \displaystyle\sum_{t = 1}^{\infty} Pr(R = t)$ after distributing the $(t + 1)$
 term.
 
-Using the fact that $E[R] = \displaystyle\sum_{t = 1}{\infty} tPr(R = t)$ and that $\displaystyle\sum_{t = 1}{\infty} Pr(R = t) = 1$ due to $R$ 
+Using the fact that $E[R] = \displaystyle\sum_{t = 1}^{\infty} tPr(R = t)$ and that $\displaystyle\sum_{t = 1}^{\infty} Pr(R = t) = 1$ due to $R$ 
 being a probability space, the expression above simplifies to $E[R] + 1$, which is equivalent to $E[R | N6]$. Using this information, 
 we can substitute the value of $E[R | N6]$ into $E[R]$ to obtain 
 $E[R] = (E[R] + 1)Pr(N6) + E[R | {N6}^{\complement}]Pr({N6}^{\complement})$
