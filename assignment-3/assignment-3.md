@@ -255,18 +255,16 @@ To calculate $Pr(SS \cap M)$, we must count all the ways in which the hero can g
 Given that the first attempt failed and the second attempt succeeded, we know that one bullet must be in the chamber adjacent to 
 the one used on the first attempt and that another bullet can be in any of the four remaining chambers. This means there 
 are four possible location combinations which result in the hero getting shot. Since this number only considers the case where the first 
-bullet is the one used when shooting the hero, we add an additional four cases to account for when the second bullet is used for 
-shooting the hero.
-
-Since this is a uniform probability space and there are $\binom{6}{2}$ ways to select two chambers to place the bullets in, 
-we have that $Pr(SS \cap M) = \frac{|SS \cap M|}{|S|}$, where $S$ is the sample space. This expression simplifies to 
-$\frac{8}{15}$.
+bullet is the one used when shooting the hero, we add four additional cases to account for when the second bullet is used for 
+shooting the hero. Since we have a uniform probability space and there are $\binom{6}{2} * 2$ ways to place two bullets in 
+the six chambers, we can calculate $Pr(SS \cap M) = \frac{|SS \cap M|}{|S|}$,  where $S$ is the sample space. This expression simplifies to
+$\frac{8}{30} = \frac{4}{15}$.
 
 Now, we nee to calculate $Pr(M)$ in order to obtain the value of $Pr(SS | M)$. We can calculate $Pr(M)$ by taking the 
-complement of $Pr(S)$, having that $Pr(M) = 1 - Pr(S) = 1 - \frac{1}{3} = \frac{2}{3}$.
+complement of $Pr(S)$ (using the value of $Pr(S)$ defined in the previous question) , having that $Pr(M) = 1 - Pr(S) = 1 - \frac{1}{3} = \frac{2}{3}$.
 
 Using the values of $Pr(SS \cap M) = \frac{8}{15}$ and $Pr(M) = \frac{2}{3}$, we can calculate
-$\frac{Pr(SS \cap M)}{Pr(M)}$ to be $\frac{8}{15} * \frac{3}{2} = \frac{4}{5}$.
+$\frac{Pr(SS \cap M)}{Pr(M)}$ to be $\frac{4}{15} * \frac{3}{2} = \frac{2}{5}$.
 
 ### Part 3
 Since the gangster spins the cylinder, it is equally probable that we land on any chamber. Since the bullets continue to 
@@ -277,3 +275,62 @@ Let $TS$ be the event that the hero is shot on the third attempt. Using the fact
 calculate Pr(TS) as Pr(TS) = Pr(bullet lands on chamber with bullet 1) + Pr(bullet lands on chamber with bullet 2) = $\frac{1}{6} * 2 = \frac{1}{3}$.
 
 ### Part 4
+
+## Question seven
+
+### Part 1
+
+Assuming the balls are drawn randomly from the urn, we have a uniform probability space where the probability of 
+picking any set of n balls from the urn is $\frac{1}{\binom{N}{n}}$.
+
+Let U be the event that there are $k$ white balls in the $n$ balls selected from the urn.
+Since we want to calculate all the ways of picking k white balls from the set of n balls, this can be done in 
+$\binom{n}{k}$ many ways.
+
+Using the fact we have a uniform probability space, $Pr(U) = \frac{|U|}{|S|}$, where $S$ is the sample space of all 
+possible ways to select n balls from the urn. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{n}{k}$, $Pr(U)$ 
+can be calculated as $\frac{\binom{n}{k}}{\binom{N}{n}}$
+
+### Part 2
+The domain of $X$ would be $[0, n]$ since we could draw no white balls in the worst case and then have that all the balls
+selected are white.
+
+### Part 3
+
+## Question eight
+
+### Part 1
+Since $R$ is the random variable denoting the number of throws we need until we obtain two consecutive sixes, it 
+appears that R is best modelled by a geometric distribution. $R \sim Geo(\frac{1}{36})$.
+
+We can partition $R$ into the events that occurred after obtaining a six on the first throw and the events that 
+occurred after obtaining a value which is not six on the first throw. As a result, we have that $E[R]$ becomes equivalent to
+$E[R] = E[R | N6]Pr(N6) + E[R | {N6}^{\complement}]Pr({N6}^{\complement})$, where $N6$ is the event that a six was not obtained 
+on the first throw.
+
+Expanding out the expression $E[R | N6]$, it is equivalent to 
+$\displaystyle\sum_{i = 1}{\infty}i Pr(R = i | N6)$.
+
+Since it is impossible to get a pair of sixes on the first throw, the first term of the summation can be discarded, resulting in 
+$\displaystyle\sum_{i = 2}{\infty}i Pr(R = i | N6)$.
+
+We can rewrite the summation above as
+$\displaystyle\sum_{i = 2}{\infty}i p * (1 - p)^{i - 2}$, owing to the fact that the first $i - 2$ consecutive pairs
+of numbers will not contain consecutive sixes and only the last pair will contain two sixes. We can also recognize that 
+the expression above is equivalent to $\displaystyle\sum_{i = 2}{\infty}i Pr(R = i - 1)$.
+
+Let us now define $t$ to be $i - 1$. Substituting t into the expression above, the summation now becomes
+$\displaystyle\sum_{t = 1}{\infty}(t + 1) Pr(R = t)$, which becomes
+$\displaystyle\sum_{t = 1}{\infty} tPr(R = t) + \displaystyle\sum_{t = 1}{\infty} Pr(R = t)$ after distributing the $(t + 1)$
+term.
+
+Using the fact that $E[R] = \displaystyle\sum_{t = 1}{\infty} tPr(R = t)$ and that $\displaystyle\sum_{t = 1}{\infty} Pr(R = t) = 1$ due to $R$ 
+being a probability space, the expression above simplifies to $E[R] + 1$, which is equivalent to $E[R | N6]$. Using this information, 
+we can substitute the value of $E[R | N6]$ into $E[R]$ to obtain 
+$E[R] = (E[R] + 1)Pr(N6) + E[R | {N6}^{\complement}]Pr({N6}^{\complement})$
+
+
+
+
+.
+
