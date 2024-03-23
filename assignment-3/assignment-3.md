@@ -208,10 +208,14 @@ Since $X_{Adele}$ is binomally distributed, we know that $E[X_{Adele}] = np = np
 
 ### Part 2
 
-The joint PDF is $PDF_{X_{Adele}, X_{Lizzo}, X_{Taylor}} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{Taylor}^k$
+The joint PDF is $PDF_{i, j, k} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{Taylor}^k$
 
 ### Part 3
 
-The value of the joint pdf given that $p_{Adele} = 0.5, p_{Lixxo} = 0.3$
+Given that $n = 8, p_{Adele} = 0.5, p_{Lizzo} = 0.3$, and $p_{Taylor} = 0.2$, the value of 
+$PDF(4, 2, 2) = \frac{8!}{4!(2!)^2}(0.5)^4 (0.3)^2 (0.2)^2 = 0.095$
 
-
+### Part 4
+Since I only wish to compute the probabilities that Adele receives three votes, this is the same as 
+taking the joint pdf and then summing over the possible values that j and k can take on, obtaining 
+$X_{Adele}
