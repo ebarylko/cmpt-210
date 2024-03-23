@@ -195,4 +195,23 @@ is $\frac{1}{p}$ after simplifying the expression.
 
 Since we obtained this value by manipulating the expression $E[R]$, we can say that $E[R] = \frac{1}{p}$.
 
+## Question five
+
+### Part 1
+Since there are n audience members voting where each member has the same probability of voting for Adele and 
+each audience member's vote is independent of the others, it seems that the distribution of $X_{Adele}$ can be 
+modeled as a binomial distribution. 
+
+$X_{Adele} \sim Bin(n, p_{Adele})$.
+
+Since $X_{Adele}$ is binomally distributed, we know that $E[X_{Adele}] = np = np_{Adele}$.
+
+### Part 2
+
+The joint PDF is $PDF_{X_{Adele}, X_{Lizzo}, X_{Taylor}} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{Taylor}^k$
+
+### Part 3
+
+The value of the joint pdf given that $p_{Adele} = 0.5, p_{Lixxo} = 0.3$
+
 
