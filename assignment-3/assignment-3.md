@@ -164,11 +164,35 @@ which is equivalent to ${\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
 
 Therefore, we have proven that $E[X] = {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
 
-
-
-
-
-
 ### Part 3
+
+Using the value of $E[X]$ obtained above for computing $E[R]$, we obtain
+$E[R] = {\displaystyle\sum_{k \ge 1}^{}}Pr(R \ge k)$
+
+For $Pr(R \ge 1)$, this evaluates to 1 since I will always need to flip at least once in order to gain a success 
+immediately or after some n - 1 failures. 
+
+For the remaining terms in ${\displaystyle\sum_{k \ge 2}^{}}Pr(R \ge k)$, I can always factor out a $(1 - p)^{k - 1}$ 
+term since if $R \ge k$, this means that I have at least $k - 1$ failures before I must account for a success occurring 
+right after or in the following events. 
+
+I can then think of the summation in two different parts, one part in which is the probability of the minimum amount of 
+failures and the other part which is the probability of every possible event that can occur after the minimum amount of 
+failures occurring. By doing this, I can think of $Pr(R \ge k)$ as $Pr(X, Y)$, where $X$ indicates the number of 
+minimum failures and $Y$ is the probability of the events following the minimum amount of failures.
+
+I can then change ${\displaystyle\sum_{k \ge 2}^{}}Pr(R \ge k)$ to ${\displaystyle\sum_{\forall x \ge 1, \forall y \in Y}{} Pr(X)Pr(Y| X)}$.
+
+After summing over all the possible values of $Y$, my expression above becomes
+${\displaystyle\sum_{\forall x \ge 1}{} Pr(X)}$. I know this expression is equivalent to 
+${\displaystyle\sum_{i \ge 1}{} (1- p)^{i}}$.
+
+Summing this expression with the value obtained for $Pr(R \ge 1)$, I have that the summation becomes
+${\displaystyle\sum_{i \ge 0}{} (1- p)^{i}}$.
+
+Using the geometric sum formula with a = 1 and r = 1 - p, the summation of this series becomes $\frac{1}{1 - (1 - p)}$, which 
+is $\frac{1}{p}$ after simplifying the expression.
+
+Since we obtained this value by manipulating the expression $E[R]$, we can say that $E[R] = \frac{1}{p}$.
 
 
