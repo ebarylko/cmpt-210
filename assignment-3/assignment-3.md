@@ -218,4 +218,13 @@ $PDF(4, 2, 2) = \frac{8!}{4!(2!)^2}(0.5)^4 (0.3)^2 (0.2)^2 = 0.095$
 ### Part 4
 Since I only wish to compute the probabilities that Adele receives three votes, this is the same as 
 taking the joint pdf and then summing over the possible values that j and k can take on, obtaining 
-$X_{Adele}
+$X_{Adele}$ as the result. 
+
+For calculating the probability that Adele receives three votes, it is the same as $Pr(X_{Adele} = 3) = \binom{8}{3}(0.5)^3(0.5)^5 = 0.16$.
+
+### Part 5
+If Adele receives three votes, Lizzo receives three votes, and Taylor receives two votes, the probability 
+of this occurring is $PDF(3, 3, 2) = \frac{8!}{(3!)^2 2!)} (0.5)^3 (0.3)^2 (0.2)^2 = 0.25$
+
+
+## Question six
