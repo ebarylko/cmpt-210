@@ -213,7 +213,7 @@ The joint PDF is $PDF_{i, j, k} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{T
 ### Part 3
 
 Given that $n = 8, p_{Adele} = 0.5, p_{Lizzo} = 0.3$, and $p_{Taylor} = 0.2$, the value of 
-$PDF(4, 2, 2) = \frac{8!}{4!(2!)^2}(0.5)^4 (0.3)^2 (0.2)^2 = 0.095$
+$PDF_{4, 2, 2} = \frac{8!}{4!(2!)^2}(0.5)^4 (0.3)^2 (0.2)^2 = 0.095$
 
 ### Part 4
 Since I only wish to compute the probabilities that Adele receives three votes, this is the same as 
@@ -224,7 +224,56 @@ For calculating the probability that Adele receives three votes, it is the same 
 
 ### Part 5
 If Adele receives three votes, Lizzo receives three votes, and Taylor receives two votes, the probability 
-of this occurring is $PDF(3, 3, 2) = \frac{8!}{(3!)^2 2!)} (0.5)^3 (0.3)^2 (0.2)^2 = 0.25$
+of this occurring is $PDF_{3, 3, 2} = \frac{8!}{(3!)^2 2!} (0.5)^3 (0.3)^2 (0.2)^2 = 0.25$
 
 
 ## Question six
+
+### Part 1
+Since the bullets are placed randomly in any of the chambers, the probability that a bullet is in any specific chamber is 
+$\frac{1}{6}$. 
+
+Let $S$ be the event that the hero is shot the first time. We know that $S$ occurs if the 
+chamber landed after spinning the cylinder contains the first bullet or the second bullet.
+
+Let $FB$ and $SB$ be the event that the chamber landed on contains the first bullet and second bullet respectively.
+
+We can then say that $S = (S \cap FB) \cup (S \cap SB)$. Since these events are disjoint, this means that 
+$Pr(S) = Pr(S \cap FB) + Pr(S \cap SB)$. 
+
+Since we wish to sum up the probabilities that we landed on the first or second chamber and it is known that 
+the bullets are distributed uniformly (meaning that Pr(bullet is in a specific chamber) = $\frac{1}{6}$), 
+$Pr(S) = 2 * \frac{1}{6} = \frac{1}{3}$.
+
+### Part 2
+
+Let $SS$ be the event that the hero is shot on the second attempt and $M$ be the event the gangster misses on the first attempt.
+
+We want to calculate $Pr(SS | M)$, which is equivalent to $\frac{Pr(SS \cap M)}{Pr(M)}$.
+
+To calculate $Pr(SS \cap M)$, we must count all the ways in which the hero can get shot on the second attempt.
+Given that the first attempt failed and the second attempt succeeded, we know that one bullet must be in the chamber adjacent to 
+the one used on the first attempt and that another bullet can be in any of the four remaining chambers. This means there 
+are four possible location combinations which result in the hero getting shot. Since this number only considers the case where the first 
+bullet is the one used when shooting the hero, we add an additional four cases to account for when the second bullet is used for 
+shooting the hero.
+
+Since this is a uniform probability space and there are $\binom{6}{2}$ ways to select two chambers to place the bullets in, 
+we have that $Pr(SS \cap M) = \frac{|SS \cap M|}{|S|}$, where $S$ is the sample space. This expression simplifies to 
+$\frac{8}{15}$.
+
+Now, we nee to calculate $Pr(M)$ in order to obtain the value of $Pr(SS | M)$. We can calculate $Pr(M)$ by taking the 
+complement of $Pr(S)$, having that $Pr(M) = 1 - Pr(S) = 1 - \frac{1}{3} = \frac{2}{3}$.
+
+Using the values of $Pr(SS \cap M) = \frac{8}{15}$ and $Pr(M) = \frac{2}{3}$, we can calculate
+$\frac{Pr(SS \cap M)}{Pr(M)}$ to be $\frac{8}{15} * \frac{3}{2} = \frac{4}{5}$.
+
+### Part 3
+Since the gangster spins the cylinder, it is equally probable that we land on any chamber. Since the bullets continue to 
+be randomly distributed after spinning the cylinder once more, the probability the hero gets shot on the third 
+attempt is the probability of landing on the first or second chamber which contains a bullet.
+
+Let $TS$ be the event that the hero is shot on the third attempt. Using the fact that Pr(bullet is in chamber i) = $\frac{1}{6}$, we can 
+calculate Pr(TS) as Pr(TS) = Pr(bullet lands on chamber with bullet 1) + Pr(bullet lands on chamber with bullet 2) = $\frac{1}{6} * 2 = \frac{1}{3}$.
+
+### Part 4
