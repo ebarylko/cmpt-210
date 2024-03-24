@@ -276,6 +276,35 @@ calculate Pr(TS) as Pr(TS) = Pr(bullet lands on chamber with bullet 1) + Pr(bull
 
 ### Part 4
 
+I will prove that $Pr(S > i + 1 | S > i) = \frac{4 - i}{6 - i} \forall i \in \set{1, 2, 3, 4}$ below. The sections that 
+follow correspond to a specific value of i.
+
+#### i = 1
+The expression $Pr(S > 2| S > 1)$ expands to $\frac{Pr(S > 2)}{Pr(S > 1)}$.
+
+For the denominator, it can be calculated as $Pr(S > 1) = 1 - Pr(S \le 1) = 1 - Pr(S = 1) = 1 - \frac{1}{3} = \frac{2}{3}$.
+
+The numerator can be calculated as $Pr(X, Y) = Pr(X) \displaystyle\sum_{y \in Y}^{} Pr(y| X)$, where $X$ represents the 
+minimum number of failures to shoot the hero and $Y$ represents all the possible events that can follow the failing to 
+shoot the hero $X$ times. Marginalizing over $Y$, we obtain that $Pr(X, Y)$ becomes $Pr(X)$. 
+
+Since we wish to calculate $Pr(S > 2)$, which is equivalent to $Pr(X = 2, Y)$ for the set of $Y$ events which can occur after
+failing to shoot the hero twice. Marginalizing over $Y$, we obtain $Pr(X = 2) = \frac{4}{6} * \frac{3}{5} = \frac{2}{5}$.
+
+Using the values of $Pr(S > 2) = \frac{2}{5}$ and $Pr(S > 1) = \frac{2}{3}$, the expression
+$\frac{Pr(S > 2)}{Pr(S > 1)}$ becomes $\frac{2}{5} * \frac{3}{2} = \frac{3}{5}$
+
+#### i = 2
+The expression $Pr(S > 3| S > 2)$ expands to $\frac{Pr(S > 3)}{Pr(S > 2)}$.
+
+We have the value of $Pr(S > 2)$ from the subpart above, being $\frac{2}{5}$.
+
+To calculate the of $Pr(S > 3)$, I know it is equivalent to calculating $Pr(X = 3, Y)$ and then 
+marginalizing over $Y$, obtaining $Pr(X = 3) =  \frac{4}{6} * \frac{3}{5} * \frac{2}{4} = \frac{1}{5}$.
+
+Using the values of $Pr(S > 2) = \frac{2}{5}$ and $Pr(S > 3) = \frac{1}{5}$,
+$\frac{Pr(S > 3)}{Pr(S > 2)}$ evaluates to $\frac{1}{5} * \frac{5}{2} = \frac{1}{2}$
+
 ## Question seven
 
 ### Part 1
