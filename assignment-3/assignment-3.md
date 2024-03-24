@@ -364,7 +364,7 @@ The above expression can be simplified to
 $(1 -p)(E[R] + 2)$, recalling the definition of $E[R]$ and that $R$ is a probability space.
 
 Since we derived $(1 -p)(E[R] + 2)$ from
-\displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$, we 
+$\displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$, we 
 can substitute in the expression it was used in, modifying
 $2p + \displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$ to become 
 $2p + (1 -p)(E[R] + 2)$, which is equivalent to
