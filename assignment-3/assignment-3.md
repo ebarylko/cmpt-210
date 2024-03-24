@@ -327,6 +327,41 @@ marginalizing over $Y$, obtaining $Pr(X = 5) =  \frac{4}{6} * \frac{3}{5} * \fra
 Using the values of $Pr(S > 5) = 0$ and $Pr(S > 4) = \frac{1}{15}$,
 $\frac{Pr(S > 5)}{Pr(S > 4)}$ evaluates to $0 * 15 = 0$
 
+### Part 5
+
+My inductive hypothesis is $\forall i \in \set{1, 2, 3, 4}, Pr(S > i) = \frac{(6 - i)(5 - i)}{30}$.
+
+I will now prove the base case for $i = 1$:
+
+$Pr(S > 1) = 1 - Pr(S = 1) = 1 - \frac{1}{3} = \frac{2}{3}$.
+
+Calculating the value of $\frac{(6 - i)(5 - i)}{30}$ when $i = 1$, we obtain 
+$\frac{20}{30} = \frac{2}{3}$.
+
+Seeing that $Pr(S > 1) = \frac{(6 - i)(5 - i)}{30}$ when i = 1, this hypothesis holds true for when $i = 1$.
+
+My inductive step will be proving that for $i = 5$, $Pr(S  > 5) = \frac{(6 - 5)(5 - 5)}{30} = 0$.
+
+To start, I note that $Pr(S > 5) = Pr(S > 4) - Pr(S = 5)$. 
+
+Using the inductive hypothesis for when $i = 4$, the expression 
+$Pr(S > 5) = Pr(S > 4) - Pr(S = 5)$ becomes $Pr(S > 5) = \frac{(6 - 4)(5 - 1)}{30} - Pr(S = 5) = \frac{1}{15} - Pr(S = 5)$.
+
+For calculating the value of $Pr(S = 5)$, I can use the fact that $S$ is a uniform probability space 
+and say that $Pr(S = 5) = \frac{|S = 5|}{|G|}$, where $G$ is the sample space. In order to evaluate this 
+expression, I must determine $|S = 5|$ and $|G|$.
+
+The number of events in $|S = 5|$ is equivalent to the number of the ways that the first four chambers are empty and 
+the last two contain both bullets. This can be done in $2!$ many ways.
+
+With $|S = 5|$ known, the value of $|G|$ must be calculated. Using the fact that there are $\binom{6}{2} * 2$ many ways to 
+place two bullets in the six chambers, we know that $|G| = \binom{6}{2} * 2$.
+
+Using the values of $|S| = 2$ and $|G| = 30$, $Pr(S = 5) = \frac{|S = 5|}{|G|}$ can be evaluated as $\frac{2}{30} = \frac{1}{15}$.
+
+Substituting the value of $Pr(S = 5) = \frac{1}{15}$ into $\Pr(S > 5) = frac{1}{15} - Pr(S = 5)$, we obtain 0.
+
+
 ## Question seven
 
 ### Part 1
