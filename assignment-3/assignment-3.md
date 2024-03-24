@@ -331,9 +331,43 @@ $E[R] = (E[R] + 1)Pr({O6}^{\complement}) + E[R | O6]Pr(O6)$
 
 ### Part 2
 
+Expanding out $E[R | O6]$, it is equivalent to
+$\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | O6)$.
 
+We can remove the first term since it is impossible to obtain two sixes on the first throw, resulting in our summation being
+$\displaystyle\sum_{i = 2}^{\infty} i Pr(R = i | O6)$.
 
+Since the first throw resulted in a six and a six can be obtained with probability $p$, the first term of the summation 
+evaluates to $2p$. Removing this term from the summation, it can now be expressed as
 
+$2p + \displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$.
 
-.
+For the first term of the modified summation, we know that it evaluates to 0 since 
+we need the first two consecutive numbers to not be sixes and the last two consecutive numbers to both be six. 
+Considering that the first throw is a six, this means that the second throw must be any number less than 6 to not 
+match the first throw. However, this decision precludes the possibility of the second and third throw being 
+consecutive sixes. Consequently, the first term of the modified summation can be removed, resulting in the 
+summation now being  $\displaystyle\sum_{i = 4}^{\infty} i Pr(R = i | O6)$.
 
+We can alternatively represent the summation as
+$\displaystyle\sum_{i = 4}^{\infty} i (1 - p)^{i - 2}p$, which is equivalent to 
+$(1 -p) \displaystyle\sum_{i = 4}^{\infty} i (1 - p)^{i - 3}p$. 
+
+Using the fact that $Pr(R = i - 2) = p(1 - p)^{i - 3}$, we can modify the summation above to 
+be $(1 -p) \displaystyle\sum_{i = 4}^{\infty} i Pr(R = i - 2)$. The summation can be further 
+transformed by substituting all uses of i with $t$, where $t = i - 2$. Doing this 
+results in the summation becoming
+$(1 -p) \displaystyle\sum_{t = 2}^{\infty} (t + 2) Pr(R = t)$, which is equivalent to
+$(1 -p)( \displaystyle\sum_{t = 2}^{\infty}t  Pr(R = t) + 2\displaystyle\sum_{t = 2}^{\infty}  Pr(R = t))$.
+
+The above expression can be simplified to 
+$(1 -p)(E[R] + 2)$, recalling the definition of $E[R]$ and that $R$ is a probability space.
+
+Since we derived $(1 -p)(E[R] + 2)$ from
+\displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$, we 
+can substitute in the expression it was used in, modifying
+$2p + \displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$ to become 
+$2p + (1 -p)(E[R] + 2)$, which is equivalent to
+$E[R | O6]$.
+
+### Part 3
