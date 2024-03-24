@@ -305,6 +305,28 @@ marginalizing over $Y$, obtaining $Pr(X = 3) =  \frac{4}{6} * \frac{3}{5} * \fra
 Using the values of $Pr(S > 2) = \frac{2}{5}$ and $Pr(S > 3) = \frac{1}{5}$,
 $\frac{Pr(S > 3)}{Pr(S > 2)}$ evaluates to $\frac{1}{5} * \frac{5}{2} = \frac{1}{2}$
 
+#### i = 3
+The expression $Pr(S > 4| S > 3)$ expands to $\frac{Pr(S > 4)}{Pr(S > 3)}$.
+
+We have the value of $Pr(S > 3)$ from the subpart above, being $\frac{1}{5}$.
+
+To calculate the of $Pr(S > 4)$, I know it is equivalent to calculating $Pr(X = 4, Y)$ and then
+marginalizing over $Y$, obtaining $Pr(X = 4) =  \frac{4}{6} * \frac{3}{5} * \frac{2}{4} * \frac{1}{3} = \frac{1}{15}$.
+
+Using the values of $Pr(S > 3) = \frac{1}{5}$ and $Pr(S > 4) = \frac{1}{15}$,
+$\frac{Pr(S > 4)}{Pr(S > 3)}$ evaluates to $\frac{1}{15} * 5 = \frac{1}{3}$
+
+#### i = 4
+The expression $Pr(S > 5| S > 4)$ expands to $\frac{Pr(S > 5)}{Pr(S > 4)}$.
+
+We have the value of $Pr(S > 4)$ from the subpart above, being $\frac{1}{15}$.
+
+To calculate the of $Pr(S > 5)$, I know it is equivalent to calculating $Pr(X = 5, Y)$ and then
+marginalizing over $Y$, obtaining $Pr(X = 5) =  \frac{4}{6} * \frac{3}{5} * \frac{2}{4} * \frac{1}{3} * 0 = 0$.
+
+Using the values of $Pr(S > 5) = 0$ and $Pr(S > 4) = \frac{1}{15}$,
+$\frac{Pr(S > 5)}{Pr(S > 4)}$ evaluates to $0 * 15 = 0$
+
 ## Question seven
 
 ### Part 1
