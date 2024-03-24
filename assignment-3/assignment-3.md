@@ -359,7 +359,13 @@ place two bullets in the six chambers, we know that $|G| = \binom{6}{2} * 2$.
 
 Using the values of $|S| = 2$ and $|G| = 30$, $Pr(S = 5) = \frac{|S = 5|}{|G|}$ can be evaluated as $\frac{2}{30} = \frac{1}{15}$.
 
-Substituting the value of $Pr(S = 5) = \frac{1}{15}$ into $\Pr(S > 5) = frac{1}{15} - Pr(S = 5)$, we obtain 0.
+Substituting the value of $Pr(S = 5) = \frac{1}{15}$ into $\Pr(S > 5) = \frac{1}{15} - Pr(S = 5)$, we obtain 0.
+
+We have just showed that $Pr(S > 5) = \frac{(6 - 5)(5 - 5)}{30} = 0$, proving that the 
+inductive hypothesis holds on $i \in \set{1, 2, 3, 4, 5}$.
+
+
+### Part 6
 
 
 ## Question seven
