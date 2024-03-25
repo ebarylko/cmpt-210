@@ -156,11 +156,16 @@ ${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{x \ge 1}^{
 
 To simplify the above expression, let us define $k$ such that $k = x + 1$. Using the value of $k$ in the  
 second summation above with $x = k -1$ resulting as a consequence of the definition, the expression becomes 
-${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 1}^{}}(k - 1)Pr(X \ge k)$.
+${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 2}^{}}(k - 1)Pr(X \ge k)$.
 
 Expanding out the expression, we obtain
-${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 1}^{}}kPr(X \ge k) + {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$, 
-which is equivalent to ${\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
+${\displaystyle\sum_{x \ge 1}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k \ge 2}^{}}kPr(X \ge k) + {\displaystyle\sum_{k \ge 2}^{}}Pr(X \ge k)$. 
+
+We can note that for $x$ and $k$ greater than or equal to two,  ${\displaystyle\sum_{x}^{}} xPr(X \ge x) -  {\displaystyle\sum_{k}^{}}kPr(X \ge k)$
+will cancel out, leaving the original expression as ${\displaystyle\sum_{x = 1}^{1}} xPr(X \ge x) + {\displaystyle\sum_{k \ge 2}^{}}Pr(X \ge k)$.
+Substituting the value of $x = 1$ into the first expression, we obtain $1*Pr(X \ge 1) + {\displaystyle\sum_{k \ge 2}^{}}Pr(X \ge k)$.
+
+Summing together these expressions, we obtain that they are equivalent to ${\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$
 
 Therefore, we have proven that $E[X] = {\displaystyle\sum_{k \ge 1}^{}}Pr(X \ge k)$.
 
@@ -367,6 +372,30 @@ inductive hypothesis holds on $i \in \set{1, 2, 3, 4, 5}$.
 
 ### Part 6
 
+Using the value of $Pr(S > 5) = 0$ from the subquestion above, I know this is equivalent to $Pr(S = 6) = 0$.
+
+For the value of $Pr(S = 5)$ I can calculate $Pr(S > 4) = Pr(S = 5) + Pr(S = 6)$.
+
+Knowing that $Pr(S = 6) = 0$ and that $Pr(S > 4) = \frac{1}{15}$, I can substitute these values above to 
+obtain $\frac{1}{15} = Pr(S = 5)$.
+
+To calculate $Pr(S = 4)$, I can use the value of $Pr(S > 3) = Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
+
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S > 3) = \frac{1}{5}$ in the expression above, substituting 
+these values allow us to obtain $\frac{1}{3} = Pr(S = 4) + \frac{1}{15}$, which can be rearranged to obtain 
+$Pr(S = 4) = \frac{1}{3} - \frac{1}{15} = \frac{4}{15}$.
+
+The value of $Pr(S = 3)$ can be obtained by using $Pr(S > 2) = Pr(S = 3) + Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{4}{15}, Pr(S > 2) = \frac{2}{5}$, the 
+expression above changes to $\frac{2}{5} = Pr(S = 3) + \frac{4}{15} + \frac{1}{15}$. Rearranging 
+the terms, we obtain that $Pr(S = 3) = \frac{1}{15}$.
+
+
+
+The value of $Pr(S = 2)$ can be obtained by using $Pr(S > 1) = Pr(S = 2) + Pr(S = 3) + Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{4}{15}, Pr(S = 3) = \frac{1}{6}, Pr(S > 1) = \frac{3}{5}$, the
+expression above changes to $\frac{3}{5} = Pr(S = 2) + \frac{1}{6} + \frac{4}{15} + \frac{1}{15}$. Rearranging
+the terms, we obtain that $Pr(S = 2) = \frac{1}{10}$.
 
 ## Question seven
 
