@@ -22,9 +22,9 @@ Using this value, I have that $Pr(B \ge 3) = 1 - Pr(B \le 2) = 0.94208$.
 
 ### If 10 boards are placed before him, what is the expected number of boards that he will break?
 Using the fact that the expectation for a binomally distributed R.V. is np, I can calculate 
-$E[B]$ as $E[B] = 5 * \frac{4}{5} = 4$.
+$E[B]$ as $E[B] = 10 * \frac{4}{5} = 8$.
 
-The expected number of boards that Bruce will break is four.
+The expected number of boards that Bruce will break is eight.
 
 ### In order to challenge Bruce Lee, he now has to break the bricks placed before him until he fails. He can break a brick with probability 0.2. He starts breaking the bricks one by one, but as soon as he fails, the challenge is over. On average, how many bricks will he attempt to break before the challenge is over
 Given that Bruce breaks each brick with probability $\frac{1}{5}$ and we are wishing to find the number of bricks he will break 
@@ -226,11 +226,23 @@ Since I only wish to compute the probabilities that Adele receives three votes, 
 taking the joint pdf and then summing over the possible values that j and k can take on, obtaining 
 $X_{Adele}$ as the result. 
 
-For calculating the probability that Adele receives three votes, it is the same as $Pr(X_{Adele} = 3) = \binom{8}{3}(0.5)^3(0.5)^5 = 0.16$.
+For calculating the probability that Adele receives three votes, it is the same as $Pr(X_{Adele} = 3) = \binom{8}{3}(0.5)^3(0.5)^5 = 0.219$.
 
 ### Part 5
 If Adele receives three votes, Lizzo receives three votes, and Taylor receives two votes, the probability 
-of this occurring is $PDF_{3, 3, 2} = \frac{8!}{(3!)^2 2!} (0.5)^3 (0.3)^2 (0.2)^2 = 0.25$
+of this occurring is $PDF_{3, 3, 2} = \frac{8!}{(3!)^2 2!} (0.5)^3 (0.3)^3 (0.2)^2 = 0.25$
+
+8! / 3! * 3! * 2
+8 * 7 * 6 * 5 * 4 / 3 * 4
+8 * 7 * 6 * 5 /3
+8 * 7 * 2 * 5
+= 560
+
+
+560 * (0.5)^3 * (0.3)^3 * (0.2)^2
+
+0.0756
+
 
 
 ## Question six
