@@ -229,20 +229,17 @@ $X_{Adele}$ as the result.
 For calculating the probability that Adele receives three votes, it is the same as $Pr(X_{Adele} = 3) = \binom{8}{3}(0.5)^3(0.5)^5 = 0.219$.
 
 ### Part 5
+Ask professor about this question.
+
 If Adele receives three votes, Lizzo receives three votes, and Taylor receives two votes, the probability 
 of this occurring is $PDF_{3, 3, 2} = \frac{8!}{(3!)^2 2!} (0.5)^3 (0.3)^3 (0.2)^2 = 0.25$
-
-8! / 3! * 3! * 2
-8 * 7 * 6 * 5 * 4 / 3 * 4
-8 * 7 * 6 * 5 /3
-8 * 7 * 2 * 5
-= 560
 
 
 560 * (0.5)^3 * (0.3)^3 * (0.2)^2
 
 0.0756
 
+0.3452054794520548
 
 
 ## Question six
@@ -417,7 +414,7 @@ $\binom{n}{k}$ many ways.
 
 Using the fact we have a uniform probability space, $Pr(U) = \frac{|U|}{|S|}$, where $S$ is the sample space of all 
 possible ways to select n balls from the urn. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{n}{k}$, $Pr(U)$ 
-can be calculated as $\frac{\binom{n}{k}}{\binom{N}{n}}$
+can be calculated as $\frac{\binom{w}{k} \binom{N - k}{n - k}}{\binom{N}{n}}$
 
 ### Part 2
 The domain of $X$ would be $[0, n]$ since we could draw no white balls in the worst case and then have that all the balls
