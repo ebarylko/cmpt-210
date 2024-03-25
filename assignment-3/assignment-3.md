@@ -65,7 +65,7 @@ $Pr(X = 2) = \frac{1}{4}$.
 $Pr(X = 3) = \frac{1}{12}$.
 
 ### Calculate Pr[X ≤ 2]
-I know that $Pr(X \le 2) = F(2)$. Reading off the value of $F(2), I have that
+I know that $Pr(X \le 2) = F(2)$. Reading off the value of $F(2)$, I have that
 $Pr(X \le 2) = \frac{11}{12}$.
 
 ### Calculate Pr[2 < X ≤ 4].
