@@ -345,29 +345,19 @@ $\frac{20}{30} = \frac{2}{3}$.
 
 Seeing that $Pr(S > 1) = \frac{(6 - i)(5 - i)}{30}$ when i = 1, this hypothesis holds true for when $i = 1$.
 
-My inductive step will be proving that for $i = 5$, $Pr(S  > 5) = \frac{(6 - 5)(5 - 5)}{30} = 0$.
+My inductive step will be proving that for $i = 5$, $Pr(S  > 5) = \frac{(6 - (i + 1))(5 - (i + 1))}{30}$.
 
-To start, I note that $Pr(S > 5) = Pr(S > 4) - Pr(S = 5)$. 
+To start, I note that $Pr(S > i + 1 | S > i) = \frac{Pr(S > i + 1)}{Pr(S > i)}$, meaning that 
+$Pr(S > i + 1) = Pr(S > i + 1 | S > i)Pr(S > i)$.
 
-Using the inductive hypothesis for when $i = 4$, the expression 
-$Pr(S > 5) = Pr(S > 4) - Pr(S = 5)$ becomes $Pr(S > 5) = \frac{(6 - 4)(5 - 1)}{30} - Pr(S = 5) = \frac{1}{15} - Pr(S = 5)$.
+Using the values of $Pr(S > i + 1 | S > i) = \frac{4 - i}{6 - i}$ and $Pr(S > i) = \frac{(6 - i)(5 - i)}{30}$ (from the inductive hypothesis) in 
+the expression above, $Pr(S > i + 1)$ becomes $\frac{(4 - i)(6 - i)(5 - i)}{30(6 - i)}$, which simplifies to $\frac{(4 - i)(5 - i)}{30}$. 
 
-For calculating the value of $Pr(S = 5)$, I can use the fact that $S$ is a uniform probability space 
-and say that $Pr(S = 5) = \frac{|S = 5|}{|G|}$, where $G$ is the sample space. In order to evaluate this 
-expression, I must determine $|S = 5|$ and $|G|$.
+We can modify the expression above to be equivalent to $\frac{(5 - (i + 1))(6 - (i + 1))}{30}$, which is 
+the value we wished to obtain.
 
-The number of events in $|S = 5|$ is equivalent to the number of the ways that the first four chambers are empty and 
-the last two contain both bullets. This can be done in $2!$ many ways.
-
-With $|S = 5|$ known, the value of $|G|$ must be calculated. Using the fact that there are $\binom{6}{2} * 2$ many ways to 
-place two bullets in the six chambers, we know that $|G| = \binom{6}{2} * 2$.
-
-Using the values of $|S| = 2$ and $|G| = 30$, $Pr(S = 5) = \frac{|S = 5|}{|G|}$ can be evaluated as $\frac{2}{30} = \frac{1}{15}$.
-
-Substituting the value of $Pr(S = 5) = \frac{1}{15}$ into $\Pr(S > 5) = \frac{1}{15} - Pr(S = 5)$, we obtain 0.
-
-We have just showed that $Pr(S > 5) = \frac{(6 - 5)(5 - 5)}{30} = 0$, proving that the 
-inductive hypothesis holds on $i \in \set{1, 2, 3, 4, 5}$.
+Since we were able to show that $Pr(S > i + 1) = \frac{(6 - (i + 1))(5 - (i + 1))}{30}$, we have proved that 
+the inductive hypothesis is true for $i \in \set{1, 2, 3, 4, 5}$.
 
 
 ### Part 6
