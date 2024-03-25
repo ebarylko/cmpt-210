@@ -220,6 +220,7 @@ The joint PDF is $PDF_{i, j, k} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{T
 Given that $n = 8, p_{Adele} = 0.5, p_{Lizzo} = 0.3$, and $p_{Taylor} = 0.2$, the value of 
 $PDF_{4, 2, 2} = \frac{8!}{4!(2!)^2}(0.5)^4 (0.3)^2 (0.2)^2 = 0.095$
 
+
 ### Part 4
 Since I only wish to compute the probabilities that Adele receives three votes, this is the same as 
 taking the joint pdf and then summing over the possible values that j and k can take on, obtaining 
@@ -373,19 +374,23 @@ To calculate $Pr(S = 4)$, I can use the value of $Pr(S > 3) = Pr(S = 4) + Pr(S =
 
 Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S > 3) = \frac{1}{5}$ in the expression above, substituting 
 these values allow us to obtain $\frac{1}{3} = Pr(S = 4) + \frac{1}{15}$, which can be rearranged to obtain 
-$Pr(S = 4) = \frac{1}{3} - \frac{1}{15} = \frac{4}{15}$.
+$Pr(S = 4) = \frac{1}{5} - \frac{1}{15} = \frac{2}{15}$.
 
 The value of $Pr(S = 3)$ can be obtained by using $Pr(S > 2) = Pr(S = 3) + Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
-Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{4}{15}, Pr(S > 2) = \frac{2}{5}$, the 
-expression above changes to $\frac{2}{5} = Pr(S = 3) + \frac{4}{15} + \frac{1}{15}$. Rearranging 
-the terms, we obtain that $Pr(S = 3) = \frac{1}{15}$.
-
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{2}{15}, Pr(S > 2) = \frac{2}{5}$, the 
+expression above changes to $\frac{2}{5} = Pr(S = 3) + \frac{2}{15} + \frac{1}{15}$. Rearranging 
+the terms, we obtain that $Pr(S = 3) = \frac{1}{5}$.
 
 
 The value of $Pr(S = 2)$ can be obtained by using $Pr(S > 1) = Pr(S = 2) + Pr(S = 3) + Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
-Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{4}{15}, Pr(S = 3) = \frac{1}{6}, Pr(S > 1) = \frac{3}{5}$, the
-expression above changes to $\frac{3}{5} = Pr(S = 2) + \frac{1}{6} + \frac{4}{15} + \frac{1}{15}$. Rearranging
-the terms, we obtain that $Pr(S = 2) = \frac{1}{10}$.
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{2}{15}, Pr(S = 3) = \frac{1}{5}, Pr(S > 1) = \frac{2}{3}$, the
+expression above changes to $\frac{2}{3} = Pr(S = 2) + \frac{1}{5} + \frac{2}{15} + \frac{1}{15}$. Rearranging
+the terms, we obtain that $Pr(S = 2) = \frac{4}{15}$.
+
+The value of $Pr(S = 1)$ can be obtained by noting that $1 = Pr(S = 1) + Pr(S = 2) + Pr(S = 3) + Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{2}{15}, Pr(S = 3) = \frac{1}{5}, Pr(S = 2) = \frac{4}{15}, 
+the expression above changes to $Pr(S = 1) = 1 - \frac{1}{15} - \frac{2}{15} - \frac{1}{5} - \frac{4}{15}$. Simplifying this,
+we obtain that $Pr(S = 1) = \frac{1}{3}$.
 
 ## Question seven
 
@@ -489,3 +494,5 @@ $E[R] = E[R] - pE[R] + 1 - p + p(E[R] - E[R]p + 2)$.
 
 We can rearrange the terms to obtain $0 = -pE[R] + 1 - p + pE[R] - p^2E[R] + 2p$, which becomes 
 $p^2E[R] = 1 + p$. Dividing by $p^2$, we obtain $E[R] = \frac{1 + p}{p^2}$.
+
+0.21875
