@@ -388,7 +388,7 @@ expression above changes to $\frac{2}{3} = Pr(S = 2) + \frac{1}{5} + \frac{2}{15
 the terms, we obtain that $Pr(S = 2) = \frac{4}{15}$.
 
 The value of $Pr(S = 1)$ can be obtained by noting that $1 = Pr(S = 1) + Pr(S = 2) + Pr(S = 3) + Pr(S = 4) + Pr(S = 5) + Pr(S = 6)$.
-Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{2}{15}, Pr(S = 3) = \frac{1}{5}, Pr(S = 2) = \frac{4}{15}, 
+Utilizing that $Pr(S = 6) = 0, Pr(S = 5) = \frac{1}{15}, Pr(S = 4) = \frac{2}{15}, Pr(S = 3) = \frac{1}{5}, Pr(S = 2) = \frac{4}{15}$,
 the expression above changes to $Pr(S = 1) = 1 - \frac{1}{15} - \frac{2}{15} - \frac{1}{5} - \frac{4}{15}$. Simplifying this,
 we obtain that $Pr(S = 1) = \frac{1}{3}$.
 
