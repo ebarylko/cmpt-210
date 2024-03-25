@@ -220,7 +220,6 @@ The joint PDF is $PDF_{i, j, k} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{T
 Given that $n = 8, p_{Adele} = 0.5, p_{Lizzo} = 0.3$, and $p_{Taylor} = 0.2$, the value of 
 $PDF_{4, 2, 2} = \frac{8!}{4!(2!)^2}(0.5)^4 (0.3)^2 (0.2)^2 = 0.095$
 
-
 ### Part 4
 Since I only wish to compute the probabilities that Adele receives three votes, this is the same as 
 taking the joint pdf and then summing over the possible values that j and k can take on, obtaining 
@@ -232,14 +231,16 @@ For calculating the probability that Adele receives three votes, it is the same 
 Ask professor about this question.
 
 If Adele receives three votes, Lizzo receives three votes, and Taylor receives two votes, the probability 
-of this occurring is $PDF_{3, 3, 2} = \frac{8!}{(3!)^2 2!} (0.5)^3 (0.3)^3 (0.2)^2 = 0.25$
+of this occurring is $Pr(\text{Lizzo and Taylor receive 3 and 2 votes}| \text{Adele received three votes})$.
 
+Taking the joint $PDF_{i, j, k}$ and marginalizing Adele's distribution, we obtain $PDF_{i, j}$, which represents the 
+probability of Lizzo and Taylor receiving i and j votes respectively. Since Adele received three votes, we know 
+that $PDF_{i, j} = \binom{5}{3, 2} * (0.3)^i (0.2)^j$, where $0.3$ represents the probability of Lizzo receiving a vote and 
+$0.2$ represents the probability of $Taylor$ receiving a vote. Using the value of $i = 3, j = 2$, the value of 
+$PDF_{3, 2}$ is $\binom{5}{3, 2} * (0.3)^3 * (0.2)^2 = 10 * (0.3)^3 * (0.2)^2 = 0.0108$
 
-560 * (0.5)^3 * (0.3)^3 * (0.2)^2
-
-0.0756
-
-0.3452054794520548
+Using the value of $PDF_{3, 2} = 0.0108, Pr(X_{Adele} = 3) = 0.219$, we can expand 
+$Pr(PDF_{3, 2} | X_{Adele} = 3) = \frac{PDF_{3, 2} * Pr(X_{Adele} = 3)}{ Pr(X_{Adele} = 3)} = PDF_{3, 2} = 0.0108$.
 
 
 ## Question six
@@ -402,6 +403,7 @@ the expression above changes to $Pr(S = 1) = 1 - \frac{1}{15} - \frac{2}{15} - \
 we obtain that $Pr(S = 1) = \frac{1}{3}$.
 
 ## Question seven
+
 
 ### Part 1
 
