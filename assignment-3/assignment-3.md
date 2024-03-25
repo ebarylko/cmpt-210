@@ -482,3 +482,10 @@ $2p + (1 -p)(E[R] + 2)$, which is equivalent to
 $E[R | O6]$.
 
 ### Part 3
+
+Using value of $E[R] = (E[R] + 1)(1 - p) + p(2p + (E[R] + 2)(1 - p))$, it can be simplified to 
+$E[R] = E[R] - pE[R] + 1 - p + p(2p + E[R] - E[R]p + 2 - 2p)$, which can be further reduced to
+$E[R] = E[R] - pE[R] + 1 - p + p(E[R] - E[R]p + 2)$.
+
+We can rearrange the terms to obtain $0 = -pE[R] + 1 - p + pE[R] - p^2E[R] + 2p$, which becomes 
+$p^2E[R] = 1 + p$. Dividing by $p^2$, we obtain $E[R] = \frac{1 + p}{p^2}$.
