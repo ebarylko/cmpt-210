@@ -246,7 +246,7 @@ of this occurring is $Pr(\text{Lizzo and Taylor receive 3 and 2 votes}| \text{Ad
 
 Taking the joint $PDF_{i, j, k}$ and marginalizing Adele's distribution, we obtain $PDF_{i, j}$, which represents the 
 probability of Lizzo and Taylor receiving i and j votes respectively. Since Adele received three votes, we know 
-that $PDF_{i, j} = \binom{5}{3, 2} * (0.3)^i (0.2)^j$, where $0.3$ represents the probability of Lizzo receiving a vote and 
+that $PDF_{i, j} = \binom{5}{i, j} * (0.3)^i (0.2)^j$, where $0.3$ represents the probability of Lizzo receiving a vote and 
 $0.2$ represents the probability of $Taylor$ receiving a vote. Using the value of $i = 3, j = 2$, the value of 
 $PDF_{3, 2}$ is $\binom{5}{3, 2} * (0.3)^3 * (0.2)^2 = 10 * (0.3)^3 * (0.2)^2 = 0.0108$
 
