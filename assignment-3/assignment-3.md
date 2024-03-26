@@ -215,7 +215,7 @@ Since we obtained this value by manipulating the expression $E[R]$, we can concl
 
 ### Part 1
 Since there are n audience members voting where each member has the same probability of voting for Adele and 
-each audience member's vote is independent of the others, it seems that the distribution of $X_{Adele}$ can be 
+each audience member's vote is independent of the others, the distribution of $X_{Adele}$ can be 
 modeled as a binomial distribution. 
 
 $X_{Adele} \sim Bin(n, p_{Adele})$.
@@ -224,7 +224,7 @@ Since $X_{Adele}$ is binomally distributed, we know that $E[X_{Adele}] = np = np
 
 ### Part 2
 
-The joint PDF is $PDF_{i, j, k} = \binom{3}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{Taylor}^k$
+The joint PDF is $PDF_{i, j, k} = \binom{n}{i, k, k}p_{Adele}^i p_{Lizzo}^j p_{Taylor}^k$
 
 ### Part 3
 
