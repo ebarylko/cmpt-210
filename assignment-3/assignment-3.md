@@ -295,6 +295,22 @@ calculate Pr(TS) as Pr(TS) = Pr(bullet lands on chamber with bullet 1) + Pr(bull
 I will prove that $Pr(S > i + 1 | S > i) = \frac{4 - i}{6 - i} \forall i \in \set{1, 2, 3, 4}$ below. The sections that 
 follow correspond to a specific value of i.
 
+#### Additional work
+The expression $Pr(S > i| S > i)$ means the probability that I need more than i + 1 shots given that I missed the i shots.
+This can only occur if I missed the (i + 1)th shot. 
+Let $M_{i}$ be the event that the villain misses on the ith shot. 
+
+I then need to calculate $Pr(M_{i + 1} | M_i)$. Since I started out with four chambers which were empty, 
+I know that missing the first i shots will leave me with $4 - i$ empty chambers and $6 - i$ unused chambers.
+Using the fact that this is a uniform probability space, I know that 
+$Pr(M_i) = \frac{|\set{\text{All empty chambers at the ith shot}}|}{|\set{\text{All unused chambers}}|}$. 
+
+Since $Pr(M_{i + 1} | M_i)$ is asking for the probability that we miss the (i + 1)th shot given we miss the first 
+i shots, I know that the number of empty chambers is $4 - i$, and the number of unused chambers is $6 - i$. 
+Therefore, $Pr(M{i + 1} | M_i) = \frac{4 - i}{6 - i}$.
+
+#### End of work
+
 #### i = 1
 The expression $Pr(S > 2| S > 1)$ expands to $\frac{Pr(S > 2)}{Pr(S > 1)}$.
 
