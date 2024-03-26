@@ -113,6 +113,9 @@ Using the values of $Pr(X = 2 | X \ge 2) = \frac{3}{4}$ and $Pr(X = 3 | X \ge 2)
 conditional expectation is $2 * \frac{3}{4} + 3 * \frac{1}{4} = \frac{9}{4}$.
 
 ## Question three
+
+### Part 1
+
 I will now prove that
 ${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = nx(x + y)^{n - 1}$.
 
@@ -132,7 +135,15 @@ $nx{\displaystyle\sum_{t = 0}^{n - 1} \frac{(n - 1)!}{(t)!(n - t - 1)!}x^{t} y^{
 $nx{\displaystyle\sum_{t = 0}^{n - 1} \binom{n - 1}{t}x^{t} y^{n - t - 1}},$ which is 
 equivalent to $nx(x + y)^{n - 1}$.
 
-.
+End of proof.
+
+### Part 2
+
+Since I derived $E[X] = nx(x + y)^{n - 1}$ from
+${\displaystyle\sum_{k = 0}^{n}k \binom{n}{k}x^k y^{n - k}} = nx(x + y)^{n - 1}$, I know that 
+for a binomially distributed r.v, x represents p and $y$ represents $1 - p$. Subbing in $x = p$ and 
+$y = 1 - p$ into the expression $E[X] = nx(x + y)^{n - 1}$, I obtain 
+$E[X] = np(p + (1 - p))^{n - 1} = np(1)^{n - 1} = np$
 
 ## Question four
 
