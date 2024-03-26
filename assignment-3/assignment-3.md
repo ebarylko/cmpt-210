@@ -239,20 +239,16 @@ $X_{Adele}$ as the result.
 For calculating the probability that Adele receives three votes, it is the same as $Pr(X_{Adele} = 3) = \binom{8}{3}(0.5)^3(0.5)^5 = 0.219$.
 
 ### Part 5
-Ask professor about this question.
 
 If Adele receives three votes, Lizzo receives three votes, and Taylor receives two votes, the probability 
-of this occurring is $Pr(\text{Lizzo and Taylor receive 3 and 2 votes}| \text{Adele received three votes})$.
+of this occurring is $Pr(\text{Lizzo and Taylor receive 3 and 2 votes}| \text{Adele received three votes})$, which 
+is equivalent to $\frac{PDF_{3, 3, 2}}{Pr(X_{Adele} = 3}$ using the definition of conditional probability.
 
-Taking the joint $PDF_{i, j, k}$ and marginalizing Adele's distribution, we obtain $PDF_{i, j}$, which represents the 
-probability of Lizzo and Taylor receiving i and j votes respectively. Since Adele received three votes, we know 
-that $PDF_{i, j} = \binom{5}{i, j} * (0.3)^i (0.2)^j$, where $0.3$ represents the probability of Lizzo receiving a vote and 
-$0.2$ represents the probability of $Taylor$ receiving a vote. Using the value of $i = 3, j = 2$, the value of 
-$PDF_{3, 2}$ is $\binom{5}{3, 2} * (0.3)^3 * (0.2)^2 = 10 * (0.3)^3 * (0.2)^2 = 0.0108$
+Taking the joint $PDF_{i, j, k}$ for $i = 3, j = 3, k = 2$, we obtain 
+\binom{8}{3, 3, 2} (0.5)^3 * (0.3)^3 * (0.2)^2 = 0.0756$.
 
-Using the value of $PDF_{3, 2} = 0.0108, Pr(X_{Adele} = 3) = 0.219$, we can expand 
-$Pr(PDF_{3, 2} | X_{Adele} = 3) = \frac{PDF_{3, 2} * Pr(X_{Adele} = 3)}{ Pr(X_{Adele} = 3)} = PDF_{3, 2} = 0.0108$.
-
+Using the value of $Pr(X_{Adele} = 3) = 0.219$ from the previous question, we can expand 
+$Pr(PDF_{3,3, 2} | X_{Adele} = 3) = \frac{PDF_{3,3, 2}}{ Pr(X_{Adele} = 3)} = 0.35$
 
 ## Question six
 
@@ -290,7 +286,7 @@ $\frac{8}{30} = \frac{4}{15}$.
 Now, we nee to calculate $Pr(M)$ in order to obtain the value of $Pr(SS | M)$. We can calculate $Pr(M)$ by taking the 
 complement of $Pr(S)$ (using the value of $Pr(S)$ defined in the previous question) , having that $Pr(M) = 1 - Pr(S) = 1 - \frac{1}{3} = \frac{2}{3}$.
 
-Using the values of $Pr(SS \cap M) = \frac{8}{15}$ and $Pr(M) = \frac{2}{3}$, we can calculate
+Using the values of $Pr(SS \cap M) = \frac{4}{15}$ and $Pr(M) = \frac{2}{3}$, we can calculate
 $\frac{Pr(SS \cap M)}{Pr(M)}$ to be $\frac{4}{15} * \frac{3}{2} = \frac{2}{5}$.
 
 ### Part 3
@@ -303,11 +299,7 @@ calculate Pr(TS) as Pr(TS) = Pr(bullet lands on chamber with bullet 1) + Pr(bull
 
 ### Part 4
 
-I will prove that $Pr(S > i + 1 | S > i) = \frac{4 - i}{6 - i} \forall i \in \set{1, 2, 3, 4}$ below. The sections that 
-follow correspond to a specific value of i.
-
-#### Additional work
-The expression $Pr(S > i| S > i)$ means the probability that I need more than i + 1 shots given that I missed the i shots.
+The expression $Pr(S > i + 1| S > i)$ means the probability that I need more than i + 1 shots given that I missed the i shots.
 This can only occur if I missed the (i + 1)th shot. 
 Let $M_{i}$ be the event that the villain misses on the ith shot. 
 
@@ -318,57 +310,7 @@ $Pr(M_i) = \frac{|\set{\text{All empty chambers at the ith shot}}|}{|\set{\text{
 
 Since $Pr(M_{i + 1} | M_i)$ is asking for the probability that we miss the (i + 1)th shot given we miss the first 
 i shots, I know that the number of empty chambers is $4 - i$, and the number of unused chambers is $6 - i$. 
-Therefore, $Pr(M{i + 1} | M_i) = \frac{4 - i}{6 - i}$.
-
-#### End of work
-
-#### i = 1
-The expression $Pr(S > 2| S > 1)$ expands to $\frac{Pr(S > 2)}{Pr(S > 1)}$.
-
-For the denominator, it can be calculated as $Pr(S > 1) = 1 - Pr(S \le 1) = 1 - Pr(S = 1) = 1 - \frac{1}{3} = \frac{2}{3}$.
-
-The numerator can be calculated as $Pr(X, Y) = Pr(X) \displaystyle\sum_{y \in Y}^{} Pr(y| X)$, where $X$ represents the 
-minimum number of failures to shoot the hero and $Y$ represents all the possible events that can follow the failing to 
-shoot the hero $X$ times. Marginalizing over $Y$, we obtain that $Pr(X, Y)$ becomes $Pr(X)$. 
-
-Since we wish to calculate $Pr(S > 2)$, which is equivalent to $Pr(X = 2, Y)$ for the set of $Y$ events which can occur after
-failing to shoot the hero twice. Marginalizing over $Y$, we obtain $Pr(X = 2) = \frac{4}{6} * \frac{3}{5} = \frac{2}{5}$.
-
-Using the values of $Pr(S > 2) = \frac{2}{5}$ and $Pr(S > 1) = \frac{2}{3}$, the expression
-$\frac{Pr(S > 2)}{Pr(S > 1)}$ becomes $\frac{2}{5} * \frac{3}{2} = \frac{3}{5}$
-
-#### i = 2
-The expression $Pr(S > 3| S > 2)$ expands to $\frac{Pr(S > 3)}{Pr(S > 2)}$.
-
-We have the value of $Pr(S > 2)$ from the subpart above, being $\frac{2}{5}$.
-
-To calculate the of $Pr(S > 3)$, I know it is equivalent to calculating $Pr(X = 3, Y)$ and then 
-marginalizing over $Y$, obtaining $Pr(X = 3) =  \frac{4}{6} * \frac{3}{5} * \frac{2}{4} = \frac{1}{5}$.
-
-Using the values of $Pr(S > 2) = \frac{2}{5}$ and $Pr(S > 3) = \frac{1}{5}$,
-$\frac{Pr(S > 3)}{Pr(S > 2)}$ evaluates to $\frac{1}{5} * \frac{5}{2} = \frac{1}{2}$
-
-#### i = 3
-The expression $Pr(S > 4| S > 3)$ expands to $\frac{Pr(S > 4)}{Pr(S > 3)}$.
-
-We have the value of $Pr(S > 3)$ from the subpart above, being $\frac{1}{5}$.
-
-To calculate the of $Pr(S > 4)$, I know it is equivalent to calculating $Pr(X = 4, Y)$ and then
-marginalizing over $Y$, obtaining $Pr(X = 4) =  \frac{4}{6} * \frac{3}{5} * \frac{2}{4} * \frac{1}{3} = \frac{1}{15}$.
-
-Using the values of $Pr(S > 3) = \frac{1}{5}$ and $Pr(S > 4) = \frac{1}{15}$,
-$\frac{Pr(S > 4)}{Pr(S > 3)}$ evaluates to $\frac{1}{15} * 5 = \frac{1}{3}$
-
-#### i = 4
-The expression $Pr(S > 5| S > 4)$ expands to $\frac{Pr(S > 5)}{Pr(S > 4)}$.
-
-We have the value of $Pr(S > 4)$ from the subpart above, being $\frac{1}{15}$.
-
-To calculate the of $Pr(S > 5)$, I know it is equivalent to calculating $Pr(X = 5, Y)$ and then
-marginalizing over $Y$, obtaining $Pr(X = 5) =  \frac{4}{6} * \frac{3}{5} * \frac{2}{4} * \frac{1}{3} * 0 = 0$.
-
-Using the values of $Pr(S > 5) = 0$ and $Pr(S > 4) = \frac{1}{15}$,
-$\frac{Pr(S > 5)}{Pr(S > 4)}$ evaluates to $0 * 15 = 0$
+Therefore, $Pr(M{i + 1} | M_i) = Pr(S > i  + 1| S > i) = \frac{4 - i}{6 - i}$.
 
 ### Part 5
 
@@ -394,7 +336,7 @@ the expression above, $Pr(S > i + 1)$ becomes $\frac{(4 - i)(6 - i)(5 - i)}{30(6
 We can modify the expression above to be equivalent to $\frac{(5 - (i + 1))(6 - (i + 1))}{30}$, which is 
 the value we wished to obtain.
 
-Since we were able to show that $Pr(S > i + 1) = \frac{(6 - (i + 1))(5 - (i + 1))}{30}$, we have proved that 
+Since we were able to show that $Pr(S > i + 1) = \frac{(6 - (i + 1))(5 - (i + 1))}{30}$ for $i = 5$, we have proved that 
 the inductive hypothesis is true for $i \in \set{1, 2, 3, 4, 5}$.
 
 
@@ -454,11 +396,13 @@ selected are white.
 ## Question eight
 
 ### Part 1
-Since $R$ is the random variable denoting the number of throws we need until we obtain two consecutive sixes, it 
-appears that R is best modelled by a geometric distribution. $R \sim Geo(\frac{1}{36})$.
+
+[//]: # (Since $R$ is the random variable denoting the number of throws we need until we obtain two consecutive sixes, it )
+
+[//]: # (appears that R is best modelled by a geometric distribution. $R \sim Geo&#40;\frac{1}{36}&#41;$.)
 
 We can partition $R$ into the events that occurred after obtaining a six on the first throw and the events that 
-occurred after obtaining a value which is not six on the first throw. As a result, we have that $E[R]$ becomes equivalent to
+occurred after not obtaining a six on the first throw. As a result, we have that $E[R]$ becomes equivalent to
 $E[R] = E[R | {O6}^{\complement}]Pr({O6}^{\complement}) + E[R | O6]Pr(O6)$, where $O6$ is the event that a six was obtained 
 on the first throw.
 
