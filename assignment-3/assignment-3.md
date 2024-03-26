@@ -42,13 +42,13 @@ Bruce will break an average of five blocks before he fails to break the next blo
 
 ### Fully specify the PDF for X
 
-From the $CDF$, we can see that the $PDF$ has non-zero probabilities for $x \in \{0, 1, 2, 3\}$.
+From the $CDF$, we can see that the $PDF$ has non-zero probabilities for $x \in \set{0, 1, 2, 3}$.
 
 Given the value of $F(0)$, we know that it is equivalent to $Pr(X = 0)$ since there is no other element smaller than 
 zero with a non-zero probability. Therefore, $Pr(X = 0) = \frac{1}{2}$.
 
 Using the value of $F(0)$, I can calculate $Pr(X = 1)$ by calculating $F(1) - F(0)$, which is equivalent to $Pr(x \le 1) - Pr(x \le 0)$. 
-Doing this, I have that $Pr(x = 1) = \frac{2}{3} - {1}{2} = \frac{1}{6}$.
+Doing this, I have that $Pr(x = 1) = \frac{2}{3} - \frac{1}{2} = \frac{1}{6}$.
 
 Repeating the process above with $F(1)$ and $F(2)$ to calculate $Pr(X = 2)$, I obtain that $Pr(X = 2) = \frac{11}{12} - \frac{2}{3} = \frac{3}{12} = \frac{1}{4}$.
 
@@ -73,7 +73,7 @@ $Pr(X \le 2) = \frac{11}{12}$.
 Taking the expression $Pr(2 < x \le 4)$, we can convert it to the equivalent expression $Pr(3 \le x \le 4)$ since we are 
 looking at a discrete distribution.
 
-Noting that my distribution only contains non-zero probabilities for $x \in \{0, 1, 2, 3\}$,
+Noting that my distribution only contains non-zero probabilities for $x \in \set{0, 1, 2, 3}$,
 $Pr(3 \le x \le 4)$ can be also be represented as $Pr(3 \le x \le 3) = Pr(X = 3)$.
 
 Using the values of the $PDF$ computed in the last question, $Pr(X = 3) = Pr(2 < x \le 4) = \frac{1}{12}$.
