@@ -398,7 +398,7 @@ decompose $X$ as $X_1 + X_2 + ... X_n$. As a result, we have that $E[X] = E[X_1]
 Since every $X_i$ is an indicator variable, we know that $E[X_i] = Pr(X_i = 1)$. Since we draw all the 
 balls simultaneously at once, each ball has the same probability of being a white ball. Since this is a uniform 
 probability space and there are $w$ white balls in the total number of $N$ balls in the urn, we know that 
-Pr( $\text{select a white ball}) = \frac{w}{N}$. Since we select each ball with a probability of $\frac{w}{N}$ and we 
+$Pr(W) = \frac{w}{N}$, where $W$ is the event that a white ball was picked. Since we select each ball with a probability of $\frac{w}{N}$ and we 
 do this for each of the n balls selected, $E[X]$ simplifies to $n * \frac{w}{N} = \frac{nw}{N}$. 
 
 ### Part 4
