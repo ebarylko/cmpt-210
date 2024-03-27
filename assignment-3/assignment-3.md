@@ -392,6 +392,16 @@ The domain of $X$ would be $[0, n]$ since we could draw no white balls in the wo
 selected are white.
 
 ### Part 3
+Let $X_i$ be the indicator r.v denoting whether the ith ball in the n balls selected from the urn is white. We can 
+decompose $X$ as $X_1 + X_2 + ... X_n$. As a result, we have that $E[X] = E[X_1] + E[X_2] + .... E[X_n]$.
+
+Since every $X_i$ is an indicator variable, we know that $E[X_i] = Pr(X_i = 1)$. Since we draw all the 
+balls simultaneously at once, each ball has the same probability of being a white ball. Since this is a uniform 
+probability space and there are $w$ white balls in the total number of $N$ balls in the urn, we know that 
+$Pr(\text{select a white ball}) = \frac{w}{N}$. Since we select each ball with a probability of $\frac{w}{N}$ and we 
+do this for each of the n balls selected, $E[X]$ simplifies to $n * \frac{w}{N} = \frac{nw}{N}$. 
+
+### Part 4
 
 ## Question eight
 
@@ -409,64 +419,104 @@ on the first throw.
 Expanding out the expression $E[R | {O6}^{\complement}]$, it is equivalent to 
 $\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | {O6}^{\complement})$.
 
-Since it is impossible to get a pair of sixes on the first throw, the first term of the summation can be discarded, resulting in 
-$\displaystyle\sum_{i = 2}^{\infty}i Pr(R = i | {O6}^{\complement})$.
+[//]: # (Since it is impossible to get a pair of sixes on the first throw, the first term of the summation can be discarded, resulting in )
 
-We can rewrite the summation above as
-$\displaystyle\sum_{i = 2}^{\infty}i p * (1 - p)^{i - 2}$, owing to the fact that the first $i - 2$ consecutive pairs
-of numbers will not contain consecutive sixes and only the last pair will contain two sixes. We can also recognize that 
-the expression above is equivalent to $\displaystyle\sum_{i = 2}^{\infty}i Pr(R = i - 1)$.
+[//]: # ($\displaystyle\sum_{i = 2}^{\infty}i Pr&#40;R = i | {O6}^{\complement}&#41;$.)
 
-Let us now define $t$ to be $i - 1$. Substituting t into the expression above, the summation now becomes
-$\displaystyle\sum_{t = 1}^{\infty}(t + 1) Pr(R = t)$, which becomes
-$\displaystyle\sum_{t = 1}^{\infty} tPr(R = t) + \displaystyle\sum_{t = 1}^{\infty} Pr(R = t)$ after distributing the $(t + 1)$
-term.
+[//]: # ()
+[//]: # (We can rewrite the summation above as)
 
-Using the fact that $E[R] = \displaystyle\sum_{t = 1}^{\infty} tPr(R = t)$ and that $\displaystyle\sum_{t = 1}^{\infty} Pr(R = t) = 1$ due to $R$ 
-being a probability space, the expression above simplifies to $E[R] + 1$, which is equivalent to $E[R | {O6}^{\complement}]$. Using this information, 
-we can substitute the value of $E[R | {O6}^{\complement}]$ into $E[R]$ to obtain 
-$E[R] = (E[R] + 1)Pr({O6}^{\complement}) + E[R | O6]Pr(O6)$
+[//]: # ($\displaystyle\sum_{i = 2}^{\infty}i p * &#40;1 - p&#41;^{i - 2}$, owing to the fact that the first $i - 2$ consecutive pairs)
+
+[//]: # (of numbers will not contain consecutive sixes and only the last pair will contain two sixes. We can also recognize that )
+
+[//]: # (the expression above is equivalent to $\displaystyle\sum_{i = 2}^{\infty}i Pr&#40;R = i - 1&#41;$.)
+
+[//]: # ()
+[//]: # (Let us now define $t$ to be $i - 1$. Substituting t into the expression above, the summation now becomes)
+
+[//]: # ($\displaystyle\sum_{t = 1}^{\infty}&#40;t + 1&#41; Pr&#40;R = t&#41;$, which becomes)
+
+[//]: # ($\displaystyle\sum_{t = 1}^{\infty} tPr&#40;R = t&#41; + \displaystyle\sum_{t = 1}^{\infty} Pr&#40;R = t&#41;$ after distributing the $&#40;t + 1&#41;$)
+
+[//]: # (term.)
+
+[//]: # ()
+[//]: # (Using the fact that $E[R] = \displaystyle\sum_{t = 1}^{\infty} tPr&#40;R = t&#41;$ and that $\displaystyle\sum_{t = 1}^{\infty} Pr&#40;R = t&#41; = 1$ due to $R$ )
+
+[//]: # (being a probability space, the expression above simplifies to $E[R] + 1$, which is equivalent to $E[R | {O6}^{\complement}]$. Using this information, )
+
+[//]: # (we can substitute the value of $E[R | {O6}^{\complement}]$ into $E[R]$ to obtain )
+
+[//]: # ($E[R] = &#40;E[R] + 1&#41;Pr&#40;{O6}^{\complement}&#41; + E[R | O6]Pr&#40;O6&#41;$)
 
 ### Part 2
 
 Expanding out $E[R | O6]$, it is equivalent to
 $\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | O6)$.
 
-We can remove the first term since it is impossible to obtain two sixes on the first throw, resulting in our summation being
-$\displaystyle\sum_{i = 2}^{\infty} i Pr(R = i | O6)$.
+[//]: # (We can remove the first term since it is impossible to obtain two sixes on the first throw, resulting in our summation being)
 
-Since the first throw resulted in a six and a six can be obtained with probability $p$, the first term of the summation 
-evaluates to $2p$. Removing this term from the summation, it can now be expressed as
+[//]: # ($\displaystyle\sum_{i = 2}^{\infty} i Pr&#40;R = i | O6&#41;$.)
 
-$2p + \displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$.
+[//]: # ()
+[//]: # (Since the first throw resulted in a six and a six can be obtained with probability $p$, the first term of the summation )
 
-For the first term of the modified summation, we know that it evaluates to 0 since 
-we need the first two consecutive numbers to not be sixes and the last two consecutive numbers to both be six. 
-Considering that the first throw is a six, this means that the second throw must be any number less than 6 to not 
-match the first throw. However, this decision precludes the possibility of the second and third throw being 
-consecutive sixes. Consequently, the first term of the modified summation can be removed, resulting in the 
-summation now being  $\displaystyle\sum_{i = 4}^{\infty} i Pr(R = i | O6)$.
+[//]: # (evaluates to $2p$. Removing this term from the summation, it can now be expressed as)
 
-We can alternatively represent the summation as
-$\displaystyle\sum_{i = 4}^{\infty} i (1 - p)^{i - 2}p$, which is equivalent to 
-$(1 -p) \displaystyle\sum_{i = 4}^{\infty} i (1 - p)^{i - 3}p$. 
+[//]: # ()
+[//]: # ($2p + \displaystyle\sum_{i = 3}^{\infty} i Pr&#40;R = i | O6&#41;$.)
 
-Using the fact that $Pr(R = i - 2) = p(1 - p)^{i - 3}$, we can modify the summation above to 
-be $(1 -p) \displaystyle\sum_{i = 4}^{\infty} i Pr(R = i - 2)$. The summation can be further 
-transformed by substituting all uses of i with $t$, where $t = i - 2$. Doing this 
-results in the summation becoming
-$(1 -p) \displaystyle\sum_{t = 2}^{\infty} (t + 2) Pr(R = t)$, which is equivalent to
-$(1 -p)( \displaystyle\sum_{t = 2}^{\infty}t  Pr(R = t) + 2\displaystyle\sum_{t = 2}^{\infty}  Pr(R = t))$.
+[//]: # ()
+[//]: # (For the first term of the modified summation, we know that it evaluates to 0 since )
 
-The above expression can be simplified to 
-$(1 -p)(E[R] + 2)$, recalling the definition of $E[R]$ and that $R$ is a probability space.
+[//]: # (we need the first two consecutive numbers to not be sixes and the last two consecutive numbers to both be six. )
 
-Since we derived $(1 -p)(E[R] + 2)$ from
-$\displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$, we 
-can substitute in the expression it was used in, modifying
-$2p + \displaystyle\sum_{i = 3}^{\infty} i Pr(R = i | O6)$ to become 
-$2p + (1 -p)(E[R] + 2)$, which is equivalent to
-$E[R | O6]$.
+[//]: # (Considering that the first throw is a six, this means that the second throw must be any number less than 6 to not )
+
+[//]: # (match the first throw. However, this decision precludes the possibility of the second and third throw being )
+
+[//]: # (consecutive sixes. Consequently, the first term of the modified summation can be removed, resulting in the )
+
+[//]: # (summation now being  $\displaystyle\sum_{i = 4}^{\infty} i Pr&#40;R = i | O6&#41;$.)
+
+[//]: # ()
+[//]: # (We can alternatively represent the summation as)
+
+[//]: # ($\displaystyle\sum_{i = 4}^{\infty} i &#40;1 - p&#41;^{i - 2}p$, which is equivalent to )
+
+[//]: # ($&#40;1 -p&#41; \displaystyle\sum_{i = 4}^{\infty} i &#40;1 - p&#41;^{i - 3}p$. )
+
+[//]: # ()
+[//]: # (Using the fact that $Pr&#40;R = i - 2&#41; = p&#40;1 - p&#41;^{i - 3}$, we can modify the summation above to )
+
+[//]: # (be $&#40;1 -p&#41; \displaystyle\sum_{i = 4}^{\infty} i Pr&#40;R = i - 2&#41;$. The summation can be further )
+
+[//]: # (transformed by substituting all uses of i with $t$, where $t = i - 2$. Doing this )
+
+[//]: # (results in the summation becoming)
+
+[//]: # ($&#40;1 -p&#41; \displaystyle\sum_{t = 2}^{\infty} &#40;t + 2&#41; Pr&#40;R = t&#41;$, which is equivalent to)
+
+[//]: # ($&#40;1 -p&#41;&#40; \displaystyle\sum_{t = 2}^{\infty}t  Pr&#40;R = t&#41; + 2\displaystyle\sum_{t = 2}^{\infty}  Pr&#40;R = t&#41;&#41;$.)
+
+[//]: # ()
+[//]: # (The above expression can be simplified to )
+
+[//]: # ($&#40;1 -p&#41;&#40;E[R] + 2&#41;$, recalling the definition of $E[R]$ and that $R$ is a probability space.)
+
+[//]: # ()
+[//]: # (Since we derived $&#40;1 -p&#41;&#40;E[R] + 2&#41;$ from)
+
+[//]: # ($\displaystyle\sum_{i = 3}^{\infty} i Pr&#40;R = i | O6&#41;$, we )
+
+[//]: # (can substitute in the expression it was used in, modifying)
+
+[//]: # ($2p + \displaystyle\sum_{i = 3}^{\infty} i Pr&#40;R = i | O6&#41;$ to become )
+
+[//]: # ($2p + &#40;1 -p&#41;&#40;E[R] + 2&#41;$, which is equivalent to)
+
+[//]: # ($E[R | O6]$.)
 
 ### Part 3
 
@@ -476,11 +526,3 @@ $E[R] = E[R] - pE[R] + 1 - p + p(E[R] - E[R]p + 2)$.
 
 We can rearrange the terms to obtain $0 = -pE[R] + 1 - p + pE[R] - p^2E[R] + 2p$, which becomes 
 $p^2E[R] = 1 + p$. Dividing by $p^2$, we obtain $E[R] = \frac{1 + p}{p^2}$.
-
-0.21875
-
-0.0756 * (32/7)
-
-0.34559999999999996
-
-0.21875
