@@ -404,6 +404,12 @@ do this for each of the n balls selected, $E[X]$ simplifies to $n * \frac{w}{N} 
 ### Part 4
 
 ## Question eight
+Since we draw n balls where the probability of drawing a white ball for each ball is constant and each 
+ball is independent of the others, a binomial distribution seems suitable for modelling $Y$.
+
+$Y \sim Bin(n, \frac{w}{N})$.
+
+Given that $Y$ is a binomial r.v, we know that $E[Y] = np = n * \frac{w}{N} = \frac{nw}{N}$.
 
 ### Part 1
 
