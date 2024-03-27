@@ -245,7 +245,7 @@ of this occurring is $Pr(\text{Lizzo and Taylor receive 3 and 2 votes}| \text{Ad
 is equivalent to $\frac{PDF_{3, 3, 2}}{Pr(X_{Adele} = 3}$ using the definition of conditional probability.
 
 Taking the joint $PDF_{i, j, k}$ for $i = 3, j = 3, k = 2$, we obtain 
-\binom{8}{3, 3, 2} (0.5)^3 * (0.3)^3 * (0.2)^2 = 0.0756$.
+$\binom{8}{3, 3, 2} (0.5)^3 * (0.3)^3 * (0.2)^2 = 0.0756$.
 
 Using the value of $Pr(X_{Adele} = 3) = 0.219$ from the previous question, we can expand 
 $Pr(PDF_{3,3, 2} | X_{Adele} = 3) = \frac{PDF_{3,3, 2}}{ Pr(X_{Adele} = 3)} = 0.35$
@@ -476,5 +476,11 @@ $E[R] = E[R] - pE[R] + 1 - p + p(E[R] - E[R]p + 2)$.
 
 We can rearrange the terms to obtain $0 = -pE[R] + 1 - p + pE[R] - p^2E[R] + 2p$, which becomes 
 $p^2E[R] = 1 + p$. Dividing by $p^2$, we obtain $E[R] = \frac{1 + p}{p^2}$.
+
+0.21875
+
+0.0756 * (32/7)
+
+0.34559999999999996
 
 0.21875
