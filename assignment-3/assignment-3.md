@@ -390,8 +390,8 @@ balls and we want to pick $n - k$ non-white balls, there are $\binom{N - w}{n - 
 many ways to pick the non-white balls.
 
 Using the fact we have a uniform probability space, $Pr(U) = \frac{|U|}{|S|}$, where $S$ is the sample space of all 
-possible ways to select n balls from the urn. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{n}{k}$, $Pr(U)$ 
-can be calculated as $\frac{\binom{w}{k} \binom{N - k}{n - k}}{\binom{N}{n}}$
+possible ways to select n balls from the urn. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{N - w}{n - k} \binom{w}{k}$, $Pr(U)$ 
+can be calculated as $\frac{\binom{N - w}{n - k} \binom{w}{k}}{\binom{N}{n}}$
 
 ### Part 2
 The domain of $X$ would be $[0, n]$ since we could draw no white balls in the worst case and then have that all the balls
