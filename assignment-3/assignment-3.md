@@ -398,12 +398,11 @@ decompose $X$ as $X_1 + X_2 + ... X_n$. As a result, we have that $E[X] = E[X_1]
 Since every $X_i$ is an indicator variable, we know that $E[X_i] = Pr(X_i = 1)$. Since we draw all the 
 balls simultaneously at once, each ball has the same probability of being a white ball. Since this is a uniform 
 probability space and there are $w$ white balls in the total number of $N$ balls in the urn, we know that 
-$Pr(\text{select a white ball}) = \frac{w}{N}$. Since we select each ball with a probability of $\frac{w}{N}$ and we 
+$Pr( \text{select a white ball}) = \frac{w}{N}$. Since we select each ball with a probability of $\frac{w}{N}$ and we 
 do this for each of the n balls selected, $E[X]$ simplifies to $n * \frac{w}{N} = \frac{nw}{N}$. 
 
 ### Part 4
 
-## Question eight
 Since we draw n balls where the probability of drawing a white ball for each ball is constant and each 
 ball is independent of the others, a binomial distribution seems suitable for modelling $Y$.
 
@@ -411,12 +410,9 @@ $Y \sim Bin(n, \frac{w}{N})$.
 
 Given that $Y$ is a binomial r.v, we know that $E[Y] = np = n * \frac{w}{N} = \frac{nw}{N}$.
 
+## Question eight
+
 ### Part 1
-
-[//]: # (Since $R$ is the random variable denoting the number of throws we need until we obtain two consecutive sixes, it )
-
-[//]: # (appears that R is best modelled by a geometric distribution. $R \sim Geo&#40;\frac{1}{36}&#41;$.)
-
 We can partition $R$ into the events that occurred after obtaining a six on the first throw and the events that 
 occurred after not obtaining a six on the first throw. As a result, we have that $E[R]$ becomes equivalent to
 $E[R] = E[R | {O6}^{\complement}]Pr({O6}^{\complement}) + E[R | O6]Pr(O6)$, where $O6$ is the event that a six was obtained 
@@ -425,104 +421,31 @@ on the first throw.
 Expanding out the expression $E[R | {O6}^{\complement}]$, it is equivalent to 
 $\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | {O6}^{\complement})$.
 
-[//]: # (Since it is impossible to get a pair of sixes on the first throw, the first term of the summation can be discarded, resulting in )
-
-[//]: # ($\displaystyle\sum_{i = 2}^{\infty}i Pr&#40;R = i | {O6}^{\complement}&#41;$.)
-
-[//]: # ()
-[//]: # (We can rewrite the summation above as)
-
-[//]: # ($\displaystyle\sum_{i = 2}^{\infty}i p * &#40;1 - p&#41;^{i - 2}$, owing to the fact that the first $i - 2$ consecutive pairs)
-
-[//]: # (of numbers will not contain consecutive sixes and only the last pair will contain two sixes. We can also recognize that )
-
-[//]: # (the expression above is equivalent to $\displaystyle\sum_{i = 2}^{\infty}i Pr&#40;R = i - 1&#41;$.)
-
-[//]: # ()
-[//]: # (Let us now define $t$ to be $i - 1$. Substituting t into the expression above, the summation now becomes)
-
-[//]: # ($\displaystyle\sum_{t = 1}^{\infty}&#40;t + 1&#41; Pr&#40;R = t&#41;$, which becomes)
-
-[//]: # ($\displaystyle\sum_{t = 1}^{\infty} tPr&#40;R = t&#41; + \displaystyle\sum_{t = 1}^{\infty} Pr&#40;R = t&#41;$ after distributing the $&#40;t + 1&#41;$)
-
-[//]: # (term.)
-
-[//]: # ()
-[//]: # (Using the fact that $E[R] = \displaystyle\sum_{t = 1}^{\infty} tPr&#40;R = t&#41;$ and that $\displaystyle\sum_{t = 1}^{\infty} Pr&#40;R = t&#41; = 1$ due to $R$ )
-
-[//]: # (being a probability space, the expression above simplifies to $E[R] + 1$, which is equivalent to $E[R | {O6}^{\complement}]$. Using this information, )
-
-[//]: # (we can substitute the value of $E[R | {O6}^{\complement}]$ into $E[R]$ to obtain )
-
-[//]: # ($E[R] = &#40;E[R] + 1&#41;Pr&#40;{O6}^{\complement}&#41; + E[R | O6]Pr&#40;O6&#41;$)
+For counting the number of rolls needed, I know that I will need at least one due 
+to the first roll not being a six. After that roll, I must calculate how many rolls I need until 
+I obtain two sixes, which is equivalent to $E[R]$. Summing up these values, I know that
+$E[R | {O6}^{\complement}] = (1 + E[R])$.
 
 ### Part 2
 
 Expanding out $E[R | O6]$, it is equivalent to
 $\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | O6)$.
 
-[//]: # (We can remove the first term since it is impossible to obtain two sixes on the first throw, resulting in our summation being)
+We can separate the summation into two cases:
 
-[//]: # ($\displaystyle\sum_{i = 2}^{\infty} i Pr&#40;R = i | O6&#41;$.)
+**Case 1**: The first two rolls are both sixes
+In this case, the probability of this occurring is 2p, owing from the fact that we roll a six with probability $p$ 
+and this occurs on the second term in the summation.
 
-[//]: # ()
-[//]: # (Since the first throw resulted in a six and a six can be obtained with probability $p$, the first term of the summation )
+**Case 2**: The first two rolls are not both sixes
+In this case, the first two rolls are misses and I need to calculate how many rolls I need after 
+failing the first two rolls. This is equivalent to (2 + E[R]) many rolls. This case could only occur after 
+missing the second roll, which happens with probability $Pr({O6}^{\complement})$. Therefore, we have
+$(2 + E[R])* Pr({O6}^{\complement})$ for this case, where $x = (2 + E[R]), Pr(R = x) = Pr({O6}^{\complement})$.
 
-[//]: # (evaluates to $2p$. Removing this term from the summation, it can now be expressed as)
-
-[//]: # ()
-[//]: # ($2p + \displaystyle\sum_{i = 3}^{\infty} i Pr&#40;R = i | O6&#41;$.)
-
-[//]: # ()
-[//]: # (For the first term of the modified summation, we know that it evaluates to 0 since )
-
-[//]: # (we need the first two consecutive numbers to not be sixes and the last two consecutive numbers to both be six. )
-
-[//]: # (Considering that the first throw is a six, this means that the second throw must be any number less than 6 to not )
-
-[//]: # (match the first throw. However, this decision precludes the possibility of the second and third throw being )
-
-[//]: # (consecutive sixes. Consequently, the first term of the modified summation can be removed, resulting in the )
-
-[//]: # (summation now being  $\displaystyle\sum_{i = 4}^{\infty} i Pr&#40;R = i | O6&#41;$.)
-
-[//]: # ()
-[//]: # (We can alternatively represent the summation as)
-
-[//]: # ($\displaystyle\sum_{i = 4}^{\infty} i &#40;1 - p&#41;^{i - 2}p$, which is equivalent to )
-
-[//]: # ($&#40;1 -p&#41; \displaystyle\sum_{i = 4}^{\infty} i &#40;1 - p&#41;^{i - 3}p$. )
-
-[//]: # ()
-[//]: # (Using the fact that $Pr&#40;R = i - 2&#41; = p&#40;1 - p&#41;^{i - 3}$, we can modify the summation above to )
-
-[//]: # (be $&#40;1 -p&#41; \displaystyle\sum_{i = 4}^{\infty} i Pr&#40;R = i - 2&#41;$. The summation can be further )
-
-[//]: # (transformed by substituting all uses of i with $t$, where $t = i - 2$. Doing this )
-
-[//]: # (results in the summation becoming)
-
-[//]: # ($&#40;1 -p&#41; \displaystyle\sum_{t = 2}^{\infty} &#40;t + 2&#41; Pr&#40;R = t&#41;$, which is equivalent to)
-
-[//]: # ($&#40;1 -p&#41;&#40; \displaystyle\sum_{t = 2}^{\infty}t  Pr&#40;R = t&#41; + 2\displaystyle\sum_{t = 2}^{\infty}  Pr&#40;R = t&#41;&#41;$.)
-
-[//]: # ()
-[//]: # (The above expression can be simplified to )
-
-[//]: # ($&#40;1 -p&#41;&#40;E[R] + 2&#41;$, recalling the definition of $E[R]$ and that $R$ is a probability space.)
-
-[//]: # ()
-[//]: # (Since we derived $&#40;1 -p&#41;&#40;E[R] + 2&#41;$ from)
-
-[//]: # ($\displaystyle\sum_{i = 3}^{\infty} i Pr&#40;R = i | O6&#41;$, we )
-
-[//]: # (can substitute in the expression it was used in, modifying)
-
-[//]: # ($2p + \displaystyle\sum_{i = 3}^{\infty} i Pr&#40;R = i | O6&#41;$ to become )
-
-[//]: # ($2p + &#40;1 -p&#41;&#40;E[R] + 2&#41;$, which is equivalent to)
-
-[//]: # ($E[R | O6]$.)
+Since these cases are separate, I can sum them to obtain $2p + (2 + E[R])* Pr({O6}^{\complement})$. Since 
+this value was obtained from splitting two different portions in $E[R | O6]$, we can say that 
+$E[R | O6] = 2p + (2 + E[R])* Pr({O6}^{\complement})$.
 
 ### Part 3
 
