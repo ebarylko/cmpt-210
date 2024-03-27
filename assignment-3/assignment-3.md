@@ -389,9 +389,11 @@ We also need to count the number of ways to pick the non-white balls in the urn.
 balls and we want to pick $n - k$ non-white balls, there are $\binom{N - w}{n - k}$ 
 many ways to pick the non-white balls.
 
+Let us define $B$ as the r.v which measures the number of white balls in the n selected balls from the urn.
+
 Using the fact we have a uniform probability space, $Pr(B = k) = \frac{|B = k|}{|S|}$, where $S$ is the sample space of all 
 possible ways to select n balls from the urn and $B = k$ is the set of all n selected balls which contain 
-k white balls. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{N - w}{n - k} \binom{w}{k}$, $Pr(U)$ 
+k white balls. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{N - w}{n - k} \binom{w}{k}$, $Pr(B = k)$ 
 can be calculated as $\frac{\binom{N - w}{n - k} \binom{w}{k}}{\binom{N}{n}}$
 
 ### Part 2
@@ -441,10 +443,12 @@ $\displaystyle\sum_{i = 1}^{\infty} i Pr(R = i | O6)$.
 We can separate the summation into two cases:
 
 **Case 1**: The first two rolls are both sixes
+
 In this case, the probability of this occurring is 2p, owing from the fact that we roll a six with probability $p$ 
 and this occurs on the second term in the summation.
 
 **Case 2**: The first two rolls are not both sixes
+
 In this case, the first two rolls are misses and I need to calculate how many rolls I need after 
 failing the first two rolls. This is equivalent to (2 + E[R]) many rolls. This case could only occur after 
 missing the second roll, which happens with probability $Pr({O6}^{\complement})$. Therefore, we have
