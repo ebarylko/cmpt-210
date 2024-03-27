@@ -390,13 +390,13 @@ balls and we want to pick $n - k$ non-white balls, there are $\binom{N - w}{n - 
 many ways to pick the non-white balls.
 
 Using the fact we have a uniform probability space, $Pr(B = k) = \frac{|B = k|}{|S|}$, where $S$ is the sample space of all 
-possible ways to select n balls from the urn and $B = k$ is the set of all the ways to draw the n balls which contain 
+possible ways to select n balls from the urn and $B = k$ is the set of all n selected balls which contain 
 k white balls. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{N - w}{n - k} \binom{w}{k}$, $Pr(U)$ 
 can be calculated as $\frac{\binom{N - w}{n - k} \binom{w}{k}}{\binom{N}{n}}$
 
 ### Part 2
-The domain of $X$ would be $[0, n]$ since we could draw no white balls in the worst case and then have that all the balls
-selected are white.
+The domain of $X$ would be $[0, n]$ since the smallest number of white balls we could draw is 0 and the largest number of
+white balls that could be drawn is n, the number of balls selected from the urn.
 
 ### Part 3
 Let $X_i$ be the indicator r.v denoting whether the ith ball in the n balls selected from the urn is white. We can 
