@@ -379,9 +379,15 @@ we obtain that $Pr(S = 1) = \frac{1}{3}$.
 Assuming the balls are drawn randomly from the urn, we have a uniform probability space where the probability of 
 picking any set of n balls from the urn is $\frac{1}{\binom{N}{n}}$.
 
-Let U be the event that there are $k$ white balls in the $n$ balls selected from the urn.
-Since we want to calculate all the ways of picking k white balls from the set of n balls, this can be done in 
-$\binom{n}{k}$ many ways.
+Let U be the event that there are $k$ white balls in the $n$ balls selected from the urn. We need to calculate all the 
+ways to select the k white balls and the $n - k$ non-balls in the n balls we pick from the urn.
+
+Since we want to calculate all the ways of picking k white balls from the set of w balls, this can be done in 
+$\binom{w}{k}$ many ways.
+
+We also need to count the number of ways to pick the non-white balls in the urn. Since there are $N - w$ non-white 
+balls and we want to pick $n - k$ non-white balls, there are $\binom{N - w}{n - k}$ 
+many ways to pick the non-white balls.
 
 Using the fact we have a uniform probability space, $Pr(U) = \frac{|U|}{|S|}$, where $S$ is the sample space of all 
 possible ways to select n balls from the urn. Knowing that $|S| = \binom{N}{n}$ and $|U| = \binom{n}{k}$, $Pr(U)$ 
