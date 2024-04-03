@@ -40,3 +40,5 @@ Using the formula for variance, $Var[S] = E[S^2] - (E[S])^2 = \frac{2 - p}{p^2} 
 $E[\frac{X - \mu}{\sigma}] = E[\frac{X}{\sigma} - \frac{\mu}{\sigma}] = \frac{\mu}{\sigma} - \frac{\mu}{\sigma} = 0$. 
 
 $Var[\frac{X - \mu}{\sigma}] = Var[\frac{X}{\sigma} - \frac{\mu}{\sigma}] = \frac{\sigma^2}{\sigma^2} = 1$. 
+
+## Question four
