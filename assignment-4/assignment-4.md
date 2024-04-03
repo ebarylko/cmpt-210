@@ -27,7 +27,18 @@ $X$ and $Y$ are not independent.
 
 ###  If Z = X + Y , compute E[Z] and Var[Z]
 
-Using linearity of expectation, $E[Z] = E[X] + E[Y]$. Using the fact that $X$ and $Y$ both have the same distribution, which is binomial,
-$E[X] = E[Y] = np$. Using the fact that $p = \frac{1}{6}$, the value of $E[Z]$ is $E[Z] = 2 * \frac{n}{6} = \frac{n}{3}$.
+Since each roll is independent and the probability of obtaining a one or a two remains constant, I can model $Z$ by a binomial distribution. 
+$Z \sim Bin(n, \frac{1}{3})$.
 
-Using the formula for variance on a r.v. $X$, $Var[X] = E[X^2] - (E[X])^2$, $Var[Z] = E[(X + y)^2] - (E[X + Y])$
+Using the fact $Z$ has a binomial distribution, $E[Z] = np = \frac{n}{3}$
+
+Using the formula for variance on a binomial r.v. $X$, $Var[X] = np(1 - p)$, $Var[Z] = n * \frac{1}{3} * \frac{2}{3} = \frac{2n}{9}$.
+
+### Use the above results to compute E[(X + Y )^2] and E[X Y ]
+
+Using the formula $Var[Z] = E[Z^2] - {E[Z]}^2$ and knowing that 
+$E[(X + Y)^2] = E[Z^2]$, we can rearrange the formula for $Var[Z]$ to 
+obtain $E[Z^2] = Var[Z] + {E[Z]}^2$.
+
+Substituting the values of $Var[Z] = \frac{2n}{9}$ and $(E[Z])^2 = \frac{n^2}{9}$ into
+$E[Z^2] = Var[Z] + {E[Z]}^2$, we obtain that $E[Z^2] = \frac{2n}{9} + \frac{n^2}{9} = \frac{2n + n^2}{9}$
