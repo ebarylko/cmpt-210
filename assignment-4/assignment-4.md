@@ -48,23 +48,14 @@ Rearranging the expression, we obtain $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$.
 
 Knowing that $X$ and $Y$ have the same distribution, finding the value of $E[X^2]$ will allow $E[Y^2]$ to be known.
 
-Writing out $X$ as $X = X_1 + X_2 + X_3 + ..... X_n$, where each $X_i$ in an indicator r.v determining if 
-a one has occurred on roll i. $X^2$ then becomes $(X_1 + X_2 + X_3 + ..... X_n)^2 = \displaystyle\sum_{i}^{} X_i^2 + 2 \displaystyle\sum_{i, j, i \neq j}^{} X_i X_j$. 
-Applying linearity of expectation in $E[X^2]$, we obtain $E[X^2] = \displaystyle\sum_{i}^{} E[X_i^2] + 2 \displaystyle\sum_{i, j, i \neq j}^{} E[X_i X_j]$
-
-Since $X_i$ is an indicator variable, $X_i^2 = X_i$. The above expression can be rewritten as
-$E[X^2] = \displaystyle\sum_{i}^{} E[X_i] + 2 \displaystyle\sum_{i, j, i \neq j}^{} E[X_i X_j]$.
-Recognizing the first term in the expression is equivalent to $E[X] = np = \frac{n}{6}$, the expression simplifies to
-$E[X^2] = \frac{n}{6} + 2 \displaystyle\sum_{i, j, i \neq j}^{} E[X_i X_j]$
-In the second term, the only case where any $X_i X_j$ pair outputs one is where both 
-$X_i$ and $X_j$ are both one, which occurs with probability of $\frac{1}{36}$. Since there are
-$\binom{n}{2} - n = \frac{n^2 - 3n}{2}$ many ways to obtain distinct $X_i X_j$ pairs, the expression above reduces to 
-$E[X^2] = \frac{n}{6} + 2 * \frac{n^2 - 3n}{72} = \frac{n}{6} + \frac{n^2 - 3n}{36} = \frac{n^2 + 3n}{36}$.
+Using the formula $Var[X] = E[X^2] - (E[X])^2$, the value of $E[X^2]$ is $E[X^2] = Var[X] + (E[X])^2$.
+Using $Var[X] = \frac{5n}{36}, E[X] = \frac{n}{6}$, we can calculate the above expression.
+$E[X^2] = \frac{5n}{36} + \frac{n^2}{36} = \frac{5n + n^2}{36}$.
 
 Knowing the value of $E[X^2]$ and further aware that $E[X^2] = E[Y^2]$, I can now calculate $E[XY]$.
 Using the values of
-$E[X^2] = \frac{n^2 + 3n}{36}, E[Z^2] = \frac{2n + n^2}{9}$ in the expression $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$, 
-I obtain $E[XY] = \frac{2n + n^2}{9} - 2 * \frac{n^2 + 3n}{36} = \frac{2n + n^2}{9} -\frac{n^2 + 3n}{18}  = \frac{4n + 2n^2 - n^2 - 3n}{18} = \frac{n^2 + n}{18}$.
+$E[X^2] = \frac{n^2 + 5n}{36}, E[Z^2] = \frac{2n + n^2}{9}$ in the expression $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$, 
+I obtain $E[XY] = \frac{2n + n^2}{9} - 2 * \frac{n^2 + 5n}{36} = \frac{2n + n^2}{9} - \frac{n^2 + 5n}{18}  = \frac{4n + 2n^2 - n^2 - 5n}{18} = \frac{n^2 - n}{18}$.
 
 ### Use the above results to compute Cov[X, Y ]
 Using the formula for covariance, $Cov[X, Y] = E[XY] - E[X]E[Y]$, I have that
@@ -127,7 +118,7 @@ $Var[Y] = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - (1 - (1 - p)^i)) = 
 
 Noting that many of the terms in the summation cancel out, we can simplify the summation to become $Var[Y] = 1 - p$.
 
-Ask TA about this.  
+Ask TA about this.   p
 
 
 
