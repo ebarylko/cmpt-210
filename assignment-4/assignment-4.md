@@ -44,7 +44,7 @@ Substituting the values of $Var[Z] = \frac{2n}{9}$ and $(E[Z])^2 = \frac{n^2}{9}
 $E[Z^2] = Var[Z] + {E[Z]}^2$, we obtain that $E[Z^2] = \frac{2n}{9} + \frac{n^2}{9} = \frac{2n + n^2}{9}$
 
 Expanding out $E[Z^2]$, we obtain $E[Z^2] = E[(X + Y)^2] = E[X^2 + Y^2 + 2XY]$.
-Rearranging the expression, we obtain $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$.
+Rearranging the expression, we obtain $E[XY] = \frac{E[Z^2]  - E[X^2] - E[Y^2]}{2}$.
 
 Knowing that $X$ and $Y$ have the same distribution, finding the value of $E[X^2]$ will allow $E[Y^2]$ to be known.
 
@@ -55,17 +55,17 @@ $E[X^2] = \frac{5n}{36} + \frac{n^2}{36} = \frac{5n + n^2}{36}$.
 Knowing the value of $E[X^2]$ and further aware that $E[X^2] = E[Y^2]$, I can now calculate $E[XY]$.
 Using the values of
 $E[X^2] = \frac{n^2 + 5n}{36}, E[Z^2] = \frac{2n + n^2}{9}$ in the expression $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$, 
-I obtain $E[XY] = \frac{2n + n^2}{9} - 2 * \frac{n^2 + 5n}{36} = \frac{2n + n^2}{9} - \frac{n^2 + 5n}{18}  = \frac{4n + 2n^2 - n^2 - 5n}{18} = \frac{n^2 - n}{18}$.
+I obtain $E[XY] = \frac{\frac{2n + n^2}{9} - 2 * \frac{n^2 + 5n}{36}}{2} = \frac{\frac{2n + n^2}{9} - \frac{n^2 + 5n}{18}}{2}  = \frac{\frac{4n + 2n^2 - n^2 - 5n}{18}}{2} = \frac{n^2 - n}{36}$.
 
 ### Use the above results to compute Cov[X, Y ]
 Using the formula for covariance, $Cov[X, Y] = E[XY] - E[X]E[Y]$, I have that
-$Cov[X, Y]  = \frac{n^2 + n}{18} - \frac{n^2}{36} = \frac{n^2 + 2n}{36}$.
+$Cov[X, Y]  = \frac{n^2 - n}{36} - \frac{n^2}{36} = \frac{-n}{36}$.
 
 ### Use the above results to compute Corr[X, Y ]. Are X and Y positively or negatively correlated?
 
 Using the formula for $Corr[X, Y] = \frac{Cov[X, Y]}{\sqrt{Var[X]Var[Y]}}$, I obtain that the correlation coefficient is
-$\frac{\frac{n^2 + 2n}{36}}{\sqrt{(\frac{5n}{36})^2}} = \frac{n^2 + 2n}{36} * \frac{36}{5n} = \frac{n^2 + 2n}{5n}$. Since this 
-value is positive for all values of n $\in \mathbb{Z^{+}}$, I conclude that $X$ and $Y$ are positively correlated.
+$\frac{\frac{-n}{36}}{\sqrt{(\frac{5n}{36})^2}} = \frac{-n}{36} * \frac{36}{5n} = \frac{-1}{5}$. Since this 
+value is negative, I conclude that $X$ and $Y$ are negatively correlated.
 
 ## Question 2
 
