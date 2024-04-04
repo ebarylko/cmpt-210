@@ -117,3 +117,18 @@ $E[Y] = \frac{np + p - 1}{p}$.
 
 ### Var[Y]
 
+Using the fact that each of turn result is independent of the other turns, I can calculate 
+$Var[Y]$ as $Var[Y] = \displaystyle\sum_{i = 1}^{n} Var[Y_i]$. 
+
+Knowing that $Var[T] = p(1 - p)$ for an indicator r.v $T$, I can apply it with $Y$ to 
+obtain $Var[Y] = \displaystyle\sum_{i = 1}^{n} p_i(1 - p_i)$. Substituting the 
+value of $p_i$ with $1 - (1 - p)^i$, the expression becomes
+$Var[Y] = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - (1 - (1 - p)^i)) = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - p)^i$.
+
+Noting that many of the terms in the summation cancel out, we can simplify the summation to become $Var[Y] = 1 - p$.
+
+Ask TA about this.  
+
+
+
+
