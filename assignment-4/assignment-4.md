@@ -49,5 +49,5 @@ Rearranging the expression, we obtain $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$.
 Knowing that $X$ and $Y$ have the same distribution, finding the value of $E[X^2]$ will allow $E[Y^2]$ to be known.
 
 Writing out $X$ as $X = X_1 + X_2 + X_3 + ..... X_n$, where each $X_i$ in an indicator r.v determining if 
-a one has occurred on roll i. $X^2$ then becomes $(X_1 + X_2 + X_3 + ..... X_n)^2 = \sum_{i}^{} X_i^2 + 2\sum_{i, j, i \neq j}^{} X_i X_j$. 
+a one has occurred on roll i. $X^2$ then becomes $(X_1 + X_2 + X_3 + ..... X_n)^2 = \displaystyle\sum_{i}^{} X_i^2 + 2 \displaystyle\sum_{i, j, i \neq j}^{} X_i X_j$. 
 Applying linearity of expectation in $E[X^2]$, we obtain $E[X^2] = \displaystyle\sum_{i}^{} E[X_i^2] + 2 \displaystyle\sum_{i, j, i \neq j}^{} E[X_i X_j]$
