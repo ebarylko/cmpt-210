@@ -73,5 +73,47 @@ $Cov[X, Y]  = \frac{n^2 + n}{18} - \frac{n^2}{36} = \frac{n^2 + 2n}{36}$.
 ### Use the above results to compute Corr[X, Y ]. Are X and Y positively or negatively correlated?
 
 Using the formula for $Corr[X, Y] = \frac{Cov[X, Y]}{\sqrt{Var[X]Var[Y]}}$, I obtain that the correlation coefficient is
-$\frac{\frac{n^2 + n}{36}}{\sqrt{(\frac{5n}{36})^2}} = \frac{n^2 + n}{36} * \frac{36}{5n} = \frac{n^2 + 2n}{5n}$. Since this 
+$\frac{\frac{n^2 + 2n}{36}}{\sqrt{(\frac{5n}{36})^2}} = \frac{n^2 + 2n}{36} * \frac{36}{5n} = \frac{n^2 + 2n}{5n}$. Since this 
 value is positive for all values of n $\in \mathbb{Z^{+}}$, I conclude that $X$ and $Y$ are positively correlated.
+
+## Question 2
+
+### Calculate E[X] and Var[X]
+
+We can decompose $X$ as $X = X_1 + X_2 + X_3 + .... X_n$, where each $X_i$ represents an indicator r.v signifying that the 
+ith turn was a winning turn. Applying linearity of expectation to $E[X]$, we obtain $E[X] = E[X_1] + E[X_2] + ... E[X_n]$.
+
+$\forall X_i, Pr(X_i = 1) = p^i$. Applying this to $E[X]$ above, we obtain that $E[X] = p + p^2 + ... p^n$. Recognizing this
+as a geometric series, we know that $\displaystyle\sum_{i = 1}^{n} p^i = \frac{p}{1 - p}$. Therefore, 
+$E[X] = \frac{p}{1 - p}$.
+
+For calculating $Var[X]$, I can exploit the fact that for an indicator r.v $Y$, $Var[Y] = p(1 - p) = p - p^2$. Furthermore, 
+since all the flips are mutually independent of each other, I can assume that the results of one game have no influence on the
+outcome of the other games. Utilizing this information in calculating $Var[X]$, I have that 
+$Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - p^{2i}$. Expanding out the first few terms of the summation, I have 
+$p - p^2, p^2 - p^4, p^3 - p^6$, and  $p^4 - p^8$. Seeing that some of the terms would be cancelled out when summing them up, 
+adding more terms from the summation would cancel out every term except the $p$ term. 
+
+I can simplify $Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - p^{2i}$ to become $Var[X] = p$.
+
+Ask TA if this is correct.
+
+### Calculate E[Y] and Var[Y]
+
+I can compose $Y$ as a collection of $Y_i$ where each $Y_i$ is an indicator variable r.v signifying if the ith turn 
+is a winning turn. Applying linearity of expectation, $E[Y] = E[Y_1 + Y_2 + Y_3 + .... Y_n] = E[Y_1] + E[Y_2] + ... E[Y_n]$.
+
+If I need at least one heads in order to have a winning turn, then on turn j I would have probability $1 - (1 - p)^j$ 
+of obtaining at least one heads. Since this happens for each turn, the expression $E[Y]$ can be modified as 
+$E[Y] = \displaystyle\sum_{j = 1}^{n} 1 - (1 - p)^j$. Breaking apart the summation, I obtain
+$E[Y] = \displaystyle\sum_{j = 1}^{n} 1  - \displaystyle\sum_{j = 1}^{n}(1 - p)^j$, which simplifies to
+$E[Y] = n - \displaystyle\sum_{j = 1}^{n}(1 - p)^j$. Recognizing the second term is a geometric sum, I can 
+use the formula for a geometric sum ($S_n = \frac{a}{1 -r}$) to reduce the expression above into
+$E[Y] = n - \frac{1 - p}{1 - (1 - p)} = n - \frac{1 - p}{p}$.
+
+The expression above simplifies to
+$E[Y] = \frac{np + p - 1}{p}$.
+
+
+### Var[Y]
+
