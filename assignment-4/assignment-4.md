@@ -96,11 +96,11 @@ of obtaining at least one heads. Since this happens for each turn, the expressio
 $E[Y] = \displaystyle\sum_{j = 1}^{n} 1 - (1 - p)^j$. Breaking apart the summation, I obtain
 $E[Y] = \displaystyle\sum_{j = 1}^{n} 1  - \displaystyle\sum_{j = 1}^{n}(1 - p)^j$, which simplifies to
 $E[Y] = n - \displaystyle\sum_{j = 1}^{n}(1 - p)^j$. Recognizing the second term is a geometric sum, I can 
-use the formula for a geometric sum ($S_n = \frac{a}{1 -r}$) to reduce the expression above into
-$E[Y] = n - \frac{1 - p}{1 - (1 - p)} = n - \frac{1 - p}{p}$.
+use the formula for a finite geometric sum ($S_n = a\frac{1 - r^n}{1 -r}$) to reduce the expression above into
+$E[Y] = n - (1 - p)\frac{1 - (1 - p)^n}{1 - (1 - p)} = n - (1 - p)\frac{1 - (1 - p)^n}{p}$.
 
 The expression above simplifies to
-$E[Y] = \frac{np + p - 1}{p}$.
+$E[Y] = n - (1 - p)\frac{1 - (1 - p)^n}{p}$.
 
 
 ### Var[Y]
@@ -111,12 +111,13 @@ $Var[Y]$ as $Var[Y] = \displaystyle\sum_{i = 1}^{n} Var[Y_i]$.
 Knowing that $Var[T] = p(1 - p)$ for an indicator r.v $T$, I can apply it with $Y$ to 
 obtain $Var[Y] = \displaystyle\sum_{i = 1}^{n} p_i(1 - p_i)$. Substituting the 
 value of $p_i$ with $1 - (1 - p)^i$, the expression becomes
-$Var[Y] = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - (1 - (1 - p)^i)) = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - p)^i$.
+$Var[Y] = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - (1 - (1 - p)^i)) = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - p)^i = \displaystyle\sum_{i = 1}^{n} (1 - p)^i - (1 - p)^{2i}$.
+Distributing the summation, I obtain $\displaystyle\sum_{i = 1}^{n} (1 - p)^i - \displaystyle\sum_{i = 1}^{n} (1 - p)^{2i}$.
+Applying the formula for a finite geometric sum on both summations, the variance reduces to
+$Var[Y] = (1 - p)\frac{1 - (1 - p)^n}{1 - (1 - p)} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2} = (1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2}$.
 
-Noting that many of the terms in the summation cancel out, we can simplify the summation to become $Var[Y] = 1 - p$.
 
-Ask TA about this.   p
-
+The variance of $Y$ is $(1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2}$.
 
 
 
