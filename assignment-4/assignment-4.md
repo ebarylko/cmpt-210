@@ -165,3 +165,20 @@ Using this information, we can apply the Markov abound to calculate $Pr(N \ge 86
 This simplifies to $Pr(N \ge 86) \le \frac{75}{86}$.
 
 ### Part 2
+Knowing that no student gets a score below forty marks, we can modify the expression
+$Pr(N \ge 86)$ to $Pr(N - 40 \ge 46)$ to account for this information.
+
+If we define $Y = N - 40$, we can equivalently state $Pr(N - 40 \ge 46)$ as $Pr(Y \ge 46)$. Since $Y$ is 
+non-negative, we can apply the Markov to calculate $Pr(Y \ge 46) \le \frac{E[Y]}{46} = Pr(Y \ge 46) \le \frac{E[N] - 40}{46} = Pr(Y \ge 46) \le \frac{35}{46}$.
+
+### Part 3
+We now know that $Var[N] = 25$. 
+
+Using Chebyshev's inequality in the expression $Pr(|N - 75| \ge 11)$ to upper bound it by 
+$\frac{Var[N]}{11^2}$. Using the value $Var[N] = 25$, we have $Pr(|N - 75| \ge 11) \le \frac{25}{121}$.
+
+### Part 4
+Using the one-sided Chebyshev's inequality, we find that
+$Pr(|N - 75| \ge 11) \le \frac{Var[N]}{11^2 + Var[N]} = Pr(|N - 75| \ge 11) \le \frac{25}{146}$.
+
+### Part 5
