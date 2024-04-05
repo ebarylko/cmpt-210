@@ -182,3 +182,13 @@ Using the one-sided Chebyshev's inequality, we find that
 $Pr(|N - 75| \ge 11) \le \frac{Var[N]}{11^2 + Var[N]} = Pr(|N - 75| \ge 11) \le \frac{25}{146}$.
 
 ### Part 5
+
+Let $Z_i = \frac{S_i - 40}{60}$.
+
+Since we know that $S_i \in [40, 100]$, this means that $S_i -40 \in [0, 60]$. 
+Using this information, we know the smallest and largest value $Z_i$ can take on is $\frac{0}{60}$ and $\frac{60}{60} = 1$. 
+Therefore, we have that $Z_i \in [0, 1]$.
+
+Calculating $E[Z_i]$, we obtain $E[\frac{S_i}{60} - \frac{40}{60}] = E[\frac{S_i}{60}] - \frac{2}{3} = \frac{75}{60} - \frac{2}{3} = \frac{7}{12}$.
+
+Calculating $Var[Z_i]$, we obtain $Var[\frac{S_i}{60} - \frac{40}{60}] = Var[\frac{S_i}{60}] = \frac{Var[S_i]}{3600} = \frac{25}{3600} = \frac{1}{144}$.
