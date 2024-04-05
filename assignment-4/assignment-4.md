@@ -119,5 +119,49 @@ $Var[Y] = (1 - p)\frac{1 - (1 - p)^n}{1 - (1 - p)} - (1 - p)^2\frac{1 - (1 - p)^
 
 The variance of $Y$ is $(1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2}$.
 
+Simplify the denominator for the second term.
+
+## Question three
+
+### Part one
+
+Using $Y = (R - E[R] + a)^2$, I can apply the Markov bound since $Y$ is non-negative r.v. Doing this, I obtain 
+$Pr(Y \ge (x + a)^2) \le \frac{E[Y]}{(x + a)^2}$. 
+
+I need to calculate $E[Y]$, which I can do from expanding $Y = (R - E[R] + a)^2$. Expanding out $Y$, I obtain 
+$R^2 - RE[R] + Ra - E[R]R + (E[R])^2 - E[R]a + aR - aE[R] + a^2 = R^2 - 2RE[R] + 2Ra + (E[R])^2 -2E[R]a + a^2$.
+Applying linearity of expectation on $Y$, this results in $E[Y] =  E[R^2] - E[2RE[R]] + E[2Ra] + E[(E[R])^2] - E[2E[R]a] + E[a^2]$.
+Knowing that $a$ and $E[R]$ are constants, the above expression simplifies to
+$E[Y] =  E[R^2] - 2E[R]E[R] + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 = E[R^2] - 2E([R])^2 + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 =  E[R^2] - E([R])^2 + a^2$.
+
+Using the fact that $Var[R] = E[R^2] - (E[R])^2$, the above expression can be expressed as $Var[R] a^2$. 
+Since the expression was simplified from the calculation $E[Y]$, we can say that $E[Y] = Var[R] + a^2$.
+
+Now that we have the value of $E[Y] = Var[R] + a^2$, we can plug it in  
+$Pr(Y \ge (x + a)^2) \le \frac{E[Y]}{(x + a)^2}$, resulting in
+$Pr(Y \ge (x + a)^2) \le \frac{Var[R] + a^2}{(x + a)^2}$.
+.  
+
+Since we obtained $Y \ge (x + a)^2$ from manipulating the expression 
+We are able to manipulate $R - E[R] \ge x$ to obtain $Y \ge (x + a)^2$ 
+by adding x to both sides of the inequality and squaring each side to obtain  
+$(R - E[R] + a)^2 \ge (x + a)^2$, which is equivalent to $Y \ge (x + a)^2$.
+Since we were able to obtain one expression from manipulating the other, we 
+can say that $Pr(R - E[R] \ge x) = Pr(Y \ge (x + a)^2)$.
+
+Given that $Pr(Y \ge (x + a)^2) \le \frac{Var[R] + a^2}{(x + a)^2}$, we 
+know that $Pr(R - E[R] \ge x) \le \frac{Var[R] + a^2}{(x + a)^2}$.
+
+### Part two
 
 
+## Question four 
+
+### Part 1
+Let $N$ be an r.v measuring number of marks that a student gets on their final examination. We are given that 
+$E[N] =  75$.
+
+Using this information, we can apply the Markov abound to calculate $Pr(N \ge 86)$, obtaining $Pr(N \ge 86) \le \frac{E[N]}{86}$. 
+This simplifies to $Pr(N \ge 86) \le \frac{75}{86}$.
+
+### Part 2
