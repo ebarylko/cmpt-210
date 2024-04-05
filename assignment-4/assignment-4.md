@@ -75,19 +75,16 @@ We can decompose $X$ as $X = X_1 + X_2 + X_3 + .... X_n$, where each $X_i$ repre
 ith turn was a winning turn. Applying linearity of expectation to $E[X]$, we obtain $E[X] = E[X_1] + E[X_2] + ... E[X_n]$.
 
 $\forall X_i, Pr(X_i = 1) = p^i$. Applying this to $E[X]$ above, we obtain that $E[X] = p + p^2 + ... p^n$. Recognizing this
-as a geometric series, we know that $\displaystyle\sum_{i = 1}^{n} p^i = \frac{p}{1 - p}$. Therefore, 
-$E[X] = \frac{p}{1 - p}$.
+as a geometric series, we know that $\displaystyle\sum_{i = 1}^{n} p^i = p(\frac{1 - p^n}{1 - p})$. Therefore, 
+$E[X] = p(\frac{1 - p^n}{1 - p})$.
 
 For calculating $Var[X]$, I can exploit the fact that for an indicator r.v $Y$, $Var[Y] = p(1 - p) = p - p^2$. Furthermore, 
 since all the flips are mutually independent of each other, I can assume that the results of one game have no influence on the
 outcome of the other games. Utilizing this information in calculating $Var[X]$, I have that 
-$Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - p^{2i}$. Expanding out the first few terms of the summation, I have 
-$p - p^2, p^2 - p^4, p^3 - p^6$, and  $p^4 - p^8$. Seeing that some of the terms would be cancelled out when summing them up, 
-adding more terms from the summation would cancel out every term except the $p$ term. 
-
-I can simplify $Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - p^{2i}$ to become $Var[X] = p$.
-
-Ask TA if this is correct.
+$Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - p^{2i}$. Distributing the sum, I obtain  
+$Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - \displaystyle\sum_{i = 1}^{n} p^{2i}$.
+Using the formula of a finite geometric sum with $a = p^2$ and $r = p^2$ for the second term and $a = p$ and $r = p$ for the first term,
+the variance simplifies to $Var[X] =  p(\frac{1 - p^n}{1 - p}) - p^2\frac{1 - p^{2n}}{1 - p^2}$
 
 ### Calculate E[Y] and Var[Y]
 
