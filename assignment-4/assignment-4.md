@@ -161,15 +161,15 @@ know that $Pr(R - E[R] \ge x) \le \frac{Var[R] + a^2}{(x + a)^2}$.
 Let $N$ be an r.v measuring number of marks that a student gets on their final examination. We are given that 
 $E[N] =  75$.
 
-Using this information, we can apply the Markov abound to calculate $Pr(N \ge 86)$, obtaining $Pr(N \ge 86) \le \frac{E[N]}{86}$. 
-This simplifies to $Pr(N \ge 86) \le \frac{75}{86}$.
+Using this information, we can apply the Markov abound to calculate $Pr(N \ge 85)$, obtaining $Pr(N \ge 85) \le \frac{E[N]}{85}$. 
+This simplifies to $Pr(N \ge 85) \le \frac{75}{85}$.
 
 ### Part 2
 Knowing that no student gets a score below forty marks, we can modify the expression
-$Pr(N \ge 86)$ to $Pr(N - 40 \ge 46)$ to account for this information.
+$Pr(N \ge 85)$ to $Pr(N - 40 \ge 45)$ to account for this information.
 
-If we define $Y = N - 40$, we can equivalently state $Pr(N - 40 \ge 46)$ as $Pr(Y \ge 46)$. Since $Y$ is 
-non-negative, we can apply the Markov to calculate $Pr(Y \ge 46) \le \frac{E[Y]}{46} = Pr(Y \ge 46) \le \frac{E[N] - 40}{46} = Pr(Y \ge 46) \le \frac{35}{46}$.
+If we define $Y = N - 40$, we can equivalently state $Pr(N - 40 \ge 45)$ as $Pr(Y \ge 45)$. Since $Y$ is 
+non-negative, we can apply the Markov to calculate $Pr(Y \ge 45) \le \frac{E[Y]}{45} = Pr(Y \ge 45) \le \frac{E[N] - 40}{45} = Pr(Y \ge 45) \le \frac{35}{45}$.
 
 ### Part 3
 We now know that $Var[N] = 25$. 
@@ -192,3 +192,15 @@ Therefore, we have that $Z_i \in [0, 1]$.
 Calculating $E[Z_i]$, we obtain $E[\frac{S_i}{60} - \frac{40}{60}] = E[\frac{S_i}{60}] - \frac{2}{3} = \frac{75}{60} - \frac{2}{3} = \frac{7}{12}$.
 
 Calculating $Var[Z_i]$, we obtain $Var[\frac{S_i}{60} - \frac{40}{60}] = Var[\frac{S_i}{60}] = \frac{Var[S_i]}{3600} = \frac{25}{3600} = \frac{1}{144}$.
+
+### Part 6
+
+If we start off with the expression $Pr(Z \ge \frac{3}{4})$ ($\frac{3}{4}$ obtained from converting 85 to a value in $Z$, doing $Z_{85} = \frac{85 - 40}{60} = \frac{3}{4}$), we can subtract $E[Z]$ on both sides to 
+obtain $Pr(Z - E[Z] \ge \frac{3}{4} - E[Z])$, which has the same probability as the first expression.
+Knowing that the first expression represents the probability of the case we do not want to occur, that the 
+average is greater than or equal to 85, we can lower bound it by the probability of the bad event occurring. 
+Applying the one-sided Chebyshev's inequality, we obtain 
+$Pr(Z - E[Z] \ge 86 - E[Z]) \le \frac{Var[Z]}{Var[Z] + (86 - E[Z])^2}$. 
+
+Substituting the value of $Var[Z] = \frac{n}{144}, E[Z] = \frac{7n}{12}$ in the expression above, we obtain
+$Pr(Z - E[Z] \ge 86 - E[Z]) \le \frac{\frac{n}{144}}{\frac{n}{144} + (86 - \frac{7n}{12})^2}$. 
