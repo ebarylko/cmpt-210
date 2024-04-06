@@ -221,3 +221,10 @@ Since we can only have whole students, we can modify $n > 249.75$ to equivalentl
 250 students to take the examination.
 
 ### Part 7
+
+To use the Chernoff bound, we need an expression of the form $Pr(T \ge cE[T])$, for an r.v $T$ and $c \in \mathbb{R}$.
+We want to calculate $Pr(Z \ge \frac{3n}{4})$, but we need to obtain $\frac{3n}{4}$ from $\frac{7n}{12}c$.
+Noticing that $\frac{7n}{12} * \frac{9}{7} = \frac{3n}{4}$, we can let $c = \frac{9}{7}$.
+Doing this, we can calculate $Pr(Z \ge \frac{3n}{4} * \frac{9}{7}) = $Pr(Z \ge \frac{3n}{4})$.
+
+Applying Chernoff's bound, we obtain $Pr(Z \ge \frac{3n}{4}) \le e^{-\beta (\frac{9}{7}) * \frac{7n}{12}}$
