@@ -219,3 +219,5 @@ expression to obtain $\frac{1000}{144} < \frac{1}{144} + \frac{n}{36}$, which fu
 
 Since we can only have whole students, we can modify $n > 249.75$ to equivalently be $n \ge 250$. This means that we need at least 
 250 students to take the examination.
+
+### Part 7
