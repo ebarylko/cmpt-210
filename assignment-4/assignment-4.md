@@ -212,10 +212,10 @@ $Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z]) \le \frac{\frac{n}{144}}{\frac{n}{144} + (
 
 
 Additionally knowing that the bad case has a probability of less than $0.01$ of occurring, we can upper bound the expression
-$\frac{\frac{n}{144}}{\frac{n}{144} + (\frac{n}{6})^2}$ by 0.01. We obtain the inequality
-$\frac{\frac{n}{144}}{\frac{n}{144} + \frac{n^2}{36}} < 0.01 = \frac{\frac{1}{144}}{\frac{1}{144} + \frac{n}{36}} < 0.01$. 
-Multiplying by the denominator, we obtain $\frac{1}{144} < 0.01(\frac{1}{144} + \frac{n}{36})$. We can further simplify the 
-expression to obtain $\frac{100}{144} < \frac{1}{144} + \frac{n}{36}$, which further reduces to $\frac{99}{144} * 36 < n = 24.75 < n$.
+$\frac{\frac{n}{144}}{\frac{n}{144} + (\frac{n}{6})^2}$ by 0.001. We obtain the inequality
+$\frac{\frac{n}{144}}{\frac{n}{144} + \frac{n^2}{36}} < 0.001 = \frac{\frac{1}{144}}{\frac{1}{144} + \frac{n}{36}} < 0.01$. 
+Multiplying by the denominator, we obtain $\frac{1}{144} < 0.001(\frac{1}{144} + \frac{n}{36})$. We can further simplify the 
+expression to obtain $\frac{1000}{144} < \frac{1}{144} + \frac{n}{36}$, which further reduces to $\frac{999}{144} * 36 < n = 249.75 < n$.
 
-Since we can only have whole students, we can modify $n > 24.75$ to equivalently be $n \ge 25$. This means that we need at least 
-25 students to take the examination.
+Since we can only have whole students, we can modify $n > 249.75$ to equivalently be $n \ge 250$. This means that we need at least 
+250 students to take the examination.
