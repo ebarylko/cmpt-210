@@ -208,7 +208,8 @@ Applying the one-sided Chebyshev's inequality, we obtain
 $Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z]) \le \frac{Var[Z]}{Var[Z] + (\frac{3n}{4} - E[Z])^2}$. 
 
 Substituting the value of $Var[Z] = \frac{n}{144}, E[Z] = \frac{7n}{12}$ in the expression above, we obtain
-$Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z]) \le \frac{\frac{n}{144}}{\frac{n}{144} + (\frac{3n}{4} - \frac{7n}{12})^2}$. 
+$Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z]) \le \frac{\frac{n}{144}}{\frac{n}{144} + (\frac{3n}{4} - \frac{7n}{12})^2} = \frac{\frac{n}{144}}{\frac{n}{144} + (\frac{n}{6})^2}$. 
+
 
 Additionally knowing that the bad case has a probability of less than $0.01$ of occurring, we can upper bound the expression
-$\frac{\frac{n}{144}}{\frac{n}{144} + (\frac{3n}{4} - \frac{7n}{12})^2}$. 
+$\frac{\frac{n}{144}}{\frac{n}{144} + (\frac{n}{6})^2}$. 
