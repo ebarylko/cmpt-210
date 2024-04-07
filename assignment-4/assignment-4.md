@@ -236,5 +236,5 @@ Using $\beta (c) = cln(c) - c + 1$ with $c = \frac{9}{7}$, I obtain $\beta (\fra
 Using the value of $\beta (\frac{9}{7})$ in  $\beta (\frac{9}{7}) * n \le  -\frac{ln(0.001) * 12}{7}$, I obtain
 $n \ge \approx 317$. 
 
-Using the information above, we know that we need at least 317 people. 
+Using the information above, we know that we need at least 317 people to take the examination. 
 
