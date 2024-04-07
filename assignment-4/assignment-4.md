@@ -233,7 +233,7 @@ $e^{-\beta (\frac{9}{7}) * \frac{7n}{12}} \le 0.001$. Taking the natural logarit
 we obtain $-\beta (\frac{9}{7}) * \frac{7n}{12} \le ln(0.001) = \beta (\frac{9}{7}) * n \ge  -\frac{ln(0.001) * 12}{7}$.
 
 Using $\beta (c) = cln(c) - c + 1$ with $c = \frac{9}{7}$, I obtain $\beta (\frac{9}{7}) = \frac{9}{7} * ln(\frac{9}{7}) - \frac{9}{7} + 1 \approx 0.037$.
-Using the value of $\beta (\frac{9}{7})$ in  $\beta (\frac{9}{7}) * n \le  -\frac{ln(0.001) * 12}{7}$, I obtain
+Using the value of $\beta (\frac{9}{7})$ in  $\beta (\frac{9}{7}) * n \ge  -\frac{ln(0.001) * 12}{7}$, I obtain
 $n \ge \approx 317$. 
 
 Using the information above, we know that we need at least 317 people to take the examination. 
