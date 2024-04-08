@@ -295,6 +295,44 @@ Taylor Series expansion of $e^x = \displaystyle\sum_{k = 0}^{\infty} \frac{x^k}{
 $e^{-\lambda} \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{k}}{k!}$ to $e^{-\lambda} e^{\lambda} = 1$.
 
 Since we have shown that $\displaystyle\sum_{k = 0}^{\infty} \frac{e^{-\lambda} \lambda^{k}}{k!} = 1$, we can conclude that the 
-$PDF$ for the poisson distribution is valid.
+$PDF$ for the Poisson distribution is valid.
 
 ### Part 2
+
+Prove that $E[X] = \lambda$:
+Calculating the expectation of the Poisson distribution, we find it is
+$\displaystyle\sum_{k = 0}^{\infty} k * \frac{e^{-\lambda} \lambda^{k}}{k!}$. Factoring out 
+$e^{-\lambda}$ and removing the first term of the summation due to multiplying by 0, the summation changes to
+$e^{-\lambda} \displaystyle\sum_{k = 1}^{\infty} k * \frac{ \lambda^{k}}{k!}$.
+
+If we factor out a $\lambda$ term from the summation and simplify $\frac{n}{n!}$ to $\frac{1}{(n - 1)!}$, the summation 
+further reduces to 
+$e^{-\lambda} \lambda \displaystyle\sum_{k = 1}^{\infty} \frac{ \lambda^{k - 1}}{(k - 1)!}$. In order to 
+manipulate the summation further, let us define $y = k - 1$. Substituting $y$ into the summation, the summation 
+changes to $e^{-\lambda} \lambda \displaystyle\sum_{y = 0}^{\infty} \frac{ \lambda^{y}}{(y)!}$. 
+Applying the Taylor Series 
+expansion of $e^x$, the summation now becomes $e^{-\lambda} \lambda e^{\lambda} = \lambda$.
+
+Since we obtained $\lambda$ from calculating $E[X]$, we can state that $E[X] = \lambda$.
+
+Prove that $Var[X] = \lambda$:
+
+Using the formula $Var[X] = E[X^2] - (E[X])^2$, I can calculate the variance if I know the 
+value of $E[X^2]$ and $E[X]$. I know $E[X]$, but I must obtain the $E[X^2]$.
+
+Using the formula $E[X^2] = \displaystyle\sum_{k = 0}^{\infty} k^2 * \frac{e^{-\lambda} \lambda^{k}}{k!}$, we 
+can factor out $e^{- \lambda}$ and a $\lambda$ term, obtaining
+$e^{- \lambda} \lambda \displaystyle\sum_{k = 0}^{\infty} k * \frac{\lambda^{k - 1}}{(k -1)!}$. Let 
+us now define $t = k - 1$. Using t in the summation, we now have
+$e^{- \lambda} \lambda \displaystyle\sum_{k = 0}^{\infty} (t + 1) * \frac{\lambda^{t}}{t!} = e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$.
+
+Using our previous work, we know that 
+$e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$
+simplifies to 
+$e^{- \lambda} \lambda (\lambda e^{\lambda} + e^{\lambda}) = {\lambda}^2 + \lambda$.
+
+Now that we know that $E[X^2] = {\lambda}^2 + \lambda$, I can calculate the variance.
+
+Using $Var[X] = E[X^2] - (E[X])^2$ with $E[X^2] = {\lambda}^2 + \lambda$, $E[X] = \lambda$, I obtain 
+$Var[X] = {\lambda}^2 + \lambda -\lambda^2  = \lambda$.
+
