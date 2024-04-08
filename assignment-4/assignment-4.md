@@ -342,7 +342,7 @@ $Var[X] = {\lambda}^2 + \lambda -\lambda^2  = \lambda$.
 
 Using the formula for a $MGF$, we have that $\phi (t) = \displaystyle\sum_{x \in Range(X)}^{} e^{tx}pr(X = x)$. Knowing that
 $X$ has a Poisson distribution, we can change $\phi (t)$ to $\phi (t) = \displaystyle\sum_{x \in Range(X)}^{} e^{tx} \frac{e^{-\lambda} \lambda^{x}}{x!}$.
-We can factor out $\e^{- \lambda}$ to obtain $\phi (t) = e^{-\lambda}\displaystyle\sum_{x \in Range(X)}^{}  \frac{(e^{t}\lambda)^x}{x!}$.
+We can factor out $e^{- \lambda}$ to obtain $\phi (t) = e^{-\lambda}\displaystyle\sum_{x \in Range(X)}^{}  \frac{(e^{t}\lambda)^x}{x!}$.
 Using the Taylor Series expansion of $\displaystyle\sum_{x = 0}^{\infty} \frac{(e^{t}\lambda)^x}{x!} = e^{e^{t}\lambda}$ in the expression above, I 
 can simplify $\phi (t)$ to  $\phi (t) = e^{-\lambda} e^{e^{t}\lambda} = e^{e^{t}\lambda - \lambda} = e^{\lambda(e^t - 1)}$.
 
