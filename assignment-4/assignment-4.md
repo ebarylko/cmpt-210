@@ -271,3 +271,30 @@ Using the formula $\beta (c) = cln(c) - c + 1$ with $c = 2$, I obtain $\beta (2)
 Using the value of $\beta (2) = 0.39$ in $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$, I obtain
 $Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le {1.67}^{-17}$.
 
+
+### Part 4
+
+In order to calculate $Pr(\bigcup_{D_i \in \set{D_1, D_2, D_3, D_4}} D_i \ge 200)$, I know I can equivalently take its complement $1 - Pr(\bigcap_{D_i \in \set{D_1, D_2, D_3, D_4}} D_i < 200)$.
+Since each of the $D_i$ are mutually independent, I can change $1 - Pr(\bigcap_{D_i \in \set{D_1, D_2, D_3, D_4}} D_i < 200)$ to $1 - Pr(\prod_{i = 1}^{4} D_i < 200)$.
+
+Knowing that $E[D_1] = E[D_2] = E[D_3] = E[D_4]$, we can say that $Pr(D_i \ge 200) \le {1.67}^{-17}$. Using this information, we can 
+calculate $Pr(D_i < 200) = 1 - Pr(D_i \ge 200) \ge 1 - {1.67}^{-17}$. With this lower bound on $Pr(D_i \ge 200)$, I can upper bound the 
+expression $1 - Pr(\prod_{i = 1}^{4} D_i < 200)$, obtaining $1 - (1 - {1.67}^{-17})^4 \approx 0$.
+
+The probability that some disk has more than 200 $MB$ written to it is 0.
+
+## Question six
+
+### Part 1
+
+To verify that the $PDF$ is valid, we must confirm that $\displaystyle\sum_{k = 0}^{\infty} \frac{e^{-\lambda} \lambda^{k}}{k!} = 1$.
+
+Starting with $\displaystyle\sum_{k = 0}^{\infty} \frac{e^{-\lambda} \lambda^{k}}{k!}$, we can factor out $e^{-\lambda}$ to 
+obtain $e^{-\lambda} \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{k}}{k!}$. Using the 
+Taylor Series expansion of $e^x = \displaystyle\sum_{k = 0}^{\infty} \frac{x^k}{k!}$ in the previous expression, it simplifies
+$e^{-\lambda} \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{k}}{k!}$ to $e^{-\lambda} e^{\lambda} = 1$.
+
+Since we have shown that $\displaystyle\sum_{k = 0}^{\infty} \frac{e^{-\lambda} \lambda^{k}}{k!} = 1$, we can conclude that the 
+$PDF$ for the poisson distribution is valid.
+
+### Part 2
