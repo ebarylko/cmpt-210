@@ -266,7 +266,7 @@ Since I must use the Chernoff bound, I must have an expression of the form
 $Pr(D_1 \ge c * E[D_1]), c \in \mathbb{R}$. Since I wish to calculate the probability that 
 $D_1 \ge 200$ and it is known that $E[D_1] = 100$, I can set $c = 2$ to obtain $Pr(D_1 \ge 2 * E[D_1])  = Pr(D_1 \ge 200)$.
 
-Applying the Chernoff bound $Pr(D_1 \ge c * E[D_1]) \le e^{- \beta (c) E[T}}$ with $c = 2$, $E[D_1] = 100$, I obtain that $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$. 
+Applying the Chernoff bound $Pr(D_1 \ge c * E[D_1]) \le e^{- \beta (c) E[T]}$ with $c = 2$, $E[D_1] = 100$, I obtain that $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$. 
 Using the formula $\beta (c) = cln(c) - c + 1$ with $c = 2$, I obtain $\beta (2) = 2 * ln(2) - 2 + 1 = 0.39$.
 Using the value of $\beta (2) = 0.39$ in $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$, I obtain
 $Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le {1.67}^{-17}$.
