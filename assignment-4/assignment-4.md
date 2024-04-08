@@ -251,7 +251,7 @@ Applying the formula of expectation, $E[X] =  \displaystyle\sum_{x \in X}^{} x *
 each $x$ represents the size of a file and the probability of the file being written to the first disk is always $\frac{1}{4}$,
 I can rewrite the value for $E[D_1] $ to equivalently be $E[D_1] = \frac{1}{4} \displaystyle\sum_{F_i \in F}^{} F_i$.
 
-Using the fact that $} \displaystyle\sum_{F_i \in F}^{} F_i = 400$, I can simplify the summation above to  
+Using the fact that $\displaystyle\sum_{F_i \in F}^{} F_i = 400$, I can simplify the summation above to  
 $E[D_1] = \frac{1}{4} * 400 = 100$.
 
 The expected amount of data written to disk one is 100 $MB$.
