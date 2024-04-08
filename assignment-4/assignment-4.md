@@ -299,7 +299,8 @@ $PDF$ for the Poisson distribution is valid.
 
 ### Part 2
 
-Prove that $E[X] = \lambda$:
+**Prove that E[X] =** $\lambda$:
+
 Calculating the expectation of the Poisson distribution, we find it is
 $\displaystyle\sum_{k = 0}^{\infty} k * \frac{e^{-\lambda} \lambda^{k}}{k!}$. Factoring out 
 $e^{-\lambda}$ and removing the first term of the summation due to multiplying by 0, the summation changes to
