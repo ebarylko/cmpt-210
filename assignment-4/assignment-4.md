@@ -255,3 +255,9 @@ Using the fact that $\displaystyle\sum_{F_i \in F}^{} F_i = 400$, I can simplify
 $E[D_1] = \frac{1}{4} * 400 = 100$.
 
 The expected amount of data written to disk one is 100 $MB$.
+
+### Part 2
+
+Using Markov's inequality, $Pr(D_1 \ge 200) \le \frac{E[D_1]}{200} = Pr(D_1 \ge 200) \le \frac{100}{200} = Pr(D_1 \ge 200) \le \frac{1}{2}$
+
+### Part 3
