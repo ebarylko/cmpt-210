@@ -132,15 +132,14 @@ Applying linearity of expectation on $Y$, this results in $E[Y] =  E[R^2] - E[2R
 Knowing that $a$ and $E[R]$ are constants, the above expression simplifies to
 $E[Y] =  E[R^2] - 2E[R]E[R] + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 = E[R^2] - 2(E[R])^2 + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 =  E[R^2] - (E[R])^2 + a^2$.
 
-Using the fact that $Var[R] = E[R^2] - (E[R])^2$, the above expression can be expressed as $Var[R] a^2$. 
-Since the expression was simplified from the calculation $E[Y]$, we can say that $E[Y] = Var[R] + a^2$.
+Using the fact that $Var[R] = E[R^2] - (E[R])^2$, the above expression can be expressed as $Var[R] + a^2$. 
+Since the expression was simplified from calculating $E[Y]$, we can say that $E[Y] = Var[R] + a^2$.
 
 Now that we have the value of $E[Y] = Var[R] + a^2$, we can plug it in  
 $Pr(Y \ge (x + a)^2) \le \frac{E[Y]}{(x + a)^2}$, resulting in
 $Pr(Y \ge (x + a)^2) \le \frac{Var[R] + a^2}{(x + a)^2}$.
-.  
+  
 
-Since we obtained $Y \ge (x + a)^2$ from manipulating the expression 
 We are able to manipulate $R - E[R] \ge x$ to obtain $Y \ge (x + a)^2$ 
 by adding x to both sides of the inequality and squaring each side to obtain  
 $(R - E[R] + a)^2 \ge (x + a)^2$, which is equivalent to $Y \ge (x + a)^2$.
@@ -148,7 +147,8 @@ Since we were able to obtain one expression from manipulating the other, we
 can say that $Pr(R - E[R] \ge x) = Pr(Y \ge (x + a)^2)$.
 
 Given that $Pr(Y \ge (x + a)^2) \le \frac{Var[R] + a^2}{(x + a)^2}$, we 
-know that $Pr(R - E[R] \ge x) \le \frac{Var[R] + a^2}{(x + a)^2}$.
+know that $Pr(R - E[R] \ge x) \le \frac{Var[R] + a^2}{(x + a)^2}$ since
+$Pr(R - E[R] \ge x) = Pr(Y \ge (x + a)^2)$.
 
 ### Part two
 
