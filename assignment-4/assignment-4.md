@@ -237,7 +237,7 @@ Since we can only have whole students, we can modify $n > 249.75$ to equivalentl
 To use the Chernoff bound, we need an expression of the form $Pr(T \ge cE[T])$, for an r.v $T$ and $c \in \mathbb{R}$.
 We want to calculate $Pr(Z \ge \frac{3n}{4})$, but we need to obtain $\frac{3n}{4}$ from $\frac{7n}{12}c$.
 Noticing that $\frac{7n}{12} * \frac{9}{7} = \frac{3n}{4}$, we can let $c = \frac{9}{7}$.
-Doing this, we can calculate $Pr(Z \ge \frac{3n}{4} * \frac{9}{7}) = $Pr(Z \ge \frac{3n}{4})$.
+Doing this, we can calculate $Pr(Z \ge \frac{3n}{4} * \frac{9}{7}) = Pr(Z \ge \frac{3n}{4})$.
 
 Applying Chernoff's bound, we obtain $Pr(Z \ge \frac{3n}{4}) \le e^{-\beta (\frac{9}{7}) * \frac{7n}{12}}$.
 Knowing that the upper limit obtained from Chernoff's bound is bounded by $0.001$, we have that
@@ -257,15 +257,14 @@ Using the information above, we know that we need at least 317 people to take th
 ### Part 1
 
 For $D_1$, I must consider the possibility of each file being written to the first disk. I can therefore 
-rewrite $D_1$ as $D_1 = \displaystyle\sum_{i = 1}^{1000} WF_i$, where $WF_i$ is an indicator r.v representing whether $F_i$ was 
-written to disk one.
+rewrite $D_1$ as $D_1 = \displaystyle\sum_{i = 1}^{1000} WF_i$, where $WF_i$ is an indicator r.v which is 0 if $F_i$ was not written to disk one
+or $1 * F_i$  if $F_i$ was written to disk one.
 
-Applying the formula of expectation, $E[X] =  \displaystyle\sum_{x \in X}^{} x * pr(X = x)$, to $D_1$,
-I obtain $E[D_1] = \displaystyle\sum_{i = 1}^{1000} F_i * pr(WF_i = 1)$
-Considering that the probability of the file being written to the first disk is always $\frac{1}{4}$,
+Applying linearity of expectation to $E[D_1]$, I obtain $E[X] = E[WF_1] + E[WF_2] + .... E[WF_1000] = \displaystyle\sum_{i = 1}^{1000} WF_i * Pr(WF_i = 1) = \displaystyle\sum_{i = 1}^{1000} F_i * Pr(WF_i = 1)$.
+Considering that the probability of any file being written to the first disk is always $\frac{1}{4}$,
 I can rewrite the value for $E[D_1]$ to equivalently be $E[D_1] = \frac{1}{4} \displaystyle\sum_{i = 1}^{1000} F_i$.
 
-Using the fact that $\displaystyle\sum_{F_i \in F}^{} F_i = 400$, I can simplify the summation above to  
+Using the fact that $\displaystyle\sum_{i = 1}^{1000} F_i = 400$, I can simplify the summation above to  
 $E[D_1] = \frac{1}{4} * 400 = 100$.
 
 The expected amount of data written to disk one is 100 $MB$.
