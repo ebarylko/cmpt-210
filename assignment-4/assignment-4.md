@@ -158,8 +158,8 @@ Minimizing $\frac{a^2 + Var[R]}{(x + a)^2}$, we obtain
 $\frac{d}{da}\frac{a^2 + Var[R]}{(x + a)^2} = 0$. Applying the quotient rule, 
 we obtain $\frac{d}{da}\frac{a^2 + Var[R]}{(x + a)^2} = \frac{(a + x)^2 * 2a - [a^2 + Var[R]] * 2[a + x]}{(a + x)^4} = \frac{2(a + x)[(a + x) * a - (a^2 + Var[R])]}{(a + x) (a + x)^3}$. 
 
-Simplifying the equation, we obtain $\frac{(a + x) * a - (a^2 + Var[R])}{(a + x)^3} = \frac{ a^2 + ax - a^2 - Var[R]}{(a + x)^3} = \frac{ax - Var[R]}{(a + x)^3}$.
-Knowing that we must minimize a, we must solve $\frac{ax - Var[R]}{(a + x)^3} = 0$. Solving for $a$, we obtain $a = \frac{Var[R]}{x}$.
+Simplifying the equation, we obtain $\frac{2((a + x) * a - (a^2 + Var[R])}{(a + x)^3)} = \frac{2( a^2 + ax - a^2 - Var[R])}{(a + x)^3} = \frac{2(ax - Var[R])}{(a + x)^3}$.
+Knowing that we must minimize a, we must solve $\frac{2(ax - Var[R])}{(a + x)^3} = 0$. Solving for $a$, we obtain $a = \frac{Var[R]}{x}$.
 
 Letting $v = Var[R]$ and using $a = \frac{Var[R]}{x} = \frac{v}{x}$ into the expression $\frac{a^2 + Var[R]}{(x + a)^2}$, it becomes 
 $\frac{(\frac{v}{x})^2 + v}{(x + \frac{v}{x})^2} = \frac{\frac{v^2 + x^2v}{x^2}}{(\frac{x^2 + v}{x})^2} = \frac{v^2 + x^2v}{x^2} * \frac{x^2}{(\frac{x^2 + v}{x})^2} = \frac{v(v + x^2)}{(x^2 + v)^2} = \frac{v}{x^2 + v}$.
