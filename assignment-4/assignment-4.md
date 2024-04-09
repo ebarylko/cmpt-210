@@ -206,13 +206,13 @@ Calculating $Var[Z_i]$, we obtain $Var[\frac{S_i}{60} - \frac{40}{60}] = Var[\fr
 ### Part 6
 
 If we convert 85 into a score seen in Z, we have $\frac{85 - 40}{60} = \frac{45}{60} = \frac{3}{4}$.
-If we want the average of $Z$ to be greater or equal than 85 for the good case, we know that this is equivalent to 
+If we want the average of $Z$ to be greater or equal than 85 for the bad case, we know that this is equivalent to 
 $\frac{Z}{n} \ge \frac{3}{4}$. Multiplying by n, we obtain $Z \ge \frac{3n}{4}$.
 
 
 If we start off with the expression $Pr(Z \ge \frac{3n}{4})$, we can subtract $E[Z]$ on both sides to 
 obtain $Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z])$, which has the same probability as the first expression.
-Knowing that the first expression represents the probability of the bad case, that the 
+Knowing that the first expression represents the probability of the bad case occurring, that the 
 average is greater than or equal to 85, we can lower bound it by the probability of the bad event occurring. 
 Applying the one-sided Chebyshev's inequality, we obtain 
 $Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z]) \le \frac{Var[Z]}{Var[Z] + (\frac{3n}{4} - E[Z])^2}$. 
@@ -221,9 +221,9 @@ Substituting the value of $Var[Z] = \frac{n}{144}, E[Z] = \frac{7n}{12}$ in the 
 $Pr(Z - E[Z] \ge \frac{3n}{4} - E[Z]) \le \frac{\frac{n}{144}}{\frac{n}{144} + (\frac{3n}{4} - \frac{7n}{12})^2} = \frac{\frac{n}{144}}{\frac{n}{144} + (\frac{n}{6})^2}$. 
 
 
-Additionally knowing that the bad case has a probability of less than $0.01$ of occurring, we can upper bound the expression
+Additionally knowing that the bad case has a probability smaller than $0.001$ of occurring, we can upper bound the expression
 $\frac{\frac{n}{144}}{\frac{n}{144} + (\frac{n}{6})^2}$ by 0.001. We obtain the inequality
-$\frac{\frac{n}{144}}{\frac{n}{144} + \frac{n^2}{36}} < 0.001 = \frac{\frac{1}{144}}{\frac{1}{144} + \frac{n}{36}} < 0.01$. 
+$\frac{\frac{n}{144}}{\frac{n}{144} + \frac{n^2}{36}} < 0.001 = \frac{\frac{1}{144}}{\frac{1}{144} + \frac{n}{36}} < 0.001$. 
 Multiplying by the denominator, we obtain $\frac{1}{144} < 0.001(\frac{1}{144} + \frac{n}{36})$. We can further simplify the 
 expression to obtain $\frac{1000}{144} < \frac{1}{144} + \frac{n}{36}$, which further reduces to $\frac{999}{144} * 36 < n = 249.75 < n$.
 
