@@ -340,7 +340,7 @@ Using the formula $E[X^2] = \displaystyle\sum_{k = 0}^{\infty} k^2 * \frac{e^{-\
 can factor out $e^{- \lambda}$ and a $\lambda$ term, obtaining
 $e^{- \lambda} \lambda \displaystyle\sum_{k = 0}^{\infty} k * \frac{\lambda^{k - 1}}{(k -1)!}$. Let 
 us now define $t = k - 1$. Using t in the summation, we now have
-$e^{- \lambda} \lambda \displaystyle\sum_{k = 0}^{\infty} (t + 1) * \frac{\lambda^{t}}{t!} = e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$.
+$e^{- \lambda} \lambda \displaystyle\sum_{t = 0}^{\infty} (t + 1) * \frac{\lambda^{t}}{t!} = e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$.
 
 Using our previous work, we know that 
 $e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$
