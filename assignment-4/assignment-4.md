@@ -251,7 +251,7 @@ written to disk one.
 Applying the formula of expectation, $E[X] =  \displaystyle\sum_{x \in X}^{} x * pr(X = x)$, to $D_1$,
 I obtain $E[D_1] = \displaystyle\sum_{i = 1}^{1000} F_i * pr(WF_i = 1)$
 Considering that the probability of the file being written to the first disk is always $\frac{1}{4}$,
-I can rewrite the value for $E[D_1] $ to equivalently be $E[D_1] = \frac{1}{4} \displaystyle\sum_{i = 1}^{1000} F_i$.
+I can rewrite the value for $E[D_1]$ to equivalently be $E[D_1] = \frac{1}{4} \displaystyle\sum_{i = 1}^{1000} F_i$.
 
 Using the fact that $\displaystyle\sum_{F_i \in F}^{} F_i = 400$, I can simplify the summation above to  
 $E[D_1] = \frac{1}{4} * 400 = 100$.
