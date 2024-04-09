@@ -368,3 +368,5 @@ $\phi^{\prime \prime} = \frac{d }{dt} e^{\lambda(e^t - 1)} * \lambda e^t = \lamb
 Evaluating $\phi^{\prime \prime} (0)$, I obtain $\lambda e^{\lambda (e^0 - 1) + 0} * (\lambda e^0 + 1) = \lambda(\lambda + 1) = \lambda^2 + \lambda$.
 
 Using the values of $E[X] = \lambda, E[X^2] = \lambda^2 + \lambda$, I can evaluate $Var[X] = E[X^2] - (E[X])^2 = \lambda^2 + \lambda - \lambda^2 = \lambda$.
+
+We have shown that $Var[X] = \lambda$ by using the first and second moment of the $MGF$.
