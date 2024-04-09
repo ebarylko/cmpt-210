@@ -114,12 +114,10 @@ value of $p_i$ with $1 - (1 - p)^i$, the expression becomes
 $Var[Y] = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - (1 - (1 - p)^i)) = \displaystyle\sum_{i = 1}^{n} (1 - (1 - p)^i) (1 - p)^i = \displaystyle\sum_{i = 1}^{n} (1 - p)^i - (1 - p)^{2i}$.
 Distributing the summation, I obtain $\displaystyle\sum_{i = 1}^{n} (1 - p)^i - \displaystyle\sum_{i = 1}^{n} (1 - p)^{2i}$.
 Applying the formula for a finite geometric sum on both summations, the variance reduces to
-$Var[Y] = (1 - p)\frac{1 - (1 - p)^n}{1 - (1 - p)} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2} = (1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2}$.
+$Var[Y] = (1 - p)\frac{1 - (1 - p)^n}{1 - (1 - p)} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2} = (1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{2p - p^2}$.
 
 
-The variance of $Y$ is $(1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{1 - (1 - p)^2}$.
-
-Simplify the denominator for the second term.
+The variance of $Y$ is $(1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 - p)^{2n}}{2p - p^2}$.
 
 ## Question three
 
