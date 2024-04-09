@@ -156,7 +156,7 @@ know that $Pr(R - E[R] \ge x) \le \frac{Var[R] + a^2}{(x + a)^2}$.
 
 Minimizing $\frac{a^2 + Var[R]}{(x + a)^2}$, we obtain 
 $\frac{d}{da}\frac{a^2 + Var[R]}{(x + a)^2} = 0$. Applying the quotient rule, 
-we obtain $\frac{(a + x)^2 * 2a - [a^2 + Var[R]] * 2[a + x]}{(a + x)^4} = \frac{2(a + x)[(a + x) * a - (a^2 + Var[R])]}{(a + x) (a + x)^3}$. 
+we obtain $\frac{d}{da}\frac{a^2 + Var[R]}{(x + a)^2} = \frac{(a + x)^2 * 2a - [a^2 + Var[R]] * 2[a + x]}{(a + x)^4} = \frac{2(a + x)[(a + x) * a - (a^2 + Var[R])]}{(a + x) (a + x)^3}$. 
 
 Simplifying the equation, we obtain $\frac{(a + x) * a - (a^2 + Var[R])}{(a + x)^3} = \frac{ a^2 + ax - a^2 - Var[R]}{(a + x)^3} = \frac{ax - Var[R]}{(a + x)^3}$.
 Knowing that we must minimize a, we must solve $\frac{ax - Var[R]}{(a + x)^3} = 0$. Solving for $a$, we obtain $a = \frac{Var[R]}{x}$.
