@@ -2,7 +2,7 @@
 
 ### Compute E[X] and Var[X].
 
-Since $X$ and $Y$ denotes the number of ones and twos in $n$ rolls of a standard die, we know that each dice roll 
+Since $X$ and $Y$ denotes the number of ones and twos in $n$ rolls of a standard die respectively, we know that each dice roll 
 is independent and the probability of obtaining a particular value on a roll is $\frac{1}{6}$. Using this fact, 
 we can model $X$ and $Y$ as binomial distributions. $X \sim Bin(n, \frac{1}{6}), Y \sim Bin(n, \frac{1}{6})$.
 
@@ -16,7 +16,7 @@ $Var[X] = np(1 - p) = n * \frac{1}{6} * \frac{5}{6} = \frac{5n}{36}$.
 
 If $X$ and $Y$ are independent, then $Pr(X = x, Y = y) = Pr(X = x)Pr(Y = y)$ must be true for each value of $x$ and $y$. 
 
-I will disprove this relation for $x = n, y = n$.
+I will disprove this statement for $x = n, y = n$.
 
 $Pr(X = n, Y = n) = 0$ since if I obtain n heads, I cannot obtain n tails as well.
 However,
@@ -28,7 +28,7 @@ $X$ and $Y$ are not independent.
 ###  If Z = X + Y , compute E[Z] and Var[Z]
 
 Since each roll is independent and the probability of obtaining a one or a two remains constant, I can model $Z$ by a binomial distribution. 
-$Z \sim Bin(n, \frac{1}{3})$.
+Using $Pr(\text{rolling a one or a two}) = \frac{1}{3}$, I can say that $Z \sim Bin(n, \frac{1}{3})$.
 
 Using the fact $Z$ has a binomial distribution, $E[Z] = np = \frac{n}{3}$
 
@@ -54,7 +54,7 @@ $E[X^2] = \frac{5n}{36} + \frac{n^2}{36} = \frac{5n + n^2}{36}$.
 
 Knowing the value of $E[X^2]$ and further aware that $E[X^2] = E[Y^2]$, I can now calculate $E[XY]$.
 Using the values of
-$E[X^2] = \frac{n^2 + 5n}{36}, E[Z^2] = \frac{2n + n^2}{9}$ in the expression $E[XY] = E[Z^2]  - E[X^2] - E[Y^2]$, 
+$E[X^2] = \frac{n^2 + 5n}{36}, E[Z^2] = \frac{2n + n^2}{9}$ in the expression $E[XY] = \frac{E[Z^2]  - E[X^2] - E[Y^2]}{2}$, 
 I obtain $E[XY] = \frac{\frac{2n + n^2}{9} - 2 * \frac{n^2 + 5n}{36}}{2} = \frac{\frac{2n + n^2}{9} - \frac{n^2 + 5n}{18}}{2}  = \frac{\frac{4n + 2n^2 - n^2 - 5n}{18}}{2} = \frac{n^2 - n}{36}$.
 
 ### Use the above results to compute Cov[X, Y ]
