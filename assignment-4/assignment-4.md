@@ -79,12 +79,12 @@ as a geometric series, we know that $\displaystyle\sum_{i = 1}^{n} p^i = p(\frac
 $E[X] = p(\frac{1 - p^n}{1 - p})$.
 
 For calculating $Var[X]$, I can exploit the fact that for an indicator r.v $Y$, $Var[Y] = p(1 - p) = p - p^2$. Furthermore, 
-since all the flips are mutually independent of each other, I can assume that the results of one game have no influence on the
-outcome of the other games. Utilizing this information in calculating $Var[X]$, I have that 
+since all the flips are mutually independent of each other, I can assume that the results of one turn have no influence on the
+outcome of the other turns. Utilizing this information in calculating $Var[X]$, I have that 
 $Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - p^{2i}$. Distributing the sum, I obtain  
 $Var[X] = \displaystyle\sum_{i = 1}^{n} p^i - \displaystyle\sum_{i = 1}^{n} p^{2i}$.
-Using the formula of a finite geometric sum with $a = p^2$ and $r = p^2$ for the second term and $a = p$ and $r = p$ for the first term,
-the variance simplifies to $Var[X] =  p(\frac{1 - p^n}{1 - p}) - p^2\frac{1 - p^{2n}}{1 - p^2}$
+Using the formula of a finite geometric sum with $a = p$ and $r = p$ for the first term and $a = p^2$ and $r = p^2$ for the second term,
+the variance simplifies to $Var[X] =  p(\frac{1 - p^n}{1 - p}) - p^2\frac{1 - p^{2n}}{1 - p^2}$.
 
 ### Calculate E[Y] and Var[Y]
 
