@@ -245,11 +245,13 @@ Using the information above, we know that we need at least 317 people to take th
 ### Part 1
 
 For $D_1$, I must consider the possibility of each file being written to the first disk. I can therefore 
-rewrite $D_1$ as $D_1 = \displaystyle\sum_{i = 1}^{1000} F_i$.
+rewrite $D_1$ as $D_1 = \displaystyle\sum_{i = 1}^{1000} WF_i$, where $WF_i$ is an indicator r.v representing whether $F_i$ was 
+written to disk one.
 
-Applying the formula of expectation, $E[X] =  \displaystyle\sum_{x \in X}^{} x * pr(X = x)$. Considering that 
-each $x$ represents the size of a file and the probability of the file being written to the first disk is always $\frac{1}{4}$,
-I can rewrite the value for $E[D_1] $ to equivalently be $E[D_1] = \frac{1}{4} \displaystyle\sum_{F_i \in F}^{} F_i$.
+Applying the formula of expectation, $E[X] =  \displaystyle\sum_{x \in X}^{} x * pr(X = x)$, to $D_1$,
+I obtain $E[D_1] = \displaystyle\sum_{i = 1}^{1000} F_i * pr(WF_i = 1)$
+Considering that the probability of the file being written to the first disk is always $\frac{1}{4}$,
+I can rewrite the value for $E[D_1] $ to equivalently be $E[D_1] = \frac{1}{4} \displaystyle\sum_{i = 1}^{1000} F_i$.
 
 Using the fact that $\displaystyle\sum_{F_i \in F}^{} F_i = 400$, I can simplify the summation above to  
 $E[D_1] = \frac{1}{4} * 400 = 100$.
@@ -271,17 +273,21 @@ Using the formula $\beta (c) = cln(c) - c + 1$ with $c = 2$, I obtain $\beta (2)
 Using the value of $\beta (2) = 0.39$ in $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$, I obtain
 $Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le {1.67}^{-17}$.
 
-
 ### Part 4
 
-In order to calculate $Pr(\bigcup_{D_i \in \set{D_1, D_2, D_3, D_4}} D_i \ge 200)$, I know I can equivalently take its complement $1 - Pr(\bigcap_{D_i \in \set{D_1, D_2, D_3, D_4}} D_i < 200)$.
-Since each of the $D_i$ are mutually independent, I can change $1 - Pr(\bigcap_{D_i \in \set{D_1, D_2, D_3, D_4}} D_i < 200)$ to $1 - Pr(\prod_{i = 1}^{4} D_i < 200)$.
+Let $D = \set{D_1, D_2, D_3, D_4}$.
+
+Using the union bound, I can upper bound $Pr(\bigcup_{D_i \in D} D_i \ge 200)$ by 
+$\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$.
 
 Knowing that $E[D_1] = E[D_2] = E[D_3] = E[D_4]$, we can say that $Pr(D_i \ge 200) \le {1.67}^{-17}$. Using this information, we can 
-calculate $Pr(D_i < 200) = 1 - Pr(D_i \ge 200) \ge 1 - {1.67}^{-17}$. With this lower bound on $Pr(D_i \ge 200)$, I can upper bound the 
-expression $1 - Pr(\prod_{i = 1}^{4} D_i < 200)$, obtaining $1 - (1 - {1.67}^{-17})^4 \approx 0$.
+calculate $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$ as $4 * {1.67}^{-17}$.
 
-The probability that some disk has more than 200 $MB$ written to it is 0.
+Using  $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$ as $4 * {1.67}^{-17}$ in
+$Pr(\bigcup_{D_i \in D} D_i \ge 200) \le \displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$, I obtain
+$Pr(\bigcup_{D_i \in D} D_i \ge 200) \le 6.69^{-17}$.
+
+The probability that some disk has 200 $MB$ or more than 200 $MB$ written to it is upper bounded by $6.69^{-17}$.
 
 ## Question six
 
