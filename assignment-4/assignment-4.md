@@ -168,28 +168,28 @@ Chebyshev bound.
 ## Question four 
 
 ### Part 1
-Let $N$ be an r.v measuring number of marks that a student gets on their final examination. We are given that 
+Let $N$ be an r.v measuring the number of marks that a student gets on their final examination. We are given that 
 $E[N] =  75$.
 
 Using this information, we can apply the Markov abound to calculate $Pr(N \ge 85)$, obtaining $Pr(N \ge 85) \le \frac{E[N]}{85}$. 
-This simplifies to $Pr(N \ge 85) \le \frac{75}{85}$.
+This simplifies to $Pr(N \ge 85) \le \frac{75}{85} = Pr(N \ge 85) \le \frac{15}{17}$.
 
 ### Part 2
 Knowing that no student gets a score below forty marks, we can modify the expression
 $Pr(N \ge 85)$ to $Pr(N - 40 \ge 45)$ to account for this information.
 
 If we define $Y = N - 40$, we can equivalently state $Pr(N - 40 \ge 45)$ as $Pr(Y \ge 45)$. Since $Y$ is 
-non-negative, we can apply the Markov to calculate $Pr(Y \ge 45) \le \frac{E[Y]}{45} = Pr(Y \ge 45) \le \frac{E[N] - 40}{45} = Pr(Y \ge 45) \le \frac{35}{45}$.
+non-negative, we can apply the Markov bound to calculate $Pr(Y \ge 45) \le \frac{E[Y]}{45} = Pr(Y \ge 45) \le \frac{E[N] - 40}{45} = Pr(Y \ge 45) \le \frac{35}{45} = Pr(Y \ge 45) \le \frac{7}{9}$.
 
 ### Part 3
 We now know that $Var[N] = 25$. 
 
-Using Chebyshev's inequality in the expression $Pr(|N - 75| \ge 11)$ to upper bound it by 
+We can use Chebyshev's inequality in the expression $Pr(|N - 75| \ge 11)$ to upper bound it by 
 $\frac{Var[N]}{11^2}$. Using the value $Var[N] = 25$, we have $Pr(|N - 75| \ge 11) \le \frac{25}{121}$.
 
 ### Part 4
 Using the one-sided Chebyshev's inequality, we find that
-$Pr(|N - 75| \ge 11) \le \frac{Var[N]}{11^2 + Var[N]} = Pr(|N - 75| \ge 11) \le \frac{25}{146}$.
+$Pr(N - 75 \ge 11) \le \frac{Var[N]}{11^2 + Var[N]} = Pr(N - 75 \ge 11) \le \frac{25}{146}$.
 
 ### Part 5
 
