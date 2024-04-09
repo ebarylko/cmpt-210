@@ -162,7 +162,7 @@ Simplifying the equation, we obtain $\frac{(a + x) * a - (a^2 + Var[R])}{(a + x)
 Knowing that we must minimize a, we must solve $\frac{ax - Var[R]}{(a + x)^3} = 0$. Solving for $a$, we obtain $a = \frac{Var[R]}{x}$.
 
 Letting $v = Var[R]$ and using $a = \frac{Var[R]}{x} = \frac{v}{x}$ into the expression $\frac{a^2 + Var[R]}{(x + a)^2}$, it becomes 
-$\frac{(\frac{v}{x})^2 + v}{(x + \frac{v}{x})^2} = \frac{\frac{v^2 + x^2v}{x^2}}{(\frac{x^2 + v}{x})^2} = $\frac{v^2 + x^2v}{x^2} * \frac{x^2}{(\frac{x^2 + v}{x})^2} = \frac{v(v + x^2)}{(x^2 + v)^2} = \frac{v}{x^2 + v}$.
+$\frac{(\frac{v}{x})^2 + v}{(x + \frac{v}{x})^2} = \frac{\frac{v^2 + x^2v}{x^2}}{(\frac{x^2 + v}{x})^2} = \frac{v^2 + x^2v}{x^2} * \frac{x^2}{(\frac{x^2 + v}{x})^2} = \frac{v(v + x^2)}{(x^2 + v)^2} = \frac{v}{x^2 + v}$.
 
 Remembering that $v = Var[R]$, we know that $\frac{v}{x^2 + v} = \frac{Var[R]}{x^2 + Var[R]}$, which is the one-sided 
 Chebyshev bound. 
