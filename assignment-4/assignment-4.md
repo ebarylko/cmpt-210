@@ -352,3 +352,19 @@ Therefore, if $X \sim Poisson(\lambda)$, this means that $\phi (t) = e^{\lambda(
 
 **Prove E[X] =** $\lambda$.
 
+Knowing that $E[X] = \phi^{\prime} (0)$, I must first find $\phi^{\prime}$.
+
+$\phi^{\prime} = e^{\lambda(e^t - 1)} * \lambda e^t$. Evaluating
+$\phi^{\prime} (0)$, I obtain $\phi^{\prime} (0) = e^{\lambda(e^0 - 1)} * \lambda e^0 = \lambda$.
+
+Using the derivative of the $MGF$ at the first moment, we have found that $E[X] = \lambda$.
+
+**Prove Var[X] =** $\lambda$.
+
+Using the formula $Var[X] = E[X^2] - (E[X])^2$, I can calculate this value by 
+finding $E[X^2] = \phi^{\prime \prime} (0)$.
+
+$\phi^{\prime \prime} = \frac{d }{dt} e^{\lambda(e^t - 1)} * \lambda e^t = \lambda e^{\lambda (e^t - 1) + t} * (\lambda e^t + 1)$.
+Evaluating $\phi^{\prime \prime} (0)$, I obtain $\lambda e^{\lambda (e^0 - 1) + 0} * (\lambda e^0 + 1) = \lambda(\lambda + 1) = \lambda^2 + \lambda$.
+
+Using the values of $E[X] = \lambda, E[X^2] = \lambda^2 + \lambda$, I can evaluate $Var[X] = E[X^2] - (E[X])^2 = \lambda^2 + \lambda - \lambda^2 = \lambda$.
