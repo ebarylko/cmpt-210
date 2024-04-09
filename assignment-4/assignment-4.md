@@ -233,7 +233,7 @@ Since we can only have whole students, we can modify $n > 249.75$ to equivalentl
 ### Part 7
 
 To use the Chernoff bound, we need an expression of the form $Pr(T \ge cE[T])$, for an r.v $T$ and $c \in \mathbb{R}$.
-We want to calculate $Pr(Z \ge \frac{3n}{4})$, but we need to obtain $\frac{3n}{4}$ from $\frac{7n}{12}c$.
+We want to calculate $Pr(Z \ge \frac{3n}{4})$, but we need to obtain $\frac{3n}{4}$ from $E[Z] * c = \frac{7n}{12}c$.
 Noticing that $\frac{7n}{12} * \frac{9}{7} = \frac{3n}{4}$, we can let $c = \frac{9}{7}$.
 Doing this, we can calculate $Pr(Z \ge \frac{3n}{4} * \frac{9}{7}) = Pr(Z \ge \frac{3n}{4})$.
 
@@ -280,7 +280,7 @@ $D_1 \ge 200$ and it is known that $E[D_1] = 100$, I can set $c = 2$ to obtain $
 Applying the Chernoff bound $Pr(D_1 \ge c * E[D_1]) \le e^{- \beta (c) E[T]}$ with $c = 2$, $E[D_1] = 100$, I obtain that $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$. 
 Using the formula $\beta (c) = cln(c) - c + 1$ with $c = 2$, I obtain $\beta (2) = 2 * ln(2) - 2 + 1 = 0.39$.
 Using the value of $\beta (2) = 0.39$ in $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$, I obtain
-$Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le {1.67}^{-17}$.
+$Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le {1.67}^{-17}$.
 
 ### Part 4
 
@@ -334,7 +334,7 @@ Since we obtained $\lambda$ from calculating $E[X]$, we can state that $E[X] = \
 Prove that $Var[X] = \lambda$:
 
 Using the formula $Var[X] = E[X^2] - (E[X])^2$, I can calculate the variance if I know the 
-value of $E[X^2]$ and $E[X]$. I know $E[X]$, but I must obtain the $E[X^2]$.
+value of $E[X^2]$ and $E[X]$. I know $E[X]$, but I must obtain $E[X^2]$.
 
 Using the formula $E[X^2] = \displaystyle\sum_{k = 0}^{\infty} k^2 * \frac{e^{-\lambda} \lambda^{k}}{k!}$, we 
 can factor out $e^{- \lambda}$ and a $\lambda$ term, obtaining
