@@ -123,14 +123,14 @@ The variance of $Y$ is $(1 - p)\frac{1 - (1 - p)^n}{p} - (1 - p)^2\frac{1 - (1 -
 
 ### Part one
 
-Using $Y = (R - E[R] + a)^2$, I can apply the Markov bound since $Y$ is non-negative r.v. Doing this, I obtain 
+Using $Y = (R - E[R] + a)^2$, I can apply the Markov bound since $Y$ is a non-negative r.v. Doing this, I obtain 
 $Pr(Y \ge (x + a)^2) \le \frac{E[Y]}{(x + a)^2}$. 
 
 I need to calculate $E[Y]$, which I can do from expanding $Y = (R - E[R] + a)^2$. Expanding out $Y$, I obtain 
 $R^2 - RE[R] + Ra - E[R]R + (E[R])^2 - E[R]a + aR - aE[R] + a^2 = R^2 - 2RE[R] + 2Ra + (E[R])^2 -2E[R]a + a^2$.
 Applying linearity of expectation on $Y$, this results in $E[Y] =  E[R^2] - E[2RE[R]] + E[2Ra] + E[(E[R])^2] - E[2E[R]a] + E[a^2]$.
 Knowing that $a$ and $E[R]$ are constants, the above expression simplifies to
-$E[Y] =  E[R^2] - 2E[R]E[R] + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 = E[R^2] - 2E([R])^2 + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 =  E[R^2] - E([R])^2 + a^2$.
+$E[Y] =  E[R^2] - 2E[R]E[R] + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 = E[R^2] - 2(E[R])^2 + 2aE[R] + (E[R])^2  - 2E[R]a  +  a^2 =  E[R^2] - (E[R])^2 + a^2$.
 
 Using the fact that $Var[R] = E[R^2] - (E[R])^2$, the above expression can be expressed as $Var[R] a^2$. 
 Since the expression was simplified from the calculation $E[Y]$, we can say that $E[Y] = Var[R] + a^2$.
