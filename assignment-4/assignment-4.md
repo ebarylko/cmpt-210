@@ -284,7 +284,7 @@ $Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le 1.67 * {10}^{-17}$.
 
 ### Part 4
 
-Let $D$ be the set of $D_i$, where $D_i$ represents the ith disk. $D$ = \set{D_1, D_2, D_3, D_4}$.
+Let $D$ be the set of $D_i$, where $D_i$ represents the ith disk. $D = \set{D_1, D_2, D_3, D_4}$.
 
 Using the union bound, I can upper bound $Pr(\bigcup_{D_i \in D} D_i \ge 200)$ by 
 $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$.
