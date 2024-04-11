@@ -280,7 +280,7 @@ $D_1 \ge 200$ and it is known that $E[D_1] = 100$, I can set $c = 2$ to obtain $
 Applying the Chernoff bound $Pr(D_1 \ge c * E[D_1]) \le e^{- \beta (c) E[T]}$ with $c = 2$, $E[D_1] = 100$, I obtain that $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$. 
 Using the formula $\beta (c) = cln(c) - c + 1$ with $c = 2$, I obtain $\beta (2) = 2 * ln(2) - 2 + 1 = 0.39$.
 Using the value of $\beta (2) = 0.39$ in $Pr(D_1 \ge 200) \le e^{- \beta (2) 100}$, I obtain
-$Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le {1.67}^{-17}$.
+$Pr(D_1 \ge 200) \le e^{-38.6} = Pr(D_1 \ge 200) \le 1.67 * {10}^{-17}$.
 
 ### Part 4
 
@@ -289,14 +289,14 @@ Let $D = \set{D_1, D_2, D_3, D_4}$.
 Using the union bound, I can upper bound $Pr(\bigcup_{D_i \in D} D_i \ge 200)$ by 
 $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$.
 
-Knowing that $E[D_1] = E[D_2] = E[D_3] = E[D_4]$, we can say that $Pr(D_i \ge 200) \le {1.67}^{-17}$. Using this information, we can 
-calculate $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$ as $4 * {1.67}^{-17}$.
+Knowing that $E[D_1] = E[D_2] = E[D_3] = E[D_4]$, we can say that $Pr(D_i \ge 200) \le 1.67 * {10}^{-17}$. Using this information, we can 
+calculate $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$ as $4 * 1.67 * {10}^{-17}$.
 
-Using  $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$ as $4 * {1.67}^{-17}$ in
+Using  $\displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$ as $4 * 1.67 * {10}^{-17}$ in
 $Pr(\bigcup_{D_i \in D} D_i \ge 200) \le \displaystyle\sum_{D_i \in D}^{} Pr(D_i \ge 200)$, I obtain
-$Pr(\bigcup_{D_i \in D} D_i \ge 200) \le 6.69^{-17}$.
+$Pr(\bigcup_{D_i \in D} D_i \ge 200) \le 6.69 * {10}^{-17}$.
 
-The probability that some disk has 200 $MB$ or more than 200 $MB$ written to it is upper bounded by $6.69^{-17}$.
+The probability that some disk has 200 $MB$ or more than 200 $MB$ written to it is upper bounded by $6.69 * {10}^{-17}$.
 
 ## Question six
 
