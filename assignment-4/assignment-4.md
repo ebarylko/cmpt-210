@@ -184,12 +184,12 @@ non-negative, we can apply the Markov bound to calculate $Pr(Y \ge 45) \le \frac
 ### Part 3
 We now know that $Var[N] = 25$. 
 
-We can use Chebyshev's inequality in the expression $Pr(|N - 75| \ge 11)$ to upper bound it by 
-$\frac{Var[N]}{11^2}$. Using the value $Var[N] = 25$, we have $Pr(|N - 75| \ge 11) \le \frac{25}{121}$.
+We can use Chebyshev's inequality in the expression $Pr(|N - 75| \ge 10)$ to upper bound it by 
+$\frac{Var[N]}{10^2}$. Using the value $Var[N] = 25$, we have $Pr(|N - 75| \ge 10) \le \frac{25}{100} = \frac{1}{4}$.
 
 ### Part 4
 Using the one-sided Chebyshev's inequality, we find that
-$Pr(N - 75 \ge 11) \le \frac{Var[N]}{11^2 + Var[N]} = Pr(N - 75 \ge 11) \le \frac{25}{146}$.
+$Pr(N - 75 \ge 10) \le \frac{Var[N]}{10^2 + Var[N]} = Pr(N - 75 \ge 11) \le \frac{25}{125} = \frac{1}{5}$.
 
 ### Part 5
 
@@ -340,10 +340,10 @@ Using the formula $E[X^2] = \displaystyle\sum_{k = 0}^{\infty} k^2 * \frac{e^{-\
 can factor out $e^{- \lambda}$ and a $\lambda$ term, obtaining
 $e^{- \lambda} \lambda \displaystyle\sum_{k = 0}^{\infty} k * \frac{\lambda^{k - 1}}{(k -1)!}$. Let 
 us now define $t = k - 1$. Using t in the summation, we now have
-$e^{- \lambda} \lambda \displaystyle\sum_{t = 0}^{\infty} (t + 1) * \frac{\lambda^{t}}{t!} = e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$.
+$e^{- \lambda} \lambda \displaystyle\sum_{t = 0}^{\infty} (t + 1) * \frac{\lambda^{t}}{t!} = e^{- \lambda} \lambda (\displaystyle\sum_{t = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{t = 0}^{\infty} \frac{\lambda^{t}}{t!})$.
 
 Using our previous work, we know that 
-$e^{- \lambda} \lambda (\displaystyle\sum_{k = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{k = 0}^{\infty} \frac{\lambda^{t}}{t!})$
+$e^{- \lambda} \lambda (\displaystyle\sum_{t = 0}^{\infty} t * \frac{\lambda^{t}}{t!} + \displaystyle\sum_{t = 0}^{\infty} \frac{\lambda^{t}}{t!})$
 simplifies to 
 $e^{- \lambda} \lambda (\lambda e^{\lambda} + e^{\lambda}) = {\lambda}^2 + \lambda$.
 
